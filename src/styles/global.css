@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
+body {
+  position: relative;
+  padding-top: 64px;
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  /* background-color: #F1F5F7; */
+}
+
+footer {
+  margin-top: auto;
+}
+
+.header__svg {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 64px);
+}
+.hero-section__svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  max-width: 75%;
+}
+
+/* .main__svg {
+	position: absolute;
+	top: 0;
+} */
+
+.logo-box {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  z-index: 5;
+}
+
+.type-txt {
+  line-height: 54px;
+  font-size: 2rem;
+}
+
+.Typewriter {
+  display: inline-block;
+  padding-left: 1rem;
+  min-height: 50px;
+  /* text-transform: uppercase; */
+  /* font-family: 'Akaya Telivigala', cursive; */
+}
+
+/* .bg-blue {
+	backdrop-filter: blur(20px);
+  background-color: rgba(#30aade, 0.8);
+} */
+
+.svg-blue {
+  backdrop-filter: blur(20px);
+  background-color: rgba(#30aade, 0.8);
+}
+
+.section__slider .wrap {
+  height: 70vh;
+  width: 25vw;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper .img-box {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
