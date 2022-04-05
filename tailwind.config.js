@@ -6,9 +6,12 @@ module.exports = {
       fontFamily: {
         akaya: ["Akaya Telivigala", "cursive"],
       },
+      spacing: {
+        130: "32rem",
+      },
       colors: {
         sky: "#30aade",
-        ylw: "F4D500",
+        ylw: "#F4D500",
       },
     },
   },

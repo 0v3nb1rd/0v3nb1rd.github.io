@@ -14,7 +14,7 @@ export default function Slider() {
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper"
+        className="swiper--proj_home"
       >
         <SwiperSlide>
           <div className="img-box">
