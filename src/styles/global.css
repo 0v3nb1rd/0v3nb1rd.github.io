@@ -6,12 +6,7 @@
 
 body {
   position: relative;
-  padding-top: 64px;
-}
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 64px);
+  /* padding-top: 64px; */
 }
 .header {
   position: fixed;
@@ -22,6 +17,16 @@ body {
   /* background-color: #F1F5F7; */
 }
 
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh);
+}
+
+.main {
+  margin-top: 125px;
+}
+
 footer {
   margin-top: auto;
 }
@@ -29,32 +34,22 @@ footer {
 .header__svg {
   position: absolute;
   top: 70%;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
   z-index: -1;
 }
 
 .hero-section {
   position: relative;
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 125px - 86px);
 }
-.hero-section__svg {
+.bottom-svg {
   position: absolute;
   left: 0;
   right: 0;
-  width: 100%;
-  height: auto;
 }
 
 .hero-content {
   max-width: 75%;
 }
-
-/* .main__svg {
-	position: absolute;
-	top: 0;
-} */
 
 .logo-box {
   position: absolute;
@@ -97,6 +92,8 @@ footer {
 }
 
 .swiper .img-box {
+  padding: 5%;
+  background-color: rgb(210, 237, 222);
   overflow-y: scroll;
   height: 100%;
 }
@@ -111,6 +108,31 @@ footer {
   color: #fff;
 }
 
+.swip--home .swiper-button-prev,
+.swip--home .swiper-button-next {
+  position: absolute;
+  top: 60%;
+  height: 3rem;
+  width: 4rem;
+  background: url("/img/icons/arrow_r.svg") center;
+  background-size: cover;
+  cursor: pointer;
+  z-index: 10;
+}
+.swip--home .swiper-button-prev {
+  left: 3%;
+  transform: rotate(180deg);
+}
+.swip--home .swiper-button-next {
+  right: 3%;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  cursor: auto;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
 .swiper--proj .swiper-slide {
   color: inherit;
 }
@@ -118,6 +140,12 @@ footer {
 .swiper--proj .swiper-wrapper {
   transition-timing-function: linear;
 }
+/* .swiper--proj .swiper-slide:first-child {
+  margin-left: 10%;
+}
+.swiper--proj .swiper-slide:last-child {
+  margin-right: 10%;
+} */
 
 .portfolio__slide::before {
   content: "";
@@ -128,6 +156,12 @@ footer {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.1026785714285714) 80%,
+    rgba(0, 0, 0, 0.304359243697479) 100%
+  );
   z-index: 1;
 }

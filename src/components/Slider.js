@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/effect-cards"
 // import required modules
-import { EffectCards } from "swiper"
+import { Autoplay, EffectCards, FreeMode, Navigation } from "swiper"
 
 export default function Slider() {
   return (
@@ -13,8 +13,13 @@ export default function Slider() {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        modules={[EffectCards]}
-        className="swiper--proj_home"
+        modules={[EffectCards, Autoplay, FreeMode, Navigation]}
+        // autoplay={{
+        //   delay: 1000,
+        // }}
+        speed={400}
+        navigation
+        className="swip swip--home"
       >
         <SwiperSlide>
           <div className="img-box">

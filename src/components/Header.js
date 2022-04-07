@@ -41,30 +41,42 @@ export default function Header() {
             </Link>
           </div>
           <nav className="navbar-center hidden lg:flex">
-            <div className="btn-group">
-              <Link to="/" className="btn ">
-                Home
-              </Link>
-              <Link to="/projects" className="btn ">
-                Projects
-              </Link>
-              <Link to="/blog" className="btn ">
-                Blog
-              </Link>
-              <Link to="/contacts" className="btn ">
-                Contacts
-              </Link>
-            </div>
+            <ul className="flex">
+              <li className="mx-2">
+                <Link to="/" className="btn glass ">
+                  Home
+                </Link>
+              </li>
+              <li className="mx-2">
+                <Link to="/projects" className="btn glass">
+                  Projects
+                </Link>
+              </li>
+              <li className="mx-2">
+                <Link to="/blog" className="btn glass">
+                  Blog
+                </Link>
+              </li>
+              <li className="mx-2">
+                <Link to="/contacts" className="btn glass">
+                  Contacts
+                </Link>
+              </li>
+            </ul>
           </nav>
           <div className="navbar-end">
-            <a className="btn">Show CV</a>
+            <a className="btn btn-accent text-white btn tracking-widest">
+              show
+              <span className="pl-1 text-red-500 text-3xl font-akaya">CV</span>
+            </a>
           </div>
         </div>
       </div>
       <svg
         className="header__svg"
-        width="1917"
-        height="100"
+        preserveAspectRatio="none"
+        height="86px"
+        width="100%"
         viewBox="0 0 1917 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

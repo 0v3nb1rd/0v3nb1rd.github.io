@@ -6,45 +6,48 @@ import Slider from "../components/Slider"
 export default function Home() {
   return (
     <Layout>
-      <section className="hero hero-section">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <video
-            className="w-2/4 rounded-lg"
-            src="/clips.mp4"
-            type="video/mp4"
-            autoPlay
-            loop
-          ></video>
-          <div className="w-2/4">
-            <h1 className="text-8xl font-bold">
-              Hello 👋<div className="text-red-600	">I’m Nazar.</div>
-            </h1>
-            <div className="py-6 text-2xl type-txt">
-              A modern
-              <Typewriter
-                options={{
-                  strings: [
-                    '<span class="text-red-600 text-5xl font-akaya">HTML-CSS</span> coder',
-                    '<span class="text-sky text-5xl font-akaya">React.js</span> dev.',
-                    '<span class="text-primary text-5xl font-akaya">Node.js</span> dev.',
-                    '<span class="text-warning text-5xl font-akaya">UI/UX</span> designer',
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-              <span className="block">
-                with a strong appetite for creating memorable experiences.
-              </span>
+      <section className="section--top">
+        <div className="hero hero-section">
+          <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="w-2/4">
+              <div className="max-w-[600px] mx-auto">
+                <video src="/clips.mp4" type="video/mp4" autoPlay loop></video>
+              </div>
             </div>
-            <button className="btn btn-wide">write me</button>
+            <div className="w-2/4">
+              <h1 className="text-8xl font-bold">
+                Hello 👋<div className="text-red-600	">I’m Nazar.</div>
+              </h1>
+              <div className="py-6 text-2xl type-txt">
+                A modern
+                <Typewriter
+                  options={{
+                    strings: [
+                      '<span class="text-red-600 text-5xl font-akaya">HTML-CSS</span> coder',
+                      '<span class="text-sky text-5xl font-akaya">React.js</span> dev.',
+                      '<span class="text-primary text-5xl font-akaya">Node.js</span> dev.',
+                      '<span class="text-warning text-5xl font-akaya">UI/UX</span> designer',
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+                <span className="block">
+                  with a strong appetite for creating memorable experiences.
+                </span>
+              </div>
+              <button className="btn btn-accent tracking-widest text-white btn-wide">
+                write me
+              </button>
+            </div>
           </div>
         </div>
+
         <svg
-          className="hero-section__svg bottom-0"
-          width="1805"
-          height="99"
+          preserveAspectRatio="none"
           viewBox="0 0 1805 99"
+          height="86px"
+          width="100%"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -57,34 +60,39 @@ export default function Home() {
 
       <section className="min-h-screen hero bg-yellow-300 relative">
         <div className="hero-content flex-col lg:flex-row">
-          <div className="section__slider w-2/4">
+          <div className="section__slider w-2/4 flex justify-center items-center">
             <div className="wrap">
               <Slider />
             </div>
           </div>
           <div className="w-2/4">
-            <h2 className="text-6xl font-bold">
-              Welcome To The<div className="text-red-600	">Weirdos Club.</div>
-            </h2>
-            <p className="py-6 text-2xl">
-              The WEIRDOS CLUB is a private collection of NFTs—unique digital
-              collectibles. The Weirdos are stored as ERC-721 tokens on the
-              Ethereum blockchain and hosted on IPFS.
-            </p>
-            <p className="py-5 text-1xl">
-              With more than 200+ hand drawn traits, each NFT is unique and
-              comes with a membership to an exclusive group of successful
-              investors. Join an ambitious ever-growing community with multiple
-              benefits and utilities.
-            </p>
+            <div className="w-4/5 mx-auto">
+              <h2 className="text-6xl font-bold">
+                Welcome To The<div className="text-red-600">Weirdos Club.</div>
+              </h2>
+              <p className="py-6 text-2xl">
+                The WEIRDOS CLUB is a private collection of NFTs—unique digital
+                collectibles. The Weirdos are stored as ERC-721 tokens on the
+                Ethereum blockchain and hosted on IPFS.
+              </p>
+              <p className="py-5 text-1xl">
+                With more than 200+ hand drawn traits, each NFT is unique and
+                comes with a membership to an exclusive group of successful
+                investors. Join an ambitious ever-growing community with
+                multiple benefits and utilities.
+              </p>
 
-            <button className="btn btn-wide">Show Projects</button>
+              <button className="btn btn-wide btn-accent text-white">
+                Show more Projects
+              </button>
+            </div>
           </div>
         </div>
         <svg
-          className="hero-section__svg  -bottom-20"
-          width="1917"
-          height="100"
+          className="bottom-svg  -bottom-20"
+          preserveAspectRatio="none"
+          height="86px"
+          width="100%"
           viewBox="0 0 1917 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -95,194 +103,6 @@ export default function Home() {
           />
         </svg>
       </section>
-
-      {/* <section className="min-h-screen hero">
-        <div class="min-w-screen min-h-screen flex items-center justify-center py-5">
-          <div class="w-full bg-white  px-5 py-16 md:py-24 text-gray-800">
-            <div class="w-full max-w-6xl mx-auto">
-              <div class="text-center max-w-xl mx-auto">
-                <h1 class="text-6xl md:text-7xl font-bold mb-5 text-gray-600">
-                  What people <br />
-                  are saying.
-                </h1>
-                <h3 class="text-xl mb-5 font-light">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </h3>
-                <div class="text-center mb-10">
-                  <span class="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
-                  <span class="inline-block w-3 h-1 rounded-full bg-indigo-500 ml-1"></span>
-                  <span class="inline-block w-40 h-1 rounded-full bg-indigo-500"></span>
-                  <span class="inline-block w-3 h-1 rounded-full bg-indigo-500 ml-1"></span>
-                  <span class="inline-block w-1 h-1 rounded-full bg-indigo-500 ml-1"></span>
-                </div>
-              </div>
-              <div class="-mx-3 md:flex items-start">
-                <div class="px-3 md:w-1/3">
-                  <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                    <div class="w-full flex mb-4 items-center">
-                      <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                        <img src="https://i.pravatar.cc/100?img=1" alt="" />
-                      </div>
-                      <div class="flex-grow pl-3">
-                        <h6 class="font-bold text-sm uppercase text-gray-600">
-                          Kenzie Edgar.
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <p class="text-sm leading-tight">
-                        <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                          "
-                        </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quos sunt ratione dolor exercitationem minima quas
-                        itaque saepe quasi architecto vel! Accusantium, vero
-                        sint recusandae cum tempora nemo commodi soluta
-                        deleniti.
-                        <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                          "
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                    <div class="w-full flex mb-4 items-center">
-                      <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                        <img src="https://i.pravatar.cc/100?img=2" alt="" />
-                      </div>
-                      <div class="flex-grow pl-3">
-                        <h6 class="font-bold text-sm uppercase text-gray-600">
-                          Stevie Tifft.
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <p class="text-sm leading-tight">
-                        <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                          "
-                        </span>
-                        Lorem ipsum, dolor sit amet, consectetur adipisicing
-                        elit. Dolore quod necessitatibus, labore sapiente, est,
-                        dignissimos ullam error ipsam sint quam tempora vel.
-                        <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                          "
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="px-3 md:w-1/3">
-                  <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                    <div class="w-full flex mb-4 items-center">
-                      <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                        <img src="https://i.pravatar.cc/100?img=3" alt="" />
-                      </div>
-                      <div class="flex-grow pl-3">
-                        <h6 class="font-bold text-sm uppercase text-gray-600">
-                          Tommie Ewart.
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <p class="text-sm leading-tight">
-                        <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                          "
-                        </span>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Vitae, obcaecati ullam excepturi dicta error
-                        deleniti sequi.
-                        <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                          "
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                    <div class="w-full flex mb-4 items-center">
-                      <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                        <img src="https://i.pravatar.cc/100?img=4" alt="" />
-                      </div>
-                      <div class="flex-grow pl-3">
-                        <h6 class="font-bold text-sm uppercase text-gray-600">
-                          Charlie Howse.
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <p class="text-sm leading-tight">
-                        <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                          "
-                        </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Architecto inventore voluptatum nostrum atque, corrupti,
-                        vitae esse id accusamus dignissimos neque reprehenderit
-                        natus, hic sequi itaque dicta nisi voluptatem! Culpa,
-                        iusto.
-                        <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                          "
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="px-3 md:w-1/3">
-                  <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                    <div class="w-full flex mb-4 items-center">
-                      <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                        <img src="https://i.pravatar.cc/100?img=5" alt="" />
-                      </div>
-                      <div class="flex-grow pl-3">
-                        <h6 class="font-bold text-sm uppercase text-gray-600">
-                          Nevada Herbertson.
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <p class="text-sm leading-tight">
-                        <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                          "
-                        </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Nobis, voluptatem porro obcaecati dicta, quibusdam sunt
-                        ipsum, laboriosam nostrum facere exercitationem pariatur
-                        deserunt tempora molestiae assumenda nesciunt alias
-                        eius? Illo, autem!
-                        <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                          "
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                  <div class="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
-                    <div class="w-full flex mb-4 items-center">
-                      <div class="overflow-hidden rounded-full w-10 h-10 bg-gray-50 border border-gray-200">
-                        <img src="https://i.pravatar.cc/100?img=6" alt="" />
-                      </div>
-                      <div class="flex-grow pl-3">
-                        <h6 class="font-bold text-sm uppercase text-gray-600">
-                          Kris Stanton.
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="w-full">
-                      <p class="text-sm leading-tight">
-                        <span class="text-lg leading-none italic font-bold text-gray-400 mr-1">
-                          "
-                        </span>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Voluptatem iusto, explicabo, cupiditate quas totam!
-                        <span class="text-lg leading-none italic font-bold text-gray-400 ml-1">
-                          "
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section>
         <div class="bg-neutral text-white py-8">
@@ -433,17 +253,17 @@ export default function Home() {
               <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:pb-10 pb-16 items-center">
                 <img
                   tabIndex="0"
-                  className="focus:outline-none"
-                  src="https://cdn.tuk.dev/assets/adidas-dark.png"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_js.svg"
                   alt="Adidas"
                   role="img"
                 />
               </div>
               <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:pb-10 pb-16 items-center">
                 <img
-                  tabIndex="0"
-                  className="focus:outline-none"
-                  src="https://cdn.tuk.dev/assets/channel-dark.png"
+                  tabIndex="1"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_node.svg"
                   alt="Chanel"
                   role="img"
                 />
@@ -451,8 +271,8 @@ export default function Home() {
               <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:pb-10 pb-16 pt-4 items-center">
                 <img
                   tabIndex="0"
-                  className="focus:outline-none"
-                  src="https://cdn.tuk.dev/assets/nike-dark.png"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_scss.svg"
                   alt="Nike"
                   role="img"
                 />
@@ -460,17 +280,55 @@ export default function Home() {
               <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:pb-10 pb-16 items-center">
                 <img
                   tabIndex="0"
-                  className="focus:outline-none"
-                  src="https://cdn.tuk.dev/assets/toyota-dark.png"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_figma.svg"
                   alt="Toyota"
                   role="img"
                 />
               </div>
+
+              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:py-10 py-16 items-center">
+                <img
+                  tabIndex="0"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_react.svg"
+                  alt="Adidas"
+                  role="img"
+                />
+              </div>
+              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:py-10 py-16 items-center">
+                <img
+                  tabIndex="1"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_redux.svg"
+                  alt="Chanel"
+                  role="img"
+                />
+              </div>
+              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:py-10 py-16 items-center">
+                <img
+                  tabIndex="0"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_next.svg"
+                  alt="Nike"
+                  role="img"
+                />
+              </div>
+              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:py-10 py-16 items-center">
+                <img
+                  tabIndex="0"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_gatsby.svg"
+                  alt="Toyota"
+                  role="img"
+                />
+              </div>
+
               <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 items-center">
                 <img
                   tabIndex="0"
-                  className="focus:outline-none"
-                  src="https://cdn.tuk.dev/assets/gs1-dark.png"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_tailwind.svg"
                   alt="GS1"
                   role="img"
                 />
@@ -478,8 +336,8 @@ export default function Home() {
               <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 items-center">
                 <img
                   tabIndex="0"
-                  className="focus:outline-none"
-                  src="https://cdn.tuk.dev/assets/berry-dark.png"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_bootstrap.svg"
                   alt="BlackBerry"
                   role="img"
                 />
@@ -487,8 +345,8 @@ export default function Home() {
               <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pt-10 lg:pt-10 md:pt-2 pt-16">
                 <img
                   tabIndex="0"
-                  className="focus:outline-none"
-                  src="https://cdn.tuk.dev/assets/min-dark.png"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_styled-components.svg"
                   alt="Mini"
                   role="img"
                 />
@@ -496,8 +354,8 @@ export default function Home() {
               <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-l lg:border-l border-gray-200 xl:pt-10 lg:pt-10 md:pt-2 pt-16">
                 <img
                   tabIndex="0"
-                  className="focus:outline-none"
-                  src="https://cdn.tuk.dev/assets/honda-dark.png"
+                  className="max-h-16 w-16"
+                  src="/img/skills/icon_laravel.svg"
                   alt="Honda"
                   role="img"
                 />

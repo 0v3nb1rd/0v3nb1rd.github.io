@@ -2,6 +2,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: "class",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+    },
     extend: {
       fontFamily: {
         akaya: ["Akaya Telivigala", "cursive"],
