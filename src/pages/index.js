@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout>
       <section className="section--top">
-        <div className="hero hero-section">
+        <div className="hero hero-section relative">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="w-2/4">
               <div className="max-w-[600px] mx-auto">
@@ -253,123 +253,126 @@ export default function Home() {
                 tabIndex="0"
                 className="focus:outline-none xl:text-5xl md:text-3xl text-xl text-center text-gray-800 font-extrabold mb-5 pt-4"
               >
-                Partnerships with Coveted Brands
+                Preferer technical scills
               </h1>
               <p
                 tabIndex="0"
                 className="focus:outline-none text-base md:text-lg lg:text-xl text-center text-gray-600 font-normal xl:w-10/12 xl:mx-auto"
               >
-                Our success has come from being committed to the property and
-                investing in the development of the product to maximize sales.
-                At the same time and maintaining the integrity.
+                Hi, I'm Anurag Hazra, a self-taught passionate FrontEnd
+                developer from Ukraine, currently working at Asign company as a
+                FrontEnd engineer. My success came from a commitment to
+                technology and investing in product development to maximize
+                results. At the same time, I am fascinated by human psychology
+                and develop products for people.
               </p>
             </div>
             <div className="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap">
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:pb-10 pb-16 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:pb-10 pb-16 items-center">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_js.svg"
                   alt="Adidas"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:pb-10 pb-16 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:pb-10 pb-16 items-center">
                 <img
                   tabIndex="1"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_node.svg"
                   alt="Chanel"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:pb-10 pb-16 pt-4 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:pb-10 pb-16 pt-4 items-center">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_scss.svg"
                   alt="Nike"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:pb-10 pb-16 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:pb-10 pb-16 items-center">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_figma.svg"
                   alt="Toyota"
                   role="img"
                 />
               </div>
 
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:py-10 py-16 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:py-10 py-16 items-center">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_react.svg"
                   alt="Adidas"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:py-10 py-16 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:py-10 py-16 items-center">
                 <img
                   tabIndex="1"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_redux.svg"
                   alt="Chanel"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:py-10 py-16 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:py-10 py-16 items-center">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_next.svg"
                   alt="Nike"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:py-10 py-16 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:py-10 py-16 items-center">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_gatsby.svg"
                   alt="Toyota"
                   role="img"
                 />
               </div>
 
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 items-center">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_tailwind.svg"
                   alt="GS1"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 items-center">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 items-center">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_bootstrap.svg"
                   alt="BlackBerry"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pt-10 lg:pt-10 md:pt-2 pt-16">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pt-10 lg:pt-10 md:pt-2 pt-16">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_styled-components.svg"
                   alt="Mini"
                   role="img"
                 />
               </div>
-              <div className="w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-l lg:border-l border-gray-200 xl:pt-10 lg:pt-10 md:pt-2 pt-16">
+              <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-l lg:border-l border-gray-200 xl:pt-10 lg:pt-10 md:pt-2 pt-16">
                 <img
                   tabIndex="0"
-                  className="max-h-16 w-16"
+                  className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                   src="/img/skills/icon_laravel.svg"
                   alt="Honda"
                   role="img"

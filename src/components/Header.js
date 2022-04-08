@@ -65,10 +65,13 @@ export default function Header() {
             </ul>
           </nav>
           <div className="navbar-end">
-            <a className="btn btn-accent text-white btn tracking-widest">
+            <label
+              for="modal-cv"
+              className="btn btn-accent text-white btn tracking-widest"
+            >
               show
               <span className="pl-1 text-red-500 text-3xl font-akaya">CV</span>
-            </a>
+            </label>
           </div>
         </div>
       </div>

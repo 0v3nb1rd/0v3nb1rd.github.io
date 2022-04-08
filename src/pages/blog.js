@@ -1,11 +1,12 @@
 import React from "react"
+import BluredBg from "../components/BluredBg"
 import Layout from "../components/Layout"
 
 export default function blog() {
   return (
     <Layout>
       <section class="hero">
-        <div class="container">
+        <div class="container relative">
           <div class="flex flex-wrap justify-center -mx-4">
             <div class="w-full px-4">
               <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
@@ -191,8 +192,6 @@ export default function blog() {
           </div>
         </div>
       </section>
-
-      <div className="container"></div>
     </Layout>
   )
 }
