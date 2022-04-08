@@ -141,16 +141,24 @@ export default function Home() {
                     <div class="mb-8 ml-10 flex justify-between flex-row-reverse items-center w-full left-timeline">
                       <div class="order-1 w-5/12"></div>
                       <div class="order-1 w-5/12 px-1 py-4 text-right">
-                        <p class="mb-3 text-base text-yellow-300">
-                          1-6 May, 2021
-                        </p>
-                        <h4 class="mb-3 font-bold text-lg md:text-2xl">
-                          Registration
-                        </h4>
+                        <p class="text-base text-yellow-300">October, 2020</p>
+                        <a
+                          href="#"
+                          class="flex mb-3 font-bold text-lg md:text-2xl"
+                        >
+                          <img
+                            className="w-40 ml-auto"
+                            src="/img/logo_asign.png"
+                            alt=""
+                          />
+                        </a>
                         <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                          Pick your favourite event(s) and register in that
-                          event by filling the form corresponding to that event.
-                          Its that easy :)
+                          Asign - web studio that creates websites and modern
+                          landings with smooth animation
+                        </p>
+                        <p className="mt-2">
+                          <span className="text-red-500">Stack:</span> HTML,
+                          CSS/LESS, JQUERY, JS/ES6, NPM, PHP, LARAVEL, GIT
                         </p>
                       </div>
                     </div>
@@ -158,15 +166,18 @@ export default function Home() {
                       <div class="order-1 w-5/12"></div>
                       <div class="order-1  w-5/12 px-1 py-4 text-left">
                         <p class="mb-3 text-base text-yellow-300">
-                          6-9 May, 2021
+                          6-9 May, 2018
                         </p>
                         <h4 class="mb-3 font-bold text-lg md:text-2xl">
-                          Participation
+                          Freelance
                         </h4>
                         <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                          Participate online. The links for your registered
-                          events will be sent to you via email and whatsapp
-                          groups. Use those links and show your talent.
+                          Work as a web muster, full-stack developer
+                          freelancehunt.com
+                        </p>
+                        <p className="mt-2">
+                          <span className="text-red-500">Stack:</span> HTML,
+                          CSS/SCSS, JS/ES6, NODE, REACT/REDUX, EXPRESS, SEO
                         </p>
                       </div>
                     </div>
@@ -174,17 +185,18 @@ export default function Home() {
                       <div class="order-1 w-5/12"></div>
                       <div class="order-1 w-5/12 px-1 py-4 text-right">
                         <p class="mb-3 text-base text-yellow-300">
-                          {" "}
-                          10 May, 2021
+                          10 May, 2017
                         </p>
                         <h4 class="mb-3 font-bold text-lg md:text-2xl">
-                          Result Declaration
+                          SEO Link builder
                         </h4>
                         <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                          The ultimate genius will be revealed by our judging
-                          panel on 10th May, 2021 and the resukts will be
-                          announced on the whatsapp groups and will be mailed to
-                          you.
+                          Created SEO-links and published on forums to increase
+                          the ranking of sites, work with rozetka.ua and
+                          hotline.ua
+                        </p>
+                        <p className="mt-2">
+                          <span className="text-red-500">Stack:</span> HTML, SEO
                         </p>
                       </div>
                     </div>
@@ -193,15 +205,18 @@ export default function Home() {
 
                       <div class="order-1  w-5/12 px-1 py-4">
                         <p class="mb-3 text-base text-yellow-300">
-                          12 May, 2021
+                          12 May, 2016
                         </p>
                         <h4 class="mb-3 font-bold  text-lg md:text-2xl text-left">
-                          Prize Distribution
+                          Self projects
                         </h4>
                         <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                          The winners will be contacted by our team for their
-                          addresses and the winning goodies will be sent at
-                          their addresses.
+                          Create landing-pages, support landing, sales{" "}
+                        </p>
+                        <p className="mt-2">
+                          <span className="text-red-500">Stack: </span>
+                          WORDPRESS, OPENCART, HTML, CSS/SCSS, JS, NPM, GULP,
+                          SEO
                         </p>
                       </div>
                     </div>

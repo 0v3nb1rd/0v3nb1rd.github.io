@@ -93,8 +93,13 @@ footer {
 
 .swiper .img-box {
   padding: 5%;
-  background-color: rgb(210, 237, 222);
-  overflow-y: scroll;
+  background: radial-gradient(
+    151.64% 120.36% at 47.19% -0.63%,
+    rgba(255, 255, 255, 0.9) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(50px);
+  /* overflow-y: scroll; */
   height: 100%;
 }
 
