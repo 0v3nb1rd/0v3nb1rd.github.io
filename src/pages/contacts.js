@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/Layout"
-import BluredBg from "../components/BluredBg"
 
 export default function Contacts() {
   return (

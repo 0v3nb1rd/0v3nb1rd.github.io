@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 export default function blog() {
   return (
     <Layout>
-      <section className="hero hero-section">
+      <section className="py-8">
         <div className="container relative">
           <div className="flex flex-wrap justify-center -mx-4">
             <div className="w-full px-4">
