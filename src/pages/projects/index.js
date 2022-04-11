@@ -6,21 +6,27 @@ import { Swiper, SwiperSlide } from "swiper/react"
 
 // Import Swiper styles
 import "swiper/css"
-// import "swiper/css/mousewheel"
+
+const initEmptySlide = () => {
+  console.log("first")
+  // const margin = $(".container")[0].getClientRects()[0].x
+  // $("#card-slider .ee_items_news").css("margin-left", Math.floor(margin) - 15)
+}
+initEmptySlide()
 
 export default function Projects() {
   return (
     <Layout>
-      <section className="hero ">
+      <section className="">
         <div className="container">
-          <div class="flex flex-wrap justify-center -mx-4">
-            <div class="w-full px-4">
-              <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
-                <span class="font-semibold text-lg text-primary mb-2 block">
+          <div className="flex flex-wrap justify-center -mx-4">
+            <div className="w-full px-4">
+              <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
+                <span className="font-semibold text-lg text-primary mb-2 block">
                   Our Blogs
                 </span>
                 <h2
-                  class="
+                  className="
                   font-bold
                   text-3xl
                   sm:text-4xl
@@ -31,7 +37,7 @@ export default function Projects() {
                 >
                   Our Recent News
                 </h2>
-                <p class="text-base text-body-color">
+                <p className="text-base text-body-color">
                   There are many variations of passages of Lorem Ipsum available
                   but the majority have suffered alteration in some form.
                 </p>
@@ -45,22 +51,22 @@ export default function Projects() {
           spaceBetween={80}
           slidesPerView={4}
           // centeredSlides={true}
-          loadSlides={3}
+          loadslides={3}
           // loop={true}
           freeMode={true}
           mousewheel={{ releaseOnEdges: true }}
           className="swiper--proj"
         >
           <SwiperSlide>
-            <div class=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-              <div class="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+            <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+              <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                 <img
-                  class="object-cover object-top"
+                  className="object-cover object-top"
                   src="/img/portfolio/arkcryo.png"
                   alt="Dog"
                 />
               </div>
-              <div class="flex flex-col p-4 pt-10 relative">
+              <div className="flex flex-col p-4 pt-10 relative">
                 <div className="absolute -top-4 py-2 left-0 right-0 w-full">
                   <Swiper
                     modules={[Autoplay, FreeMode]}
@@ -82,7 +88,7 @@ export default function Projects() {
                         <img
                           className="m-auto w-full max-h-full h-auto"
                           src="/img/skills/icon_react.svg"
-                          alt=""
+                          alt="portfolio"
                         />
                       </li>
                     </SwiperSlide>
@@ -91,7 +97,7 @@ export default function Projects() {
                         <img
                           className="m-auto w-full max-h-full h-auto"
                           src="/img/skills/icon_redux.svg"
-                          alt=""
+                          alt="portfolio"
                         />
                       </li>
                     </SwiperSlide>
@@ -100,7 +106,7 @@ export default function Projects() {
                         <img
                           className="m-auto w-full max-h-full h-auto"
                           src="/img/skills/icon_js.svg"
-                          alt=""
+                          alt="portfolio"
                         />
                       </li>
                     </SwiperSlide>
@@ -109,7 +115,7 @@ export default function Projects() {
                         <img
                           className="m-auto w-full max-h-full h-auto"
                           src="/img/skills/icon_git.svg"
-                          alt=""
+                          alt="portfolio"
                         />
                       </li>
                     </SwiperSlide>
@@ -118,7 +124,7 @@ export default function Projects() {
                         <img
                           className="m-auto w-full max-h-full h-auto"
                           src="/img/skills/icon_gulp.svg"
-                          alt=""
+                          alt="portfolio"
                         />
                       </li>
                     </SwiperSlide>
@@ -127,7 +133,7 @@ export default function Projects() {
                         <img
                           className="m-auto w-full max-h-full h-auto"
                           src="/img/skills/icon_less.svg"
-                          alt=""
+                          alt="portfolio"
                         />
                       </li>
                     </SwiperSlide>
@@ -135,7 +141,7 @@ export default function Projects() {
                 </div>
 
                 <div className=" flex items-center justify-between">
-                  <div class="flex flex-col">
+                  <div className="flex flex-col">
                     <div className="flex space-x-3">
                       <svg
                         width="39"
@@ -154,7 +160,9 @@ export default function Projects() {
                         />
                       </svg>
 
-                      <h2 class="text-xxl text-gray-900 font-bold">Arkcryo</h2>
+                      <h2 className="text-xxl text-gray-900 font-bold">
+                        Arkcryo
+                      </h2>
                     </div>
                     <div className="flex mt-3 items-center">
                       <p className="text-sm font-normal ">
@@ -162,20 +170,20 @@ export default function Projects() {
                       </p>
                     </div>
                   </div>
-                  <ul class="flex flex-col mx-2">
+                  <ul className="flex flex-col mx-2">
                     <li className="my-2 tooltip" data-tip="figma screen">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_figma.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show code">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_github.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show site">
                       <a
-                        class="flex w-8 max-h-8"
+                        className="flex w-8 max-h-8"
                         href="htts://github.com"
                         title="visit site"
                       >
@@ -189,15 +197,15 @@ export default function Projects() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <div class=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-              <div class="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+            <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+              <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                 <img
-                  class="object-cover object-top"
+                  className="object-cover object-top"
                   src="/img/portfolio/arkcryo.png"
                   alt="Dog"
                 />
               </div>
-              <div class="flex flex-col p-4 pt-10 relative">
+              <div className="flex flex-col p-4 pt-10 relative">
                 <div className="absolute -top-4 py-2 left-0 right-0 w-full">
                   <Swiper
                     modules={[Autoplay, FreeMode]}
@@ -272,7 +280,7 @@ export default function Projects() {
                 </div>
 
                 <div className=" flex items-center justify-between">
-                  <div class="flex flex-col">
+                  <div className="flex flex-col">
                     <div className="flex space-x-3">
                       <svg
                         width="39"
@@ -291,7 +299,9 @@ export default function Projects() {
                         />
                       </svg>
 
-                      <h2 class="text-xxl text-gray-900 font-bold">Arkcryo</h2>
+                      <h2 className="text-xxl text-gray-900 font-bold">
+                        Arkcryo
+                      </h2>
                     </div>
                     <div className="flex mt-3 items-center">
                       <p className="text-sm font-normal ">
@@ -299,20 +309,20 @@ export default function Projects() {
                       </p>
                     </div>
                   </div>
-                  <ul class="flex flex-col mx-2">
+                  <ul className="flex flex-col mx-2">
                     <li className="my-2 tooltip" data-tip="figma screen">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_figma.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show code">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_github.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show site">
                       <a
-                        class="flex w-8 max-h-8"
+                        className="flex w-8 max-h-8"
                         href="htts://github.com"
                         title="visit site"
                       >
@@ -325,15 +335,15 @@ export default function Projects() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-              <div class="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+            <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+              <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                 <img
-                  class="object-cover object-top"
+                  className="object-cover object-top"
                   src="/img/portfolio/arkcryo.png"
                   alt="Dog"
                 />
               </div>
-              <div class="flex flex-col p-4 pt-10 relative">
+              <div className="flex flex-col p-4 pt-10 relative">
                 <div className="absolute -top-4 py-2 left-0 right-0 w-full">
                   <Swiper
                     modules={[Autoplay, FreeMode]}
@@ -408,7 +418,7 @@ export default function Projects() {
                 </div>
 
                 <div className=" flex items-center justify-between">
-                  <div class="flex flex-col">
+                  <div className="flex flex-col">
                     <div className="flex space-x-3">
                       <svg
                         width="39"
@@ -427,7 +437,9 @@ export default function Projects() {
                         />
                       </svg>
 
-                      <h2 class="text-xxl text-gray-900 font-bold">Arkcryo</h2>
+                      <h2 className="text-xxl text-gray-900 font-bold">
+                        Arkcryo
+                      </h2>
                     </div>
                     <div className="flex mt-3 items-center">
                       <p className="text-sm font-normal ">
@@ -435,20 +447,20 @@ export default function Projects() {
                       </p>
                     </div>
                   </div>
-                  <ul class="flex flex-col mx-2">
+                  <ul className="flex flex-col mx-2">
                     <li className="my-2 tooltip" data-tip="figma screen">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_figma.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show code">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_github.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show site">
                       <a
-                        class="flex w-8 max-h-8"
+                        className="flex w-8 max-h-8"
                         href="htts://github.com"
                         title="visit site"
                       >
@@ -461,15 +473,15 @@ export default function Projects() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-              <div class="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+            <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+              <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                 <img
-                  class="object-cover object-top"
+                  className="object-cover object-top"
                   src="/img/portfolio/arkcryo.png"
                   alt="Dog"
                 />
               </div>
-              <div class="flex flex-col p-4 pt-10 relative">
+              <div className="flex flex-col p-4 pt-10 relative">
                 <div className="absolute -top-4 py-2 left-0 right-0 w-full">
                   <Swiper
                     modules={[Autoplay, FreeMode]}
@@ -544,7 +556,7 @@ export default function Projects() {
                 </div>
 
                 <div className=" flex items-center justify-between">
-                  <div class="flex flex-col">
+                  <div className="flex flex-col">
                     <div className="flex space-x-3">
                       <svg
                         width="39"
@@ -563,7 +575,9 @@ export default function Projects() {
                         />
                       </svg>
 
-                      <h2 class="text-xxl text-gray-900 font-bold">Arkcryo</h2>
+                      <h2 className="text-xxl text-gray-900 font-bold">
+                        Arkcryo
+                      </h2>
                     </div>
                     <div className="flex mt-3 items-center">
                       <p className="text-sm font-normal ">
@@ -571,20 +585,20 @@ export default function Projects() {
                       </p>
                     </div>
                   </div>
-                  <ul class="flex flex-col mx-2">
+                  <ul className="flex flex-col mx-2">
                     <li className="my-2 tooltip" data-tip="figma screen">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_figma.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show code">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_github.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show site">
                       <a
-                        class="flex w-8 max-h-8"
+                        className="flex w-8 max-h-8"
                         href="htts://github.com"
                         title="visit site"
                       >
@@ -597,15 +611,15 @@ export default function Projects() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-              <div class="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+            <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+              <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                 <img
-                  class="object-cover object-top"
+                  className="object-cover object-top"
                   src="/img/portfolio/arkcryo.png"
                   alt="Dog"
                 />
               </div>
-              <div class="flex flex-col p-4 pt-10 relative">
+              <div className="flex flex-col p-4 pt-10 relative">
                 <div className="absolute -top-4 py-2 left-0 right-0 w-full">
                   <Swiper
                     modules={[Autoplay, FreeMode]}
@@ -680,7 +694,7 @@ export default function Projects() {
                 </div>
 
                 <div className=" flex items-center justify-between">
-                  <div class="flex flex-col">
+                  <div className="flex flex-col">
                     <div className="flex space-x-3">
                       <svg
                         width="39"
@@ -699,7 +713,9 @@ export default function Projects() {
                         />
                       </svg>
 
-                      <h2 class="text-xxl text-gray-900 font-bold">Arkcryo</h2>
+                      <h2 className="text-xxl text-gray-900 font-bold">
+                        Arkcryo
+                      </h2>
                     </div>
                     <div className="flex mt-3 items-center">
                       <p className="text-sm font-normal ">
@@ -707,20 +723,20 @@ export default function Projects() {
                       </p>
                     </div>
                   </div>
-                  <ul class="flex flex-col mx-2">
+                  <ul className="flex flex-col mx-2">
                     <li className="my-2 tooltip" data-tip="figma screen">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_figma.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show code">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_github.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show site">
                       <a
-                        class="flex w-8 max-h-8"
+                        className="flex w-8 max-h-8"
                         href="htts://github.com"
                         title="visit site"
                       >
@@ -733,15 +749,15 @@ export default function Projects() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-              <div class="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+            <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+              <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                 <img
-                  class="object-cover object-top"
+                  className="object-cover object-top"
                   src="/img/portfolio/arkcryo.png"
                   alt="Dog"
                 />
               </div>
-              <div class="flex flex-col p-4 pt-10 relative">
+              <div className="flex flex-col p-4 pt-10 relative">
                 <div className="absolute -top-4 py-2 left-0 right-0 w-full">
                   <Swiper
                     modules={[Autoplay, FreeMode]}
@@ -816,7 +832,7 @@ export default function Projects() {
                 </div>
 
                 <div className=" flex items-center justify-between">
-                  <div class="flex flex-col">
+                  <div className="flex flex-col">
                     <div className="flex space-x-3">
                       <svg
                         width="39"
@@ -835,7 +851,9 @@ export default function Projects() {
                         />
                       </svg>
 
-                      <h2 class="text-xxl text-gray-900 font-bold">Arkcryo</h2>
+                      <h2 className="text-xxl text-gray-900 font-bold">
+                        Arkcryo
+                      </h2>
                     </div>
                     <div className="flex mt-3 items-center">
                       <p className="text-sm font-normal ">
@@ -843,20 +861,20 @@ export default function Projects() {
                       </p>
                     </div>
                   </div>
-                  <ul class="flex flex-col mx-2">
+                  <ul className="flex flex-col mx-2">
                     <li className="my-2 tooltip" data-tip="figma screen">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_figma.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show code">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_github.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show site">
                       <a
-                        class="flex w-8 max-h-8"
+                        className="flex w-8 max-h-8"
                         href="htts://github.com"
                         title="visit site"
                       >
@@ -869,15 +887,15 @@ export default function Projects() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-              <div class="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+            <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+              <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                 <img
-                  class="object-cover object-top"
+                  className="object-cover object-top"
                   src="/img/portfolio/arkcryo.png"
                   alt="Dog"
                 />
               </div>
-              <div class="flex flex-col p-4 pt-10 relative">
+              <div className="flex flex-col p-4 pt-10 relative">
                 <div className="absolute -top-4 py-2 left-0 right-0 w-full">
                   <Swiper
                     modules={[Autoplay, FreeMode]}
@@ -952,7 +970,7 @@ export default function Projects() {
                 </div>
 
                 <div className=" flex items-center justify-between">
-                  <div class="flex flex-col">
+                  <div className="flex flex-col">
                     <div className="flex space-x-3">
                       <svg
                         width="39"
@@ -971,7 +989,9 @@ export default function Projects() {
                         />
                       </svg>
 
-                      <h2 class="text-xxl text-gray-900 font-bold">Arkcryo</h2>
+                      <h2 className="text-xxl text-gray-900 font-bold">
+                        Arkcryo
+                      </h2>
                     </div>
                     <div className="flex mt-3 items-center">
                       <p className="text-sm font-normal ">
@@ -979,20 +999,20 @@ export default function Projects() {
                       </p>
                     </div>
                   </div>
-                  <ul class="flex flex-col mx-2">
+                  <ul className="flex flex-col mx-2">
                     <li className="my-2 tooltip" data-tip="figma screen">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_figma.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show code">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_github.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show site">
                       <a
-                        class="flex w-8 max-h-8"
+                        className="flex w-8 max-h-8"
                         href="htts://github.com"
                         title="visit site"
                       >
@@ -1005,15 +1025,15 @@ export default function Projects() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div class=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-              <div class="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+            <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+              <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                 <img
-                  class="object-cover object-top"
+                  className="object-cover object-top"
                   src="/img/portfolio/arkcryo.png"
                   alt="Dog"
                 />
               </div>
-              <div class="flex flex-col p-4 pt-10 relative">
+              <div className="flex flex-col p-4 pt-10 relative">
                 <div className="absolute -top-4 py-2 left-0 right-0 w-full">
                   <Swiper
                     modules={[Autoplay, FreeMode]}
@@ -1088,7 +1108,7 @@ export default function Projects() {
                 </div>
 
                 <div className=" flex items-center justify-between">
-                  <div class="flex flex-col">
+                  <div className="flex flex-col">
                     <div className="flex space-x-3">
                       <svg
                         width="39"
@@ -1107,7 +1127,9 @@ export default function Projects() {
                         />
                       </svg>
 
-                      <h2 class="text-xxl text-gray-900 font-bold">Arkcryo</h2>
+                      <h2 className="text-xxl text-gray-900 font-bold">
+                        Arkcryo
+                      </h2>
                     </div>
                     <div className="flex mt-3 items-center">
                       <p className="text-sm font-normal ">
@@ -1115,20 +1137,20 @@ export default function Projects() {
                       </p>
                     </div>
                   </div>
-                  <ul class="flex flex-col mx-2">
+                  <ul className="flex flex-col mx-2">
                     <li className="my-2 tooltip" data-tip="figma screen">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_figma.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show code">
-                      <a class="flex w-8 max-h-8" href="htts://github.com">
+                      <a className="flex w-8 max-h-8" href="htts://github.com">
                         <img src="/img/skills/icon_github.svg" alt="" />
                       </a>
                     </li>
                     <li className="my-2 tooltip" data-tip="show site">
                       <a
-                        class="flex w-8 max-h-8"
+                        className="flex w-8 max-h-8"
                         href="htts://github.com"
                         title="visit site"
                       >

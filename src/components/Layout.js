@@ -10,12 +10,12 @@ export default function Layout({ children }) {
       <main className="main">{children}</main>
 
       <Footer />
-      <input type="checkbox" id="modal-cv" class="modal-toggle" />
-      <div class="modal">
-        <div class="modal-box w-11/12 max-w-1xl">
+      <input type="checkbox" id="modal-cv" className="modal-toggle" />
+      <div className="modal">
+        <div className="modal-box w-11/12 max-w-1xl">
           <label
-            for="modal-cv"
-            class="btn btn-sm btn-circle absolute right-2 top-2"
+            htmlFor="modal-cv"
+            className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕
           </label>

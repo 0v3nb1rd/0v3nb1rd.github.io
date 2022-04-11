@@ -105,46 +105,48 @@ export default function Home() {
       </section>
 
       <section>
-        <div class="bg-neutral text-white py-8">
-          <div class="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-            <div class="flex flex-col w-full sticky md:top-1/4 lg:w-1/3 mt-2 md:mt-12 px-8">
-              <p class="ml-2 text-yellow-300 uppercase tracking-loose">
+        <div className="bg-neutral text-white py-8">
+          <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+            <div className="flex flex-col w-full sticky md:top-1/4 lg:w-1/3 mt-2 md:mt-12 px-8">
+              <p className="ml-2 text-yellow-300 uppercase tracking-loose">
                 Working Process
               </p>
-              <p class="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">
+              <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">
                 Working Process of Fest
               </p>
-              <p class="text-sm md:text-base text-gray-50 mb-4">
+              <p className="text-sm md:text-base text-gray-50 mb-4">
                 Here’s your guide to the tech fest 2021 process. Go through all
                 the steps to know the exact process of the fest.
               </p>
               <a
                 href="#"
-                class="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
+                className="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
               >
                 Explore Now
               </a>
             </div>
-            <div class="ml-0 md:ml-12 lg:w-2/3 sticky">
-              <div class="container mx-auto w-full h-full">
-                <div class="relative wrap overflow-hidden p-10 h-full">
+            <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
+              <div className="container mx-auto w-full h-full">
+                <div className="relative wrap overflow-hidden p-10 h-full">
                   <div
-                    class="border-4 rounded-3xl	border-yellow-300 absolute h-full"
+                    className="border-4 rounded-3xl	border-yellow-300 absolute h-full"
                     // style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"
                   ></div>
                   <div
-                    class="border-4 rounded-3xl border-yellow-300 absolute h-full "
+                    className="border-4 rounded-3xl border-yellow-300 absolute h-full "
                     // style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"
                   ></div>
 
                   <dir>
-                    <div class="mb-8 ml-10 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                      <div class="order-1 w-5/12"></div>
-                      <div class="order-1 w-5/12 px-1 py-4 text-right">
-                        <p class="text-base text-yellow-300">October, 2020</p>
+                    <div className="mb-8 ml-10 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                      <div className="order-1 w-5/12"></div>
+                      <div className="order-1 w-5/12 px-1 py-4 text-right">
+                        <p className="text-base text-yellow-300">
+                          October, 2020
+                        </p>
                         <a
                           href="#"
-                          class="flex mb-3 font-bold text-lg md:text-2xl"
+                          className="flex mb-3 font-bold text-lg md:text-2xl"
                         >
                           <img
                             className="w-40 ml-auto"
@@ -152,7 +154,7 @@ export default function Home() {
                             alt=""
                           />
                         </a>
-                        <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                           Asign - web studio that creates websites and modern
                           landings with smooth animation
                         </p>
@@ -162,16 +164,16 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                      <div class="order-1 w-5/12"></div>
-                      <div class="order-1  w-5/12 px-1 py-4 text-left">
-                        <p class="mb-3 text-base text-yellow-300">
+                    <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                      <div className="order-1 w-5/12"></div>
+                      <div className="order-1  w-5/12 px-1 py-4 text-left">
+                        <p className="mb-3 text-base text-yellow-300">
                           6-9 May, 2018
                         </p>
-                        <h4 class="mb-3 font-bold text-lg md:text-2xl">
+                        <h4 className="mb-3 font-bold text-lg md:text-2xl">
                           Freelance
                         </h4>
-                        <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                           Work as a web muster, full-stack developer
                           freelancehunt.com
                         </p>
@@ -181,16 +183,16 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                      <div class="order-1 w-5/12"></div>
-                      <div class="order-1 w-5/12 px-1 py-4 text-right">
-                        <p class="mb-3 text-base text-yellow-300">
+                    <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                      <div className="order-1 w-5/12"></div>
+                      <div className="order-1 w-5/12 px-1 py-4 text-right">
+                        <p className="mb-3 text-base text-yellow-300">
                           10 May, 2017
                         </p>
-                        <h4 class="mb-3 font-bold text-lg md:text-2xl">
+                        <h4 className="mb-3 font-bold text-lg md:text-2xl">
                           SEO Link builder
                         </h4>
-                        <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                           Created SEO-links and published on forums to increase
                           the ranking of sites, work with rozetka.ua and
                           hotline.ua
@@ -200,17 +202,17 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                      <div class="order-1 w-5/12"></div>
+                    <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                      <div className="order-1 w-5/12"></div>
 
-                      <div class="order-1  w-5/12 px-1 py-4">
-                        <p class="mb-3 text-base text-yellow-300">
+                      <div className="order-1  w-5/12 px-1 py-4">
+                        <p className="mb-3 text-base text-yellow-300">
                           12 May, 2016
                         </p>
-                        <h4 class="mb-3 font-bold  text-lg md:text-2xl text-left">
+                        <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">
                           Self projects
                         </h4>
-                        <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                        <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                           Create landing-pages, support landing, sales{" "}
                         </p>
                         <p className="mt-2">
@@ -223,7 +225,7 @@ export default function Home() {
                   </dir>
                 </div>
                 <img
-                  class="mx-auto -mt-36 md:-mt-36"
+                  className="mx-auto -mt-36 md:-mt-36"
                   src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
                 />
               </div>

@@ -66,7 +66,7 @@ export default function Header() {
           </nav>
           <div className="navbar-end">
             <label
-              for="modal-cv"
+              htmlFor="modal-cv"
               className="btn btn-accent text-white btn tracking-widest"
             >
               show

@@ -25,6 +25,7 @@ body {
 
 .main {
   margin-top: 125px;
+  margin-bottom: 4rem;
 }
 
 footer {
@@ -145,12 +146,6 @@ footer {
 .swiper--proj .swiper-wrapper {
   transition-timing-function: linear;
 }
-/* .swiper--proj .swiper-slide:first-child {
-  margin-left: 10%;
-}
-.swiper--proj .swiper-slide:last-child {
-  margin-right: 10%;
-} */
 
 .portfolio__slide::before {
   content: "";

@@ -1,20 +1,19 @@
 import React from "react"
-import BluredBg from "../components/BluredBg"
 import Layout from "../components/Layout"
 
 export default function blog() {
   return (
     <Layout>
-      <section class="hero">
-        <div class="container relative">
-          <div class="flex flex-wrap justify-center -mx-4">
-            <div class="w-full px-4">
-              <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
-                <span class="font-semibold text-lg text-primary mb-2 block">
+      <section className="hero hero-section">
+        <div className="container relative">
+          <div className="flex flex-wrap justify-center -mx-4">
+            <div className="w-full px-4">
+              <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
+                <span className="font-semibold text-lg text-primary mb-2 block">
                   Our Blogs
                 </span>
                 <h2
-                  class="
+                  className="
                   font-bold
                   text-3xl
                   sm:text-4xl
@@ -25,26 +24,26 @@ export default function blog() {
                 >
                   Our Recent News
                 </h2>
-                <p class="text-base text-body-color">
+                <p className="text-base text-body-color">
                   There are many variations of passages of Lorem Ipsum available
                   but the majority have suffered alteration in some form.
                 </p>
               </div>
             </div>
           </div>
-          <div class="flex flex-wrap -mx-4">
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-              <div class="max-w-[370px] mx-auto mb-10">
-                <div class="rounded overflow-hidden mb-8">
+          <div className="flex flex-wrap -mx-4">
+            <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+              <div className="max-w-[370px] mx-auto mb-10">
+                <div className="rounded overflow-hidden mb-8">
                   <img
                     src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-01.jpg"
-                    alt="image"
-                    class="w-full"
+                    alt="image other"
+                    className="w-full"
                   />
                 </div>
                 <div>
                   <span
-                    class="
+                    className="
                      bg-primary
                      rounded
                      inline-block
@@ -62,8 +61,8 @@ export default function blog() {
                   </span>
                   <h3>
                     <a
-                      href="javascript:void(0)"
-                      class="
+                      href="#"
+                      className="
                         font-semibold
                         text-xl
                         sm:text-2xl
@@ -78,25 +77,25 @@ export default function blog() {
                       Meet AutoManage, the best AI management tools
                     </a>
                   </h3>
-                  <p class="text-base text-body-color">
+                  <p className="text-base text-body-color">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-              <div class="max-w-[370px] mx-auto mb-10">
-                <div class="rounded overflow-hidden mb-8">
+            <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+              <div className="max-w-[370px] mx-auto mb-10">
+                <div className="rounded overflow-hidden mb-8">
                   <img
                     src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-02.jpg"
-                    alt="image"
-                    class="w-full"
+                    alt="image picture"
+                    className="w-full"
                   />
                 </div>
                 <div>
                   <span
-                    class="
+                    className="
                      bg-primary
                      rounded
                      inline-block
@@ -114,8 +113,8 @@ export default function blog() {
                   </span>
                   <h3>
                     <a
-                      href="javascript:void(0)"
-                      class="
+                      href="#"
+                      className="
                         font-semibold
                         text-xl
                         sm:text-2xl
@@ -130,25 +129,25 @@ export default function blog() {
                       How to earn more money as a wellness coach
                     </a>
                   </h3>
-                  <p class="text-base text-body-color">
+                  <p className="text-base text-body-color">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry.
                   </p>
                 </div>
               </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-1/3 px-4">
-              <div class="max-w-[370px] mx-auto mb-10">
-                <div class="rounded overflow-hidden mb-8">
+            <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+              <div className="max-w-[370px] mx-auto mb-10">
+                <div className="rounded overflow-hidden mb-8">
                   <img
                     src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-03.jpg"
                     alt="image"
-                    class="w-full"
+                    className="w-full"
                   />
                 </div>
                 <div>
                   <span
-                    class="
+                    className="
                      bg-primary
                      rounded
                      inline-block
@@ -166,8 +165,8 @@ export default function blog() {
                   </span>
                   <h3>
                     <a
-                      href="javascript:void(0)"
-                      class="
+                      href="#"
+                      className="
                         font-semibold
                         text-xl
                         sm:text-2xl
@@ -182,7 +181,7 @@ export default function blog() {
                       The no-fuss guide to upselling and cross selling
                     </a>
                   </h3>
-                  <p class="text-base text-body-color">
+                  <p className="text-base text-body-color">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry.
                   </p>
