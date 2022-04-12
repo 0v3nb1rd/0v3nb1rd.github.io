@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import NavMenu from "./NavMenu"
 
 export default function Header() {
   return (
@@ -40,30 +41,12 @@ export default function Header() {
               <img src="/logo.svg" />
             </Link>
           </div>
-          <nav className="navbar-center hidden lg:flex">
-            <ul className="flex">
-              <li className="mx-2">
-                <Link to="/" className="btn glass ">
-                  Home
-                </Link>
-              </li>
-              <li className="mx-2">
-                <Link to="/projects" className="btn glass">
-                  Projects
-                </Link>
-              </li>
-              <li className="mx-2">
-                <Link to="/blog" className="btn glass">
-                  Blog
-                </Link>
-              </li>
-              <li className="mx-2">
-                <Link to="/contacts" className="btn glass">
-                  Contacts
-                </Link>
-              </li>
-            </ul>
-          </nav>
+
+          <NavMenu
+            className="navbar-center hidden lg:flex"
+            btnClasses="btn glass"
+          />
+
           <div className="navbar-end">
             <label
               htmlFor="modal-cv"

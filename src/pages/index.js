@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import Typewriter from "typewriter-effect"
 import Slider from "../components/Slider"
+import AnimeSlider from "../components/AnimeSlider"
 
 export default function Home() {
   return (
@@ -10,10 +11,9 @@ export default function Home() {
         <div className="hero hero-section relative">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <div className="w-2/4">
-              <div className="max-w-[600px] mx-auto">
-                <video src="/clips.mp4" type="video/mp4" autoPlay loop></video>
-              </div>
+              <AnimeSlider className="w-[600px] mx-auto" />
             </div>
+
             <div className="w-2/4">
               <h1 className="text-8xl font-bold">
                 Hello 👋<div className="text-red-600	">I’m Nazar.</div>
@@ -36,9 +36,12 @@ export default function Home() {
                   with a strong appetite for creating memorable experiences.
                 </span>
               </div>
-              <button className="btn btn-accent tracking-widest text-white btn-wide">
+              <label
+                htmlFor="modal-contact"
+                className="btn btn-accent modal-button tracking-widest text-white btn-wide"
+              >
                 write me
-              </button>
+              </label>
             </div>
           </div>
         </div>
