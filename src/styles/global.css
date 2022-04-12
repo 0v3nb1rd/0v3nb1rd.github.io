@@ -42,6 +42,10 @@ footer {
   position: relative;
   min-height: calc(100vh - 125px - 86px);
 }
+.hero-section--full {
+  position: relative;
+  min-height: calc(100vh - 125px - 144px - 64px);
+}
 .bottom-svg {
   position: absolute;
   left: 0;
@@ -142,9 +146,15 @@ footer {
 .swiper--proj .swiper-slide {
   color: inherit;
 }
-
 .swiper--proj .swiper-wrapper {
   transition-timing-function: linear;
+}
+.swiper--proj > .swiper-wrapper {
+  padding: 3rem 0 5rem;
+}
+.swiper--proj > .swiper-wrapper > .swiper-slide {
+  max-width: 480px;
+  padding: 0 2rem;
 }
 
 .portfolio__slide::before {
@@ -184,26 +194,28 @@ footer {
   mix-blend-mode: multiply !important;
 }
 
+/* animation	 */
 @-webkit-keyframes traverse-up-left {
   to {
     transform: translateY(-200px) translateX(-350px) rotate(180deg);
   }
 }
-
 @keyframes traverse-up-left {
   to {
     transform: translateY(-200px) translateX(-350px) rotate(180deg);
   }
 }
-
 @-webkit-keyframes traverse-up-right {
   to {
     transform: translateY(-300px) translateX(300px) rotate(1turn);
   }
 }
-
 @keyframes traverse-up-right {
   to {
     transform: translateY(-300px) translateX(300px) rotate(1turn);
   }
 }
+
+/* input:invalid {
+  background-color: pink;
+} */
