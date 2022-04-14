@@ -2,10 +2,10 @@ import React from "react"
 import Button from "./Button"
 
 export default function ContactForm({ className, children, ...props }) {
-  console.log(props.buttonFool)
-
   return (
     <form
+      method="post"
+      action="https://getform.io/f/c3ab79b8-6485-4f71-be1d-7e3cb28dcfb1"
       className={`p-6 flex flex-col justify-center ${
         className ? className : ""
       }`}
@@ -16,6 +16,7 @@ export default function ContactForm({ className, children, ...props }) {
         </label>
         <input
           type="text"
+          name="name"
           placeholder="Name"
           className="font-semibold text-lg input input-bordered input-secondary input-md w-full"
         />
@@ -36,6 +37,7 @@ export default function ContactForm({ className, children, ...props }) {
 
       <div className="flex flex-col mt-2">
         <textarea
+          name="message"
           className="textarea textarea-info font-semibold text-lg mt-2 min-h-[120px]"
           placeholder="Message"
         ></textarea>

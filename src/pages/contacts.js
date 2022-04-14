@@ -1,8 +1,11 @@
 import React from "react"
+import { graphql } from "gatsby"
 import ContactForm from "../components/ContactForm"
 import Layout from "../components/Layout"
 
-export default function Contacts() {
+export default function Contacts({ data }) {
+  const { contacts } = data.site.siteMetadata
+  console.log(contacts)
   return (
     <Layout>
       <section className="hero hero-section--full ">
@@ -43,7 +46,7 @@ export default function Contacts() {
                         />
                       </svg>
                       <div className="ml-4 text-md tracking-wide font-semibold w-50">
-                        Ukraine, Lviv, Centrallska St.
+                        {contacts.adress}
                       </div>
                     </div>
 
@@ -65,7 +68,7 @@ export default function Contacts() {
                         />
                       </svg>
                       <div className="ml-4 text-md tracking-wide font-semibold w-50">
-                        +38(063)99-11-222
+                        {contacts.phone}
                       </div>
                     </div>
 
@@ -87,7 +90,7 @@ export default function Contacts() {
                         />
                       </svg>
                       <div className="ml-4 text-md tracking-wide font-semibold w-50">
-                        0v3nb1rd@gmail.com
+                        {contacts.email}
                       </div>
                     </div>
                   </div>
@@ -102,3 +105,17 @@ export default function Contacts() {
     </Layout>
   )
 }
+
+export const queryContacts = graphql`
+  query queryContacts {
+    site {
+      siteMetadata {
+        contacts {
+          adress
+          phone
+          email
+        }
+      }
+    }
+  }
+`

@@ -18,6 +18,8 @@
     "daisyui": "^2.13.4",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.10.3",
+    "gatsby-source-filesystem": "^4.12.1",
+    "gatsby-transformer-remark": "^5.12.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "swiper": "^8.0.7",

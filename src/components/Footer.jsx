@@ -1,8 +1,20 @@
 import React from "react"
 import NavMenu from "./NavMenu"
 import SocialList from "./SocialList"
+import { useStaticQuery, graphql } from "gatsby"
 
 export default function Footer() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          copiright
+        }
+      }
+    }
+  `)
+  const { copiright } = data.site.siteMetadata
+
   return (
     <footer className="items-center pb-12 bg-neutral text-neutral-content relative">
       <svg
@@ -31,7 +43,7 @@ export default function Footer() {
           <div className="md:hidden mt-4 mx-auto w-11 h-px rounded-full"></div>
 
           <div className="mt-7 md:mt-0 flex-1 flex flex-col items-center justify-center md:items-start md:pl-5">
-            <span className="leading-none">© 2022</span>
+            <span className="leading-none">{copiright}</span>
             <span className="mt-7 md:mt-1">
               Created by
               <a
@@ -39,6 +51,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/crabiller/"
               >
                 0v3nb1rd
+                <img src="/img/skills/logo_slick.svg" alt="" />
               </a>
             </span>
           </div>

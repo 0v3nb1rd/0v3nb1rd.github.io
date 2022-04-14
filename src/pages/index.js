@@ -3,8 +3,11 @@ import Layout from "../components/Layout"
 import Typewriter from "typewriter-effect"
 import Slider from "../components/Slider"
 import AnimeSlider from "../components/AnimeSlider"
+import { graphql } from "gatsby"
 
 export default function Home() {
+  // const { title, description, copyright } = data.site.siteMetadata
+
   return (
     <Layout>
       <section className="section--top">
@@ -390,3 +393,15 @@ export default function Home() {
     </Layout>
   )
 }
+
+// export const query = graphql`
+//   query {
+//     site {
+//       siteMetadata {
+//         title
+//         description
+//         copiright
+//       }
+//     }
+//   }
+// `
