@@ -1,11 +1,5 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  pathPrefix: "/0v3nb1rd",
+  pathPrefix: "",
   siteMetadata: {
     title: "Ov3nb1rd - Front-end Stack Developer",
     description: "web dev portfolio",

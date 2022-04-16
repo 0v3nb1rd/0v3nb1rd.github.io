@@ -50,7 +50,7 @@ export default function Header() {
           <div className="navbar-end">
             <label
               htmlFor="modal-cv"
-              className="btn btn-accent text-white btn tracking-widest"
+              className="btn btn-accent text-white tracking-widest"
             >
               show
               <span className="pl-1 text-red-500 text-3xl font-akaya">CV</span>
