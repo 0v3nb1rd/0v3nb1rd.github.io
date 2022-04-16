@@ -3,10 +3,11 @@ import Layout from "../components/Layout"
 import Typewriter from "typewriter-effect"
 import Slider from "../components/Slider"
 import AnimeSlider from "../components/AnimeSlider"
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 
 export default function Home() {
-  // const { title, description, copyright } = data.site.siteMetadata
+  // const portfolio = data.allMarkdownRemark.nodes
+  // console.log(portfolio)
 
   return (
     <Layout>
@@ -393,15 +394,3 @@ export default function Home() {
     </Layout>
   )
 }
-
-// export const query = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//         description
-//         copiright
-//       }
-//     }
-//   }
-// `

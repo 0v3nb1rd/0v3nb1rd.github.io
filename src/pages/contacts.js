@@ -6,7 +6,6 @@ import Dino from "../components/Dino"
 
 export default function Contacts({ data }) {
   const { contacts } = data.site.siteMetadata
-  console.log(contacts)
   return (
     <Layout>
       <section className="hero hero-section--full ">

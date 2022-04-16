@@ -1,14 +1,14 @@
 import React from "react"
-import Layout from "../../components/Layout"
+import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-import { Autoplay, FreeMode, Mousewheel } from "swiper"
+import { FreeMode, Mousewheel } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 // Import Swiper styles
 import "swiper/css"
-import StackSlider from "../../components/StackSlider"
+import StackSlider from "../components/StackSlider"
 
 export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes

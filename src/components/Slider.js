@@ -1,5 +1,7 @@
 import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useStaticQuery, graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 // Import Swiper styles
 import "swiper/css"
@@ -7,65 +9,55 @@ import "swiper/css/effect-cards"
 // import required modules
 import { Autoplay, EffectCards, FreeMode, Navigation } from "swiper"
 
-export default function Slider() {
+export default function Slider(props) {
+  const data = useStaticQuery(graphql`
+    query queryScreenProjects {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+        nodes {
+          id
+          frontmatter {
+            desc
+            date(formatString: "DD.MM.YYYY")
+            title
+            img {
+              screen {
+                childImageSharp {
+                  gatsbyImageData(placeholder: BLURRED)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  const projects = data.allMarkdownRemark.nodes
+
   return (
     <>
       <Swiper
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards, Autoplay, FreeMode, Navigation]}
-        // autoplay={{
-        //   delay: 1000,
-        // }}
+        autoplay={{
+          delay: 1000,
+        }}
         speed={400}
         navigation
         className="swip swip--home"
       >
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/arkcryo.png" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/appteka.png" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/nadiyaClinik.png" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/arkcryo.png" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/appteka.png" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/nadiyaClinik.png" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/arkcryo.png" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/appteka.png" alt="" />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="img-box">
-            <img src="/img/portfolio/nadiyaClinik.png" alt="" />
-          </div>
-        </SwiperSlide>
+        {projects.map((project, index) => {
+          const screen = getImage(project.frontmatter.img.screen)
+          const { title } = project.frontmatter
+
+          return (
+            <SwiperSlide key={index + project.id}>
+              <div className="img-box">
+                <GatsbyImage image={screen} alt={title} />
+              </div>
+            </SwiperSlide>
+          )
+        })}
       </Swiper>
     </>
   )
