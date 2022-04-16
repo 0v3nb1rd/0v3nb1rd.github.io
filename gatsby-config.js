@@ -5,6 +5,7 @@
  */
 
 module.exports = {
+  pathPrefix: "/0v3nb1rd",
   siteMetadata: {
     title: "Ov3nb1rd - Front-end Stack Developer",
     description: "web dev portfolio",
@@ -25,7 +26,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `blog`,
-        path: `${__dirname}/src/blog`,
+        path: `${__dirname}/blog`,
       },
     },
     {
