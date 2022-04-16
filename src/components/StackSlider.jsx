@@ -3,10 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, FreeMode } from "swiper"
 
 export default function StackSlider(props) {
-  console.log(props.stack)
-  props.stack.map((itm, idx) => {
-    console.log(itm)
-  })
   return (
     <Swiper
       className="swipere__brands"
@@ -24,12 +20,12 @@ export default function StackSlider(props) {
       }}
       slidesPerView={5}
     >
-      {props.stack.map((item, index) => (
-        <SwiperSlide>
-          <li key={index} className="logo flex max-w-[25px] h-[25px]">
+      {props.stack.map((itm, idx) => (
+        <SwiperSlide key={props.id + "_" + idx}>
+          <li className="logo flex max-w-[25px] h-[25px]">
             <img
               className="m-auto w-full max-h-full h-auto"
-              src={stackData[item]}
+              src={stackData[itm]}
               alt="portfolio"
             />
           </li>

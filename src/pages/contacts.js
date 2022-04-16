@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import ContactForm from "../components/ContactForm"
 import Layout from "../components/Layout"
+import Dino from "../components/Dino"
 
 export default function Contacts({ data }) {
   const { contacts } = data.site.siteMetadata
@@ -102,6 +103,8 @@ export default function Contacts({ data }) {
           </div>
         </div>
       </section>
+
+      <Dino />
     </Layout>
   )
 }

@@ -18,6 +18,9 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp", // Needed for dynamic images
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -29,7 +32,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `projects`,
-        path: `${__dirname}/src/projects`,
+        path: `${__dirname}/projects`,
       },
     },
   ],

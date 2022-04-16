@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../../components/Layout"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { Autoplay, FreeMode, Mousewheel } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -10,14 +11,7 @@ import "swiper/css"
 import StackSlider from "../../components/StackSlider"
 
 export default function Projects({ data }) {
-  // const mapProjects = data.allMarkdownRemark.nodes.map(project => {
-  //   // console.log(project)
-  //   // console.log(project.frontmatter.title.txt, project.frontmatter.desc)
-  // })
-
-  // console.log(props)
-  // const { title } = data.allMarkdownRemark.nodes.frontmatter
-  // console.log(data.allMarkdownRemark.nodes)
+  const projects = data.allMarkdownRemark.nodes
 
   const refContainer = React.useRef(null)
   const refContainerLeft = React.useRef(null)
@@ -70,74 +64,92 @@ export default function Projects({ data }) {
             mousewheel={{ releaseOnEdges: true }}
             className="swiper--proj"
           >
-            {data.allMarkdownRemark.nodes.map(project => (
-              <SwiperSlide key={project.id}>
-                <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-                  <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
-                    <img
-                      className="object-cover object-top"
-                      src={project.frontmatter.img.site}
-                      alt={project.frontmatter.title.txt}
-                    />
-                  </div>
-                  <div className="flex flex-col p-4 pt-10 relative">
-                    <div className="absolute -top-4 py-2 left-0 right-0 w-full">
-                      <StackSlider stack={project.frontmatter.stack} />
+            {projects.map(project => {
+              const logo = getImage(project.frontmatter.img.logo)
+              const screen = getImage(project.frontmatter.img.screen)
+              const { title, stack, img, desc, links } = project.frontmatter
+              // const { logo, screen } = getImage(project.frontmatter.img)
+              // console.log(logo, screen)
+
+              return (
+                <SwiperSlide key={project.id}>
+                  <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
+                    <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
+                      <GatsbyImage
+                        className="object-cover object-top"
+                        image={screen}
+                        alt={title}
+                      />
                     </div>
-
-                    <div className=" flex items-center justify-between">
-                      <div className="flex flex-col">
-                        <div className="flex space-x-3">
-                          <img src={project.frontmatter.title.icon} alt="" />
-
-                          <h2 className="text-xxl text-gray-900 font-bold">
-                            {project.frontmatter.title.txt}
-                          </h2>
-                        </div>
-                        <div className="flex mt-3 items-center">
-                          <p className="text-sm font-normal ">
-                            {project.frontmatter.desc}
-                          </p>
-                        </div>
+                    <div className="flex flex-col p-4 pt-10 relative">
+                      <div className="absolute -top-4 py-2 left-0 right-0 w-full">
+                        <StackSlider stack={stack} id={project.id} />
                       </div>
-                      <ul className="flex flex-col mx-2">
-                        <li className="my-2 tooltip" data-tip="figma screen">
-                          <a
-                            className="flex w-8 max-h-8"
-                            href={project.frontmatter.links[0]}
-                          >
-                            <img src="/img/skills/icon_figma.svg" alt="figma" />
-                          </a>
-                        </li>
-                        <li className="my-2 tooltip" data-tip="show code">
-                          <a
-                            className="flex w-8 max-h-8"
-                            href={project.frontmatter.links[1]}
-                          >
-                            <img
-                              src="/img/skills/icon_github.svg"
-                              alt="github"
-                            />
-                          </a>
-                        </li>
-                        <li className="my-2 tooltip" data-tip="show site">
-                          <a
-                            className="flex w-8 max-h-8"
-                            href={project.frontmatter.links[2]}
-                            title="visit site"
-                          >
-                            <img
-                              src="/img/skills/icon_chrome.svg"
-                              alt="chrome"
-                            />
-                          </a>
-                        </li>
-                      </ul>
+
+                      <div className=" flex items-center justify-between">
+                        <div className="flex flex-col">
+                          <div className="flex space-x-3">
+                            <div className="max-w-[200px] max-h-12">
+                              {img.logo.extension === "svg" ? (
+                                <img
+                                  className="h-full w-full"
+                                  src={img.logo.publicURL}
+                                  alt={title}
+                                />
+                              ) : (
+                                <GatsbyImage
+                                  className="h-full"
+                                  placeholder="tracedSVG"
+                                  image={logo}
+                                  alt={title}
+                                />
+                              )}
+                            </div>
+
+                            {/* <h2 className="text-xxl text-gray-900 font-bold">
+                              {title}
+                            </h2> */}
+                          </div>
+                          <div className="flex mt-3 items-center">
+                            <p className="text-sm font-normal ">{desc}</p>
+                          </div>
+                        </div>
+                        <ul className="flex flex-col mx-2">
+                          <li className="my-2 tooltip" data-tip="figma screen">
+                            <a className="flex w-8 max-h-8" href={links[0]}>
+                              <img
+                                src="/img/skills/icon_figma.svg"
+                                alt="figma"
+                              />
+                            </a>
+                          </li>
+                          <li className="my-2 tooltip" data-tip="show code">
+                            <a className="flex w-8 max-h-8" href={links[1]}>
+                              <img
+                                src="/img/skills/icon_github.svg"
+                                alt="github"
+                              />
+                            </a>
+                          </li>
+                          <li className="my-2 tooltip" data-tip="show site">
+                            <a
+                              className="flex w-8 max-h-8"
+                              href={links[2]}
+                              title="visit site"
+                            >
+                              <img
+                                src="/img/skills/icon_chrome.svg"
+                                alt="chrome"
+                              />
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                </SwiperSlide>
+              )
+            })}
           </Swiper>
         </div>
       </section>
@@ -149,20 +161,28 @@ export const queryProjects = graphql`
   query queryProjects {
     allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
+        id
         frontmatter {
           desc
-          title {
-            txt
-            icon
-          }
+          date(formatString: "DD.MM.YYYY")
           links
-          img {
-            figma
-            site
-          }
           stack
+          title
+          img {
+            screen {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            logo {
+              extension
+              publicURL
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
         }
-        id
       }
     }
   }
