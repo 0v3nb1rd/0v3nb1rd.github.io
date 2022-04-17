@@ -12,7 +12,10 @@ import { Autoplay, EffectCards, FreeMode, Navigation } from "swiper"
 export default function Slider(props) {
   const data = useStaticQuery(graphql`
     query queryScreenProjects {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+      allMarkdownRemark(
+        sort: { fields: frontmatter___date, order: DESC }
+        filter: { fileAbsolutePath: { regex: "/(project)/" } }
+      ) {
         nodes {
           id
           frontmatter {
@@ -47,6 +50,7 @@ export default function Slider(props) {
         className="swip swip--home"
       >
         {projects.map((project, index) => {
+          // console.log(project.frontmatter)
           const screen = getImage(project.frontmatter.img.screen)
           const { title } = project.frontmatter
 

@@ -1,10 +1,10 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-export default function Dino() {
+export default function Dino({ className }) {
   return (
     <StaticImage
-      className="absolute bottom-40 right-20 -z-10"
+      className={className}
       placeholder="blurred"
       layout="fixed"
       src="../images/deno.png"

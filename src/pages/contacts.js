@@ -103,7 +103,7 @@ export default function Contacts({ data }) {
         </div>
       </section>
 
-      <Dino />
+      <Dino className="absolute bottom-40 right-20 -z-10" />
     </Layout>
   )
 }
