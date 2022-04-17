@@ -30,5 +30,18 @@ module.exports = {
         path: `${__dirname}/projects`,
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "default title",
+        short_name: "short name",
+        start_url: "/",
+        background_color: "#f7f0eb",
+        theme_color: "#a2466c",
+        display: "minimal-ui",
+        icon: "./static/logo.svg",
+      },
+    },
+    "gatsby-plugin-offline",
   ],
 }
