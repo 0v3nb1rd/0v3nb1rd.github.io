@@ -1,7 +1,7 @@
-import React from "react"
-import ContactForm from "./ContactForm"
-import Footer from "./Footer"
-import Header from "./Header"
+import React from 'react'
+import ContactForm from './ContactForm'
+import Footer from './Footer'
+import Header from './Header'
 
 export default function Layout({ children }) {
   return (

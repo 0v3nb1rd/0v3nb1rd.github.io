@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 
 export default function blog({ data }) {
   const blog = data.allMarkdownRemark.nodes
-  // console.log(blog)
 
   return (
     <Layout>
@@ -59,6 +58,7 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMM D, YYYY")
           title
+          path
           id
           tags
           thumbnail {

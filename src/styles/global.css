@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
 
 body {
   position: relative;
@@ -124,7 +124,7 @@ footer {
   top: 60%;
   height: 3rem;
   width: 4rem;
-  background: url("/img/icons/arrow_r.svg") center;
+  background: url('/img/icons/arrow_r.svg') center;
   background-size: cover;
   cursor: pointer;
   z-index: 10;
@@ -158,7 +158,7 @@ footer {
 }
 
 .portfolio__slide::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
