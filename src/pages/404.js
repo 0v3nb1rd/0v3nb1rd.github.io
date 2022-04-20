@@ -4,22 +4,37 @@ import Layout from '../components/Layout'
 
 export default function notFound() {
   return (
-    <Layout mainClass="main--404">
-      <h1 className="text-9xl font-extrabold text-white tracking-widest">
-        404
-      </h1>
-      <div className="bg-[#FF6A3D] px-2 text-sm rounded rotate-12 absolute">
-        Page Not Found
-      </div>
-      <button className="mt-5">
-        <a className="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring">
-          <span className="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0"></span>
-
-          <span className="relative block px-8 py-3 bg-[#1A2238] border border-current">
-            <Link to="/">Go Home</Link>
-          </span>
-        </a>
-      </button>
+    <Layout mainClass="main--404 !mt-0 !-mb-24">
+      <section>
+        <div className="bg-gradient-to-r from-purple-300 to-blue-200">
+          <div className="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center">
+            <div className="bg-white shadow overflow-hidden sm:rounded-lg pb-8">
+              <div className="border-t border-gray-200 text-center pt-8">
+                <h1 className="text-9xl font-bold text-purple-400">404</h1>
+                <h1 className="text-6xl font-medium py-8">
+                  oops! Page not found
+                </h1>
+                <p className="text-2xl pb-8 px-12 font-medium">
+                  Oops! The page you are looking for does not exist. It might
+                  have been moved or deleted.
+                </p>
+                <Link
+                  to="/"
+                  className="btn bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 border-none mr-6"
+                >
+                  HOME
+                </Link>
+                <Link
+                  to="/contacts"
+                  className="btn bg-gradient-to-r from-red-400 to-red-500 hover:from-red-500 hover:to-red-500 border-none"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   )
 }
