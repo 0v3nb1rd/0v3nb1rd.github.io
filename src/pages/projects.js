@@ -1,14 +1,14 @@
-import React from "react"
-import Layout from "../components/Layout"
-import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React from 'react'
+import Layout from '../components/Layout'
+import { graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-import { FreeMode, Mousewheel } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
+import { FreeMode, Mousewheel } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
-import "swiper/css"
-import StackSlider from "../components/StackSlider"
+import 'swiper/css'
+import StackSlider from '../components/StackSlider'
 
 export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes
@@ -18,11 +18,11 @@ export default function Projects({ data }) {
 
   React.useEffect(() => {
     const margin = refContainer.current.getClientRects()[0].x
-    refContainerLeft.current.style.marginLeft = Math.floor(margin) + "px"
+    refContainerLeft.current.style.marginLeft = Math.floor(margin) + 'px'
   })
 
   return (
-    <Layout>
+    <Layout mainClass="main--projects">
       <section className="pt-8">
         <div ref={refContainer} className="container">
           <div className="flex flex-wrap justify-center -mx-4">
@@ -55,8 +55,8 @@ export default function Projects({ data }) {
         <div ref={refContainerLeft} className="py-4 container--left">
           <Swiper
             modules={[FreeMode, Mousewheel]}
-            slidesPerView={"auto"}
-            watchOverflow={"true"}
+            slidesPerView={'auto'}
+            watchOverflow={'true'}
             // centeredSlides={true}
             // loadslides={3}
             // loop={true}
@@ -64,7 +64,7 @@ export default function Projects({ data }) {
             mousewheel={{ releaseOnEdges: true }}
             className="swiper--proj"
           >
-            {projects.map(project => {
+            {projects.map((project) => {
               const logo = getImage(project.frontmatter.img.logo)
               const screen = getImage(project.frontmatter.img.screen)
               const { title, stack, img, desc, links } = project.frontmatter
@@ -90,7 +90,7 @@ export default function Projects({ data }) {
                         <div className="flex flex-col">
                           <div className="flex space-x-3">
                             <div className="max-w-[200px] max-h-12">
-                              {img.logo.extension === "svg" ? (
+                              {img.logo.extension === 'svg' ? (
                                 <img
                                   className="h-full w-full"
                                   src={img.logo.publicURL}

@@ -2,13 +2,14 @@ import React from 'react'
 import ContactForm from './ContactForm'
 import Footer from './Footer'
 import Header from './Header'
+import cn from 'classnames'
 
-export default function Layout({ children }) {
+export default function Layout({ children, mainClass }) {
   return (
     <div className="layout">
       <Header />
 
-      <main className="main">{children}</main>
+      <main className={cn('main', { [mainClass]: mainClass })}>{children}</main>
 
       <Footer />
 

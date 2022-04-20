@@ -1,13 +1,13 @@
-import React from "react"
-import Layout from "../components/Layout"
-import Post from "../components/Post"
-import { graphql } from "gatsby"
+import React from 'react'
+import Layout from '../components/Layout'
+import Post from '../components/Post'
+import { graphql } from 'gatsby'
 
 export default function blog({ data }) {
   const blog = data.allMarkdownRemark.nodes
 
   return (
-    <Layout>
+    <Layout mainClass="main--blog">
       <section className="py-8">
         <div className="container relative">
           <div className="flex flex-wrap justify-center -mx-4">
@@ -36,7 +36,7 @@ export default function blog({ data }) {
             </div>
           </div>
           <div className="flex flex-wrap -mx-4">
-            {blog.map(item => (
+            {blog.map((item) => (
               <Post key={item.id} data={item} />
             ))}
           </div>

@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 
+// import './layout.css'
 import './highlight.css'
 
 export default function BlogPost({ data }) {
@@ -10,7 +11,7 @@ export default function BlogPost({ data }) {
   const { title, thumbnail } = data.markdownRemark.frontmatter
   const image = getImage(thumbnail)
   return (
-    <Layout>
+    <Layout mainClass="main--blog-post">
       <div className="my-8 text-center">
         <h3>{title}</h3>
         <GatsbyImage image={image} alt={title} />

@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
-import ContactForm from "../components/ContactForm"
-import Layout from "../components/Layout"
-import Dino from "../components/Dino"
+import React from 'react'
+import { graphql } from 'gatsby'
+import ContactForm from '../components/ContactForm'
+import Layout from '../components/Layout'
+import Dino from '../components/Dino'
 
 export default function Contacts({ data }) {
   const { contacts } = data.site.siteMetadata
   return (
-    <Layout>
+    <Layout mainClass="main--contacts">
       <section className="hero hero-section--full ">
         <div className="container">
           <div className=" sm:items-center sm:pt-0">
