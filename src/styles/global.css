@@ -34,7 +34,6 @@ footer {
 
 .header__svg {
   position: absolute;
-  top: 70%;
   z-index: -1;
 }
 

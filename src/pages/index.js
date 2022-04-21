@@ -1,8 +1,9 @@
-import React from "react"
-import Layout from "../components/Layout"
-import Typewriter from "typewriter-effect"
-import Slider from "../components/Slider"
-import AnimeSlider from "../components/AnimeSlider"
+import React from 'react'
+import Layout from '../components/Layout'
+import Typewriter from 'typewriter-effect'
+import Slider from '../components/Slider'
+import AnimeSlider from '../components/AnimeSlider'
+
 // import { graphql } from "gatsby"
 
 export default function Home() {
@@ -220,7 +221,7 @@ export default function Home() {
                           Self projects
                         </h4>
                         <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                          Create landing-pages, support landing, sales{" "}
+                          Create landing-pages, support landing, sales{' '}
                         </p>
                         <p className="mt-2">
                           <span className="text-red-500">Stack: </span>

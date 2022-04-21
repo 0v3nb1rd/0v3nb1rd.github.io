@@ -11,6 +11,7 @@ module.exports = {
     },
   },
   plugins: [
+    // `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
