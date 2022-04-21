@@ -4,22 +4,29 @@ import Typewriter from 'typewriter-effect'
 import Slider from '../components/Slider'
 import AnimeSlider from '../components/AnimeSlider'
 
-// import { graphql } from "gatsby"
-
 export default function Home() {
-  // const portfolio = data.allMarkdownRemark.nodes
-  // console.log(portfolio)
-
   return (
     <Layout>
       <section className="section--top">
         <div className="hero hero-section relative">
           <div className="hero-content flex-col lg:flex-row-reverse">
-            <div className="w-2/4">
+            <div
+              className="w-2/4"
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sel-duration="1500"
+              data-sal-easing="ease-out-back"
+            >
               <AnimeSlider className="w-[600px] mx-auto" />
             </div>
 
-            <div className="w-2/4">
+            <div
+              className="w-2/4"
+              data-sal="slide-right"
+              data-sal-delay="50"
+              data-sel-duration="1500"
+              data-sal-easing="ease-out-back"
+            >
               <h1 className="text-8xl font-bold">
                 Hello 👋<div className="text-red-600	">I’m Nazar.</div>
               </h1>
@@ -68,29 +75,49 @@ export default function Home() {
 
       <section className="min-h-screen hero bg-yellow-300 relative">
         <div className="hero-content flex-col lg:flex-row">
-          <div className="section__slider w-2/4 flex justify-center items-center">
+          <div
+            className="section__slider w-2/4 flex justify-center items-center"
+            data-sal="slide-right"
+            data-sal-delay="100"
+            data-sal-easing="ease-out-back"
+          >
             <div className="wrap">
               <Slider />
             </div>
           </div>
           <div className="w-2/4">
             <div className="w-4/5 mx-auto">
-              <h2 className="text-6xl font-bold">
+              <h2
+                className="text-6xl font-bold"
+                data-sal="slide-up"
+                data-sal-delay="100"
+              >
                 Welcome To The<div className="text-red-600">Weirdos Club.</div>
               </h2>
-              <p className="py-6 text-2xl">
+              <p
+                className="py-6 text-2xl"
+                data-sal="slide-up"
+                data-sal-delay="100"
+              >
                 The WEIRDOS CLUB is a private collection of NFTs—unique digital
                 collectibles. The Weirdos are stored as ERC-721 tokens on the
                 Ethereum blockchain and hosted on IPFS.
               </p>
-              <p className="py-5 text-1xl">
+              <p
+                className="py-5 text-1xl"
+                data-sal="slide-up"
+                data-sal-delay="100"
+              >
                 With more than 200+ hand drawn traits, each NFT is unique and
                 comes with a membership to an exclusive group of successful
                 investors. Join an ambitious ever-growing community with
                 multiple benefits and utilities.
               </p>
-
-              <button className="btn btn-wide btn-accent text-white">
+              <button
+                className="btn btn-wide btn-accent text-white"
+                data-sal="zoom-in"
+                data-sal-delay="100"
+              >
                 Show more Projects
               </button>
             </div>
@@ -115,7 +142,13 @@ export default function Home() {
       <section>
         <div className="bg-neutral text-white py-8">
           <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
-            <div className="flex flex-col w-full sticky md:top-1/4 lg:w-1/3 mt-2 md:mt-12 px-8">
+            <div
+              className="flex flex-col w-full sticky md:top-1/4 lg:w-1/3 mt-2 md:mt-12 px-8"
+              data-sal="slide-right"
+              data-sal-delay="100"
+              data-sel-duration="1500"
+              data-sal-easing="ease-out-back"
+            >
               <p className="ml-2 text-yellow-300 uppercase tracking-loose">
                 Working Process
               </p>
@@ -136,17 +169,15 @@ export default function Home() {
             <div className="ml-0 md:ml-12 lg:w-2/3 sticky">
               <div className="container mx-auto w-full h-full">
                 <div className="relative wrap overflow-hidden p-10 h-full">
-                  <div
-                    className="border-4 rounded-3xl	border-yellow-300 absolute h-full"
-                    // style="right: 50%; border: 2px solid #FFC100; border-radius: 1%;"
-                  ></div>
-                  <div
-                    className="border-4 rounded-3xl border-yellow-300 absolute h-full "
-                    // style="left: 50%; border: 2px solid #FFC100; border-radius: 1%;"
-                  ></div>
+                  <div className="border-4 rounded-3xl	border-yellow-300 absolute h-full"></div>
+                  <div className="border-4 rounded-3xl border-yellow-300 absolute h-full "></div>
 
                   <dir>
-                    <div className="mb-8 ml-10 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div
+                      className="mb-8 ml-10 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                      data-sal="slide-up"
+                      data-sal-delay="100"
+                    >
                       <div className="order-1 w-5/12"></div>
                       <div className="order-1 w-5/12 px-1 py-4 text-right">
                         <p className="text-base text-yellow-300">
@@ -172,7 +203,11 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div
+                      className="mb-8 flex justify-between items-center w-full right-timeline"
+                      data-sal="slide-up"
+                      data-sal-delay="100"
+                    >
                       <div className="order-1 w-5/12"></div>
                       <div className="order-1  w-5/12 px-1 py-4 text-left">
                         <p className="mb-3 text-base text-yellow-300">
@@ -191,7 +226,11 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                    <div
+                      className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                      data-sal="slide-up"
+                      data-sal-delay="100"
+                    >
                       <div className="order-1 w-5/12"></div>
                       <div className="order-1 w-5/12 px-1 py-4 text-right">
                         <p className="mb-3 text-base text-yellow-300">
@@ -210,7 +249,11 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <div className="mb-8 flex justify-between items-center w-full right-timeline">
+                    <div
+                      className="mb-8 flex justify-between items-center w-full right-timeline"
+                      data-sal="slide-up"
+                      data-sal-delay="100"
+                    >
                       <div className="order-1 w-5/12"></div>
 
                       <div className="order-1  w-5/12 px-1 py-4">
@@ -234,6 +277,9 @@ export default function Home() {
                 </div>
                 <img
                   className="mx-auto -mt-36 md:-mt-36"
+                  data-sal="slide-up"
+                  data-sal-delay="300"
+                  data-sal-easing="ease-out-back"
                   src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
                 />
               </div>
@@ -262,12 +308,16 @@ export default function Home() {
               <h1
                 tabIndex="0"
                 className="focus:outline-none xl:text-5xl md:text-3xl text-xl text-center text-gray-800 font-extrabold mb-5 pt-4"
+                data-sal="slide-up"
+                data-sal-delay="100"
               >
                 Preferer technical scills
               </h1>
               <p
                 tabIndex="0"
                 className="focus:outline-none text-base md:text-lg lg:text-xl text-center text-gray-600 font-normal xl:w-10/12 xl:mx-auto"
+                data-sal="slide-up"
+                data-sal-delay="100"
               >
                 Hi, I'm Anurag Hazra, a self-taught passionate FrontEnd
                 developer from Ukraine, currently working at Asign company as a
@@ -277,7 +327,13 @@ export default function Home() {
                 and develop products for people.
               </p>
             </div>
-            <div className="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap">
+            <div
+              className="xl:py-16 lg:py-16 md:py-16 sm:py-16 px-15 flex flex-wrap"
+              data-sal="zoom-in"
+              data-sal-delay="200"
+              data-sel-duration="1500"
+              data-sal-easing="ease-out-back"
+            >
               <div className="group w-6/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:pb-10 pb-16 items-center">
                 <img
                   tabIndex="0"

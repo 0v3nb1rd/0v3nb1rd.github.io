@@ -11,7 +11,12 @@ export default function blog({ data }) {
       <section className="py-8">
         <div className="container relative">
           <div className="flex flex-wrap justify-center -mx-4">
-            <div className="w-full px-4">
+            <div
+              className="w-full px-4"
+              data-sal="slide-down"
+              data-sal-delay="100"
+              data-sal-easing="ease-out-back"
+            >
               <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
                 <span className="font-semibold text-lg text-primary mb-2 block">
                   Our Blogs

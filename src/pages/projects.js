@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
 import { FreeMode, Mousewheel } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -26,10 +25,15 @@ export default function Projects({ data }) {
       <section className="pt-8">
         <div ref={refContainer} className="container">
           <div className="flex flex-wrap justify-center -mx-4">
-            <div className="w-full px-4">
+            <div
+              className="w-full px-4"
+              data-sal="slide-down"
+              data-sal-delay="100"
+              data-sal-easing="ease-out-back"
+            >
               <div className="text-center mx-auto lg:mb-2 max-w-[510px]">
                 <span className="font-semibold text-lg text-primary mb-2 block">
-                  Our Blogs
+                  My Projects
                 </span>
                 <h2
                   className="
@@ -38,10 +42,9 @@ export default function Projects({ data }) {
                   sm:text-4xl
                   md:text-[40px]
                   text-dark
-                  mb-4
-                  "
+                  mb-4"
                 >
-                  Our Recent News
+                  My Recent Projects
                 </h2>
                 <p className="text-base text-body-color">
                   There are many variations of passages of Lorem Ipsum available
@@ -52,7 +55,14 @@ export default function Projects({ data }) {
           </div>
         </div>
 
-        <div ref={refContainerLeft} className="py-4 container--left">
+        <div
+          ref={refContainerLeft}
+          className="py-4 container--left"
+          data-sal="zoom-in"
+          data-sal-delay="300"
+          data-sel-duration="3000"
+          data-sal-easing="ease-out-back"
+        >
           <Swiper
             modules={[FreeMode, Mousewheel]}
             slidesPerView={'auto'}

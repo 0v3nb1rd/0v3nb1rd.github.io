@@ -1,13 +1,14 @@
-import React from "react"
-import Button from "./Button"
+import React from 'react'
+import Button from './Button'
 
 export default function ContactForm({ className, children, ...props }) {
   return (
     <form
+      {...props}
       method="post"
       action="https://getform.io/f/c3ab79b8-6485-4f71-be1d-7e3cb28dcfb1"
       className={`p-6 flex flex-col justify-center ${
-        className ? className : ""
+        className ? className : ''
       }`}
     >
       <div className="flex flex-col">
@@ -48,7 +49,7 @@ export default function ContactForm({ className, children, ...props }) {
           tag="button"
           type="submit"
           className={`btn text-white btn-info mt-2 btn-wide ${
-            props.buttonFool ? "w-full" : ""
+            props.buttonFool ? 'w-full' : ''
           }`}
         >
           Submit

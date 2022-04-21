@@ -14,7 +14,13 @@ export default function Contacts({ data }) {
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
               <div className="mt-8 overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="p-6 mr-2 bg-ylw  sm:rounded-lg">
+                  <div
+                    className="p-6 mr-2 bg-ylw  sm:rounded-lg relative z-10"
+                    data-sal="slide-right"
+                    data-sal-delay="50"
+                    data-sel-duration="1500"
+                    data-sal-easing="ease-out-back"
+                  >
                     <h1 className="text-4xl sm:text-5xl text-white font-akaya dark:text-white font-extrabold tracking-widest	">
                       My contacts is:
                     </h1>
@@ -95,7 +101,12 @@ export default function Contacts({ data }) {
                     </div>
                   </div>
 
-                  <ContactForm />
+                  <ContactForm
+                    data-sal="slide-right"
+                    data-sal-delay="300"
+                    data-sel-duration="1500"
+                    data-sal-easing="ease-out-back"
+                  />
                 </div>
               </div>
             </div>
@@ -103,7 +114,15 @@ export default function Contacts({ data }) {
         </div>
       </section>
 
-      <Dino className="absolute bottom-40 right-20 -z-10" />
+      <div
+        className="absolute bottom-40 right-20 -z-10 "
+        data-sal="slide-up"
+        data-sal-delay="800"
+        data-sel-duration="50"
+        data-sal-easing="linear"
+      >
+        <Dino />
+      </div>
     </Layout>
   )
 }

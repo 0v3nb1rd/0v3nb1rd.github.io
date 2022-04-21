@@ -8,7 +8,13 @@ export default function Post({ data }) {
   const image = getImage(thumbnail)
 
   return (
-    <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+    <div
+      className="w-full md:w-1/2 lg:w-1/3 px-4"
+      data-sal="zoom-in"
+      data-sal-delay="300"
+      data-sel-duration="3000"
+      data-sal-easing="ease-out-back"
+    >
       <Link
         to={`/blog${path}`}
         className="max-w-[370px] mx-auto mb-10 block group"
