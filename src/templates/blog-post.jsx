@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { graphql } from 'gatsby'
 
-import { PostStyled, HighlightStyled } from './Post.styled'
+import { PostStyled, HighlightStyled } from './styled'
 
 export default function BlogPost({ data }) {
   const { html } = data.markdownRemark

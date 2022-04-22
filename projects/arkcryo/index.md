@@ -4,7 +4,7 @@ title: "Arkcryo"
 img: {
 	logo: logo.svg,
 	screen: screen.png,
-	figma: null
+	figma: figma.png,
 }
 stack:
   ["html", "less", "bootstrap", "js", "jquery", "slick", "gsap", "php", "git"]

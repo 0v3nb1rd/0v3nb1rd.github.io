@@ -4,7 +4,7 @@ title: "Appteka"
 img: {
 	logo: logo.svg,
 	screen: screen.png,
-	figma: null
+	figma: figma.png,
 }
 stack: [html, less, bootstrap, js, jquery, gsap, php, git]
 links: ["#", "#", "http://test7.3d.lviv.ua/"]

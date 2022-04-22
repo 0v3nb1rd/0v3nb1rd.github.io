@@ -4,6 +4,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
 
+@layer components {
+  .btn-hide {
+    opacity: 0.4;
+    cursor: no-drop;
+  }
+}
+
 body {
   position: relative;
   /* padding-top: 64px; */

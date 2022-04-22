@@ -1,6 +1,4 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import { BigHead } from '@bigheads/core'
 import { motion } from 'framer-motion'
 
 export default function AnimeSlider({ className, children, ...props }) {

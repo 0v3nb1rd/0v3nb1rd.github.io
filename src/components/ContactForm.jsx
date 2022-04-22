@@ -1,15 +1,20 @@
 import React from 'react'
 import Button from './Button'
+import cn from 'classnames'
 
-export default function ContactForm({ className, children, ...props }) {
+export default function ContactForm({
+  className,
+  children,
+  btnFull,
+  ...props
+}) {
   return (
     <form
       {...props}
       method="post"
       action="https://getform.io/f/c3ab79b8-6485-4f71-be1d-7e3cb28dcfb1"
-      className={`p-6 flex flex-col justify-center ${
-        className ? className : ''
-      }`}
+      className={`p-6 flex flex-col justify-center 
+			${cn([className])}`}
     >
       <div className="flex flex-col">
         <label htmlFor="name" className="hidden">
@@ -46,11 +51,9 @@ export default function ContactForm({ className, children, ...props }) {
 
       <div className="flex flex-col mt-2">
         <Button
-          tag="button"
           type="submit"
-          className={`btn text-white btn-info mt-2 btn-wide ${
-            props.buttonFool ? 'w-full' : ''
-          }`}
+          className={`btn text-white btn-info mt-2 btn-wide 
+					${cn({ 'w-full': btnFull })}`}
         >
           Submit
         </Button>

@@ -1,8 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
-export default function Dino({ className, ...props }) {
-  console.log(props)
+export default function Dino({ className }) {
   return (
     <StaticImage
       className={className}

@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { FreeMode, Mousewheel } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import Modal from '../components/Modal'
+import cn from 'classnames'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -19,6 +21,12 @@ export default function Projects({ data }) {
     const margin = refContainer.current.getClientRects()[0].x
     refContainerLeft.current.style.marginLeft = Math.floor(margin) + 'px'
   })
+
+  const [modal, setModal] = React.useState([])
+
+  const showFigma = (figma, title) => {
+    setModal([figma, title])
+  }
 
   return (
     <Layout mainClass="main--projects">
@@ -75,11 +83,12 @@ export default function Projects({ data }) {
             className="swiper--proj"
           >
             {projects.map((project) => {
-              const logo = getImage(project.frontmatter.img.logo)
-              const screen = getImage(project.frontmatter.img.screen)
               const { title, stack, img, desc, links } = project.frontmatter
+              const logo = getImage(img.logo)
+              const screen = getImage(img.screen)
+              const figma = getImage(img.figma)
               // const { logo, screen } = getImage(project.frontmatter.img)
-              // console.log(logo, screen)
+              // console.log(figma)
 
               return (
                 <SwiperSlide key={project.id}>
@@ -125,13 +134,20 @@ export default function Projects({ data }) {
                           </div>
                         </div>
                         <ul className="flex flex-col mx-2">
-                          <li className="my-2 tooltip" data-tip="figma screen">
-                            <a className="flex w-8 max-h-8" href={links[0]}>
+                          <li
+                            className="my-2 tooltip"
+                            data-tip="show screanshot"
+                          >
+                            <label
+                              className="cursor-pointer flex w-8 max-h-8"
+                              htmlFor="modal"
+                              onClick={() => showFigma(figma, title)}
+                            >
                               <img
                                 src="/img/skills/icon_figma.svg"
                                 alt="figma"
                               />
-                            </a>
+                            </label>
                           </li>
                           <li className="my-2 tooltip" data-tip="show code">
                             <a className="flex w-8 max-h-8" href={links[1]}>
@@ -163,6 +179,14 @@ export default function Projects({ data }) {
           </Swiper>
         </div>
       </section>
+
+      <Modal className="max-w-5xl" name="modal">
+        <GatsbyImage
+          className="object-cover object-top"
+          image={modal[0]}
+          alt={modal[1]}
+        />
+      </Modal>
     </Layout>
   )
 }
@@ -185,6 +209,11 @@ export const queryProjects = graphql`
             screen {
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED)
+              }
+            }
+            figma {
+              childImageSharp {
+                gatsbyImageData
               }
             }
             logo {

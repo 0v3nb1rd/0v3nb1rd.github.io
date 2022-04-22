@@ -4,7 +4,7 @@ title: "Nadiya"
 img: {
 	logo: logo.svg,
 	screen: screen.png,
-	figma: null
+	figma: figma.png,
 }
 stack:
   ["html", "less", "bootstrap", "slick", "js", "jquery", "anime", "php", "git"]
