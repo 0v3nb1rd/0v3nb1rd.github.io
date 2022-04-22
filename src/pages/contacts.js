@@ -1,8 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import ContactForm from '../components/ContactForm'
-import Layout from '../components/Layout'
-import Dino from '../components/Dino'
+import { Layout, ContactForm, Dino } from '../components'
 
 export default function Contacts({ data }) {
   const { contacts } = data.site.siteMetadata

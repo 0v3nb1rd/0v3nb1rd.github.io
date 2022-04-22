@@ -2,13 +2,13 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 export default function AnimeSlider({ className, children, ...props }) {
-  const faceLength = 4 // length of face images
+  const faceCount = 4 // Counts of face images
   const [face, setFace] = React.useState(1)
 
   React.useEffect(() => {
     setInterval(() => {
-      setFace((face, idx) => {
-        face === faceLength ? setFace(1) : setFace(face + 1)
+      setFace((face) => {
+        face === faceCount ? setFace(1) : setFace(face + 1)
       })
     }, 1000)
   }, [])

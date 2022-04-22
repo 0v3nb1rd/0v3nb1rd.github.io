@@ -1,16 +1,12 @@
 import React from 'react'
-import ContactForm from './ContactForm'
-import Footer from './Footer'
-import Header from './Header'
+import { Header, Modal, ContactForm, Footer } from './'
 import cn from 'classnames'
-import Modal from './Modal'
-// import Modal from './Modal'
 
 export default function Layout({ children, mainClass }) {
   return (
     <div className="layout">
       <Header />
-      <main className={cn('main', { [mainClass]: mainClass })}>{children}</main>
+      <main className={cn('main', [mainClass])}>{children}</main>
       <Footer />
 
       <Modal name="modal-cv" className="max-w-3xl">

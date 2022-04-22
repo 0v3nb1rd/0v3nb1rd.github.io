@@ -1,9 +1,9 @@
-import { Link } from 'gatsby'
 import React from 'react'
-import NavMenu from './NavMenu'
+import { Link } from 'gatsby'
+import { NavMenu } from './'
 import { motion } from 'framer-motion'
 import cn from 'classnames'
-// const isBrowser = typeof window !== `undefined`
+
 const transition = { duration: 4, ease: 'easeInOut' }
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
     >
       <div className="container mx-auto">
         <div
-          className={cn('navbar', 'transition-all', 'relative', {
+          className={cn('navbar transition-all relative', {
             'translate-y-5': !hideWave,
           })}
         >

@@ -1,8 +1,6 @@
 import React from 'react'
-import Layout from '../components/Layout'
+import { Layout, Slider, AnimeSlider } from '../components'
 import Typewriter from 'typewriter-effect'
-import Slider from '../components/Slider'
-import AnimeSlider from '../components/AnimeSlider'
 
 export default function Home() {
   return (

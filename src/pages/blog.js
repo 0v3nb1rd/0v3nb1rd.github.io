@@ -1,7 +1,6 @@
 import React from 'react'
-import Layout from '../components/Layout'
-import Post from '../components/Post'
 import { graphql } from 'gatsby'
+import { Layout, Post } from '../components'
 
 export default function blog({ data }) {
   const blog = data.allMarkdownRemark.nodes

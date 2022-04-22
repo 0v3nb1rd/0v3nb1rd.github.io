@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-export default function SocialList({ className, children, ...props }) {
+export default function SocialList({ className }) {
   return (
     <div className={className}>
       <a className="ml-4 hover:text-primary-gray-20" href="#">

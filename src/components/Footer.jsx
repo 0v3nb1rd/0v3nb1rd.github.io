@@ -1,19 +1,18 @@
-import React from "react"
-import NavMenu from "./NavMenu"
-import SocialList from "./SocialList"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { NavMenu, SocialList } from './'
+// import { useStaticQuery, graphql } from 'gatsby'
 
 export default function Footer() {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          copiright
-        }
-      }
-    }
-  `)
-  const { copiright } = data.site.siteMetadata
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     site {
+  //       siteMetadata {
+  //         copiright
+  //       }
+  //     }
+  //   }
+  // `)
+  // const { copiright } = data.site.siteMetadata
 
   return (
     <footer className="items-center pb-12 bg-neutral text-neutral-content relative">
