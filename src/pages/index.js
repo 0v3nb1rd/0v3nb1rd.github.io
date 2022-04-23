@@ -1,6 +1,7 @@
 import React from 'react'
 import { Layout, Slider, AnimeSlider } from '../components'
 import Typewriter from 'typewriter-effect'
+import { Link } from 'gatsby'
 
 export default function Home() {
   return (
@@ -111,13 +112,14 @@ export default function Home() {
                 investors. Join an ambitious ever-growing community with
                 multiple benefits and utilities.
               </p>
-              <button
+              <Link
+                to="/projects"
                 className="btn btn-wide btn-accent text-white"
                 data-sal="zoom-in"
                 data-sal-delay="100"
               >
                 Show more Projects
-              </button>
+              </Link>
             </div>
           </div>
         </div>

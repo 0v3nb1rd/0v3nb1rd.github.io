@@ -19,9 +19,10 @@ export default function Projects({ data }) {
     refContainerLeft.current.style.marginLeft = Math.floor(margin) + 'px'
   })
 
-  const [modal, setModal] = React.useState([])
+  const [modal, setModal] = React.useState(false)
 
   const showFigma = (figma, title) => {
+    // console.log(figma, title)
     setModal([figma, title])
   }
 
@@ -82,9 +83,9 @@ export default function Projects({ data }) {
             {projects.map((project) => {
               const { title, stack, img, desc, links } = project.frontmatter
               const logo = getImage(img.logo)
-              const screen = getImage(img.screen)
+              const thumbnail = getImage(img.thumbnail)
               const figma = getImage(img.figma)
-              // const { logo, screen } = getImage(project.frontmatter.img)
+              // const { logo, thumbnail } = getImage(project.frontmatter.img)
               // console.log(figma)
 
               return (
@@ -93,7 +94,7 @@ export default function Projects({ data }) {
                     <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
                       <GatsbyImage
                         className="object-cover object-top"
-                        image={screen}
+                        image={thumbnail}
                         alt={title}
                       />
                     </div>
@@ -121,10 +122,6 @@ export default function Projects({ data }) {
                                 />
                               )}
                             </div>
-
-                            {/* <h2 className="text-xxl text-gray-900 font-bold">
-                              {title}
-                            </h2> */}
                           </div>
                           <div className="flex mt-3 items-center">
                             <p className="text-sm font-normal ">{desc}</p>
@@ -133,32 +130,56 @@ export default function Projects({ data }) {
                         <ul className="flex flex-col mx-2">
                           <li
                             className="my-2 tooltip"
-                            data-tip="show screanshot"
+                            data-tip={
+                              figma ? 'show screanshot' : 'contact me to show'
+                            }
                           >
                             <label
-                              className="cursor-pointer flex w-8 max-h-8"
-                              htmlFor="modal"
-                              onClick={() => showFigma(figma, title)}
+                              className="btn-hide flex w-8 max-h-8"
+                              {...(figma && {
+                                className: 'cursor-pointer flex w-8 max-h-8',
+                                htmlFor: 'modal',
+                                onClick: () => showFigma(figma, title),
+                              })}
                             >
                               <img
                                 src="/img/skills/icon_figma.svg"
-                                alt="figma"
+                                alt="figma icon"
                               />
                             </label>
                           </li>
-                          <li className="my-2 tooltip" data-tip="show code">
-                            <a className="flex w-8 max-h-8" href={links[1]}>
+
+                          <li
+                            className="my-2 tooltip"
+                            data-tip={
+                              links[1] ? 'show code' : 'contact me to show'
+                            }
+                          >
+                            <a
+                              className="btn-hide flex w-8 max-h-8"
+                              {...(links[1] && {
+                                className: 'cursor-pointer flex w-8 max-h-8',
+                                href: links[1],
+                              })}
+                            >
                               <img
                                 src="/img/skills/icon_github.svg"
                                 alt="github"
                               />
                             </a>
                           </li>
-                          <li className="my-2 tooltip" data-tip="show site">
+                          <li
+                            className="my-2 tooltip"
+                            data-tip={
+                              links[2] ? 'show site' : 'contact me to show'
+                            }
+                          >
                             <a
-                              className="flex w-8 max-h-8"
-                              href={links[2]}
-                              title="visit site"
+                              className="btn-hide flex w-8 max-h-8"
+                              {...(links[2] && {
+                                className: 'cursor-pointer flex w-8 max-h-8',
+                                href: links[2],
+                              })}
                             >
                               <img
                                 src="/img/skills/icon_chrome.svg"
@@ -177,13 +198,15 @@ export default function Projects({ data }) {
         </div>
       </section>
 
-      <Modal className="max-w-5xl" name="modal">
-        <GatsbyImage
-          className="object-cover object-top"
-          image={modal[0]}
-          alt={modal[1]}
-        />
-      </Modal>
+      {modal && (
+        <Modal className="max-w-5xl" name="modal">
+          <GatsbyImage
+            className="object-cover object-top"
+            image={modal[0]}
+            alt={modal[1]}
+          />
+        </Modal>
+      )}
     </Layout>
   )
 }
@@ -203,7 +226,7 @@ export const queryProjects = graphql`
           stack
           title
           img {
-            screen {
+            thumbnail {
               childImageSharp {
                 gatsbyImageData(placeholder: BLURRED)
               }

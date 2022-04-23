@@ -6,7 +6,7 @@
 
 @layer components {
   .btn-hide {
-    opacity: 0.4;
+    opacity: 0.3;
     cursor: no-drop;
   }
 }

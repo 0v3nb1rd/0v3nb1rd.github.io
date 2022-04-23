@@ -1,13 +1,13 @@
-import React from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/effect-cards"
+import 'swiper/css'
+import 'swiper/css/effect-cards'
 // import required modules
-import { Autoplay, EffectCards, FreeMode, Navigation } from "swiper"
+import { Autoplay, EffectCards, FreeMode, Navigation } from 'swiper'
 
 export default function Slider(props) {
   const data = useStaticQuery(graphql`
@@ -23,7 +23,7 @@ export default function Slider(props) {
             date(formatString: "DD.MM.YYYY")
             title
             img {
-              screen {
+              thumbnail {
                 childImageSharp {
                   gatsbyImageData(placeholder: BLURRED)
                 }
@@ -39,7 +39,7 @@ export default function Slider(props) {
   return (
     <>
       <Swiper
-        effect={"cards"}
+        effect={'cards'}
         grabCursor={true}
         modules={[EffectCards, Autoplay, FreeMode, Navigation]}
         autoplay={{
@@ -51,13 +51,13 @@ export default function Slider(props) {
       >
         {projects.map((project, index) => {
           // console.log(project.frontmatter)
-          const screen = getImage(project.frontmatter.img.screen)
+          const thumbnail = getImage(project.frontmatter.img.thumbnail)
           const { title } = project.frontmatter
 
           return (
             <SwiperSlide key={index + project.id}>
               <div className="img-box">
-                <GatsbyImage image={screen} alt={title} />
+                <GatsbyImage image={thumbnail} alt={title} />
               </div>
             </SwiperSlide>
           )

@@ -58,7 +58,11 @@ export default function Header() {
               </ul>
             </div>
             <Link to="/" className="logo-box">
-              <motion.img src="/logo.svg" whileHover={{ scale: 1.2 }} />
+              <motion.img
+                src="/logo.svg"
+                alt="logo icon"
+                whileHover={{ scale: 1.2 }}
+              />
             </Link>
           </div>
 
