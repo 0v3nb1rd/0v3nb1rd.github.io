@@ -40,8 +40,8 @@ export default function blog({ data }) {
             </div>
           </div>
           <div className="flex flex-wrap -mx-4">
-            {blog.map((item) => (
-              <Post key={item.id} data={item} />
+            {blog.map((item, idx) => (
+              <Post key={item.id} data={item} dalay={`${(idx % 3) + 1}00`} />
             ))}
           </div>
         </div>

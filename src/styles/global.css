@@ -156,7 +156,7 @@ footer {
   transition-timing-function: linear;
 }
 .swiper--proj > .swiper-wrapper {
-  padding: 3rem 0 5rem;
+  padding: 15rem 0 5rem;
 }
 .swiper--proj > .swiper-wrapper > .swiper-slide {
   max-width: 480px;

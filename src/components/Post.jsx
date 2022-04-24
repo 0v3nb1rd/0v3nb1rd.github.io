@@ -2,16 +2,15 @@ import React from 'react'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 
-export default function Post({ data }) {
+export default function Post({ data, dalay }) {
   const { description } = data
   const { title, date, thumbnail, path } = data.frontmatter
   const image = getImage(thumbnail)
-
   return (
     <div
       className="w-full md:w-1/2 lg:w-1/3 px-4"
       data-sal="zoom-in"
-      data-sal-delay="300"
+      data-sal-delay={dalay}
       data-sel-duration="3000"
       data-sal-easing="ease-out-back"
     >

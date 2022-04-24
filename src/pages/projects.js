@@ -27,9 +27,12 @@ export default function Projects({ data }) {
   }
 
   return (
-    <Layout mainClass="main--projects">
-      <section className="pt-8">
-        <div ref={refContainer} className="container">
+    <Layout mainClass="main--projects !mt-24">
+      <section className="relative ">
+        <div
+          ref={refContainer}
+          className="container absolute left-0 right-0 top-12"
+        >
           <div className="flex flex-wrap justify-center -mx-4">
             <div
               className="w-full px-4"
@@ -64,7 +67,7 @@ export default function Projects({ data }) {
         <div
           ref={refContainerLeft}
           className="py-4 container--left"
-          data-sal="zoom-in"
+          data-sal="slide-left"
           data-sal-delay="300"
           data-sel-duration="3000"
           data-sal-easing="ease-out-back"
@@ -105,9 +108,14 @@ export default function Projects({ data }) {
 
                       <div className=" flex items-center justify-between">
                         <div className="flex flex-col">
-                          <div className="flex space-x-3">
-                            <div className="max-w-[200px] max-h-12">
-                              {img.logo.extension === 'svg' ? (
+                          <div className="flex space-x-3 h-12">
+                            <div className="h-auto w-full max-w-[200px]">
+                              <img
+                                className="h-full	 object-contain object-left"
+                                src={img.logo.publicURL}
+                                alt={title}
+                              />
+                              {/* {img.logo.extension === 'svg' ? (
                                 <img
                                   className="h-full w-full"
                                   src={img.logo.publicURL}
@@ -115,16 +123,17 @@ export default function Projects({ data }) {
                                 />
                               ) : (
                                 <GatsbyImage
-                                  className="h-full"
+                                  // className="h-full"
                                   placeholder="tracedSVG"
+                                  // className="w-full"
                                   image={logo}
                                   alt={title}
                                 />
-                              )}
+                              )} */}
                             </div>
                           </div>
                           <div className="flex mt-3 items-center">
-                            <p className="text-sm font-normal ">{desc}</p>
+                            <p className="text-xl font-normal ">{desc}</p>
                           </div>
                         </div>
                         <ul className="flex flex-col mx-2">

@@ -39,6 +39,7 @@ const stackData = {
   //Asign stack:
   html: '/img/skills/icon_html.svg',
   less: '/img/skills/icon_less.svg',
+  // scss: '/img/skills/icon_less.svg',
   bootstrap: '/img/skills/icon_bootstrap.svg',
   js: '/img/skills/icon_js.svg',
   jquery: '/img/skills/icon_jquery.svg',
@@ -52,4 +53,9 @@ const stackData = {
   react: '/img/skills/icon_react.svg',
   redux: '/img/skills/icon_redux.svg',
   gulp: '/img/skills/icon_gulp.svg',
+  // vue: '/img/skills/icon_gulp.svg',
+  // nuxt: '/img/skills/icon_gulp.svg',
+  // vuetify: '/img/skills/icon_gulp.svg',
+  // heroku: '/img/skills/icon_gulp.svg',
+  // api: '/img/skills/icon_gulp.svg',
 }
