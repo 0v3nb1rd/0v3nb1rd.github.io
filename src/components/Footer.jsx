@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavMenu, SocialList } from './'
 // import { useStaticQuery, graphql } from 'gatsby'
-
+// import { motion } from 'framer-motion'
 export default function Footer() {
   // const data = useStaticQuery(graphql`
   //   query {
@@ -15,7 +15,7 @@ export default function Footer() {
   // const { copiright } = data.site.siteMetadata
 
   return (
-    <footer className="items-center text-neutral-content relative">
+    <footer className="items-center text-neutral-content relative z-10">
       <svg
         className="absolute top-0 w-full  h-6 sm:h-16 "
         preserveAspectRatio="none"

@@ -1,12 +1,21 @@
 import React from 'react'
 import { Header, Modal, ContactForm, Footer } from './'
 import cn from 'classnames'
+import { motion, AnimatePresence } from 'framer-motion'
 
-export default function Layout({ children, mainClass }) {
+export default function Layout({ children, page, location }) {
   return (
-    <div className="layout">
+    <motion.div className="layout">
       <Header />
-      <main className={cn('main', [mainClass])}>{children}</main>
+      <AnimatePresence
+        exitBeforeEnter
+        // initial={false}
+        // onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <main key={location.pathname} className={cn('main', [page])}>
+          {children}
+        </main>
+      </AnimatePresence>
       <Footer />
 
       <Modal name="modal-cv" className="max-w-3xl">
@@ -22,6 +31,6 @@ export default function Layout({ children, mainClass }) {
         </h2>
         <ContactForm className="pt-2" btnFull />
       </Modal>
-    </div>
+    </motion.div>
   )
 }

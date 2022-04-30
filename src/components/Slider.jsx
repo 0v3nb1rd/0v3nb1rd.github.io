@@ -3,13 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-// Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/effect-cards'
+// // Import Swiper styles
+// import 'swiper/css'
+// import 'swiper/css/effect-cards'
 // import required modules
 import { Autoplay, EffectCards, FreeMode, Navigation } from 'swiper'
 
 export default function Slider(props) {
+  // console.log('first')
   const data = useStaticQuery(graphql`
     query queryScreenProjects {
       allMarkdownRemark(
@@ -41,7 +42,8 @@ export default function Slider(props) {
       <Swiper
         effect={'cards'}
         grabCursor={true}
-        modules={[EffectCards, Autoplay, FreeMode, Navigation]}
+        // modules={[EffectCards, Autoplay, FreeMode, Navigation]}
+        modules={[FreeMode, Navigation, Autoplay]}
         autoplay={{
           delay: 1000,
         }}

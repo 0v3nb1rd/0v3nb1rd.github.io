@@ -1,26 +1,30 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Layout, Post } from '../components'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function blog({ data }) {
   const blog = data.allMarkdownRemark.nodes
 
   return (
-    <Layout mainClass="main--blog">
+    <>
       <section className="py-8">
         <div className="container relative">
           <div className="flex flex-wrap justify-center -mx-4">
             <div
               className="w-full px-4"
-              data-sal="slide-down"
-              data-sal-delay="100"
-              data-sal-easing="ease-out-back"
+              // data-sal="slide-down"
+              // data-sal-delay="100"
+              // data-sal-easing="ease-out-back"
             >
               <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
                 <span className="font-semibold text-lg text-primary mb-2 block">
                   Our Blogs
                 </span>
-                <h2
+                <motion.h2
+                  layout
+                  layoutId="headline"
+                  style={{ maxWidth: `600px`, marginBottom: `1rem` }}
                   className="
                   font-bold
                   text-3xl
@@ -31,7 +35,7 @@ export default function blog({ data }) {
                   "
                 >
                   Our Recent News
-                </h2>
+                </motion.h2>
                 <p className="text-base text-body-color">
                   There are many variations of passages of Lorem Ipsum available
                   but the majority have suffered alteration in some form.
@@ -46,7 +50,7 @@ export default function blog({ data }) {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

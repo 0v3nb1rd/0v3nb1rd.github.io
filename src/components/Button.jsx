@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 export default function Button({ className, children, ...props }) {
   return (
@@ -7,3 +8,8 @@ export default function Button({ className, children, ...props }) {
     </button>
   )
 }
+
+// export const Button = styled.button`
+//   &.active {
+//   }
+// `

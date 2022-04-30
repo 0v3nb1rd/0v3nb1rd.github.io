@@ -1,23 +1,43 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout, ContactForm, Dino } from '../components'
+import { ContactForm, Dino } from '../components'
+import { motion } from 'framer-motion'
+
+//Styles
+import { MFullSection } from '../styles/styled'
+
+// Animations
+const m_varik = {
+  hide: { opacity: 0, x: -100 },
+  show: { opacity: 1, x: 0 },
+}
+const m_top = {
+  hide: { opacity: 0, y: 200 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.3, type: 'spring', duration: 1 },
+  },
+}
 
 export default function Contacts({ data }) {
   const { contacts } = data.site.siteMetadata
   return (
-    <Layout mainClass="main--contacts">
-      <section className="hero hero-section--full ">
+    <MFullSection
+      initial="hide"
+      animate="show"
+      exit="hide"
+      transition={{ staggerChildren: 0.1 }}
+    >
+      <div className="hero hero-section--full mb-20">
         <div className="container">
           <div className=" sm:items-center sm:pt-0">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
               <div className="mt-8 overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div
+                  <motion.div
+                    variants={m_varik}
                     className="p-6 mr-2 bg-ylw  sm:rounded-lg relative z-10"
-                    data-sal="slide-right"
-                    data-sal-delay="50"
-                    data-sel-duration="1500"
-                    data-sal-easing="ease-out-back"
                   >
                     <h1 className="text-4xl sm:text-5xl text-white font-akaya dark:text-white font-extrabold tracking-widest	">
                       My contacts is:
@@ -97,31 +117,24 @@ export default function Contacts({ data }) {
                         {contacts.email}
                       </div>
                     </div>
-                  </div>
-
-                  <ContactForm
-                    data-sal="slide-right"
-                    data-sal-delay="300"
-                    data-sel-duration="1500"
-                    data-sal-easing="ease-out-back"
-                  />
+                  </motion.div>
+                  <motion.div variants={m_varik}>
+                    <ContactForm />
+                  </motion.div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <div
+      <motion.div
+        variants={m_top}
         className="absolute bottom-40 right-20 -z-10 "
-        data-sal="slide-up"
-        data-sal-delay="800"
-        data-sel-duration="50"
-        data-sal-easing="linear"
       >
         <Dino />
-      </div>
-    </Layout>
+      </motion.div>
+    </MFullSection>
   )
 }
 

@@ -27,12 +27,31 @@ body {
 .layout {
   display: flex;
   flex-direction: column;
+  /* height: 100vh; */
+  /* min-height: 45rem; */
   min-height: calc(100vh);
 }
 
 .main {
-  margin-top: 125px;
-  margin-bottom: 4rem;
+  min-height: 100%;
+  /* margin-top: 125px; */
+  /* margin-bottom: 4rem; */
+}
+/* .main--projects, */
+.main--contacts {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+.main--contacts {
+  min-height: 40rem;
+}
+.main--projects {
+  /* display: flex; */
+  flex: 1 1 auto;
+  /* position: relative; */
+  /* min-height: 70rem; */
 }
 
 footer {
@@ -43,6 +62,10 @@ footer {
   position: absolute;
   z-index: -1;
 }
+
+/* .section--top {
+  min-height: 40rem;
+} */
 
 .hero-section {
   position: relative;
@@ -103,13 +126,13 @@ footer {
 }
 
 .swiper .img-box {
-  padding: 5%;
+  /* padding: 5%;
   background: radial-gradient(
     151.64% 120.36% at 47.19% -0.63%,
     rgba(255, 255, 255, 0.9) 30%,
     rgba(255, 255, 255, 0) 100%
   );
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px); */
   /* overflow-y: scroll; */
   height: 100%;
 }
@@ -156,11 +179,13 @@ footer {
   transition-timing-function: linear;
 }
 .swiper--proj > .swiper-wrapper {
-  padding: 15rem 0 5rem;
+  padding: 20rem 0 5rem;
+  /* padding: 5rem 0; */
 }
 .swiper--proj > .swiper-wrapper > .swiper-slide {
   max-width: 480px;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
+  margin: 0 2rem;
 }
 
 .portfolio__slide::before {

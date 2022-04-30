@@ -4,7 +4,7 @@ import { NavMenu } from './'
 import { motion } from 'framer-motion'
 import cn from 'classnames'
 
-const transition = { duration: 4, ease: 'easeInOut' }
+// const transition = { duration: 4, ease: 'easeInOut' }
 
 export default function Header() {
   const [hideWave, setHideWave] = React.useState(false)
@@ -18,7 +18,11 @@ export default function Header() {
   }, [])
 
   return (
-    <header
+    <motion.header
+      // initial={false}
+      initial={{ opacity: 0, height: 0, y: -20 }}
+      animate={{ opacity: 1, height: 64, y: 0 }}
+      transition={{ delay: 0.1, duration: 0.3 }}
       className={`header ${hideWave ? 'bg-sky100 backdrop-blur-lg' : 'bg-sky'}`}
     >
       <div className="container mx-auto">
@@ -83,7 +87,9 @@ export default function Header() {
         </div>
       </div>
       <motion.svg
-        className={`header__svg ${hideWave ? 'top-[98%]' : 'top-[70%]'}`}
+        className={`header__svg max-h-full ${
+          hideWave ? 'top-[98%]' : 'top-[70%]'
+        }`}
         preserveAspectRatio="none"
         // height={hideWave ? 0 : '86px'}
         width="100%"
@@ -99,11 +105,12 @@ export default function Header() {
           strokeWidth={hideWave ? 0 : 15}
           stroke="rgba(255, 255, 255, 0.7)"
           strokeLinecap="round"
+          strokeLinejoin="round"
           initial={{ pathLength: 0 }}
           animate={{ pathLength: 0.488 }}
-          transition={transition}
+          transition={{ duration: 4, delay: 0.5, ease: 'easeInOut' }}
         />
       </motion.svg>
-    </header>
+    </motion.header>
   )
 }

@@ -1,12 +1,30 @@
 import React from 'react'
-import { Layout, Modal, StackSlider } from '../components'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
+import { Modal, StackSlider } from '../components'
+import { motion } from 'framer-motion'
+import cn from 'classnames'
 import { FreeMode, Mousewheel } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/css'
+import { MFullSection } from '../styles/styled'
+
+const m_top = {
+  hide: { opacity: 0, y: -100 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+}
+const m_projText = {
+  hide: { opacity: 0, x: 500 },
+  show: {
+    opacity: 1,
+    x: 0,
+  },
+}
 
 export default function Projects({ data }) {
   const projects = data.allMarkdownRemark.nodes
@@ -14,32 +32,34 @@ export default function Projects({ data }) {
   const refContainer = React.useRef(null)
   const refContainerLeft = React.useRef(null)
 
+  const [modal, setModal] = React.useState([])
+
   React.useEffect(() => {
     const margin = refContainer.current.getClientRects()[0].x
     refContainerLeft.current.style.marginLeft = Math.floor(margin) + 'px'
   })
 
-  const [modal, setModal] = React.useState(false)
-
   const showFigma = (figma, title) => {
-    // console.log(figma, title)
     setModal([figma, title])
   }
-
   return (
-    <Layout mainClass="main--projects !mt-24">
-      <section className="relative ">
-        <div
+    <>
+      <MFullSection
+        initial="hide"
+        animate="show"
+        exit="hide"
+        transition={{ staggerChildren: 0.5 }}
+        items="initial"
+        col="true"
+        className="my-auto"
+      >
+        <motion.div
+          variants={m_top}
           ref={refContainer}
-          className="container absolute left-0 right-0 top-12"
+          className="container absolute left-0 right-0 top-32"
         >
           <div className="flex flex-wrap justify-center -mx-4">
-            <div
-              className="w-full px-4"
-              data-sal="slide-down"
-              data-sal-delay="100"
-              data-sal-easing="ease-out-back"
-            >
+            <div className="w-full px-4">
               <div className="text-center mx-auto lg:mb-2 max-w-[510px]">
                 <span className="font-semibold text-lg text-primary mb-2 block">
                   My Projects
@@ -62,20 +82,18 @@ export default function Projects({ data }) {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          variants={m_projText}
           ref={refContainerLeft}
-          className="py-4 container--left"
-          data-sal="slide-left"
-          data-sal-delay="300"
-          data-sel-duration="3000"
-          data-sal-easing="ease-out-back"
+          className="container--left"
         >
           <Swiper
             modules={[FreeMode, Mousewheel]}
             slidesPerView={'auto'}
             watchOverflow={'true'}
+            spaceBetween={-15}
             // centeredSlides={true}
             // loadslides={3}
             // loop={true}
@@ -85,11 +103,9 @@ export default function Projects({ data }) {
           >
             {projects.map((project) => {
               const { title, stack, img, desc, links } = project.frontmatter
-              const logo = getImage(img.logo)
+              const logo = img.logo.publicURL
               const thumbnail = getImage(img.thumbnail)
               const figma = getImage(img.figma)
-              // const { logo, thumbnail } = getImage(project.frontmatter.img)
-              // console.log(figma)
 
               return (
                 <SwiperSlide key={project.id}>
@@ -102,8 +118,8 @@ export default function Projects({ data }) {
                       />
                     </div>
                     <div className="flex flex-col p-4 pt-10 relative">
-                      <div className="absolute -top-4 py-2 left-0 right-0 w-full">
-                        <StackSlider stack={stack} id={project.id} />
+                      <div className="py-2">
+                        {/* <StackSlider stack={stack} id={project.id} /> */}
                       </div>
 
                       <div className=" flex items-center justify-between">
@@ -111,25 +127,15 @@ export default function Projects({ data }) {
                           <div className="flex space-x-3 h-12">
                             <div className="h-auto w-full max-w-[200px]">
                               <img
-                                className="h-full	 object-contain object-left"
-                                src={img.logo.publicURL}
+                                className={cn(
+                                  'h-full object-contain object-left'
+                                  // {
+                                  //   'bg-black': is_white,
+                                  // }
+                                )}
+                                src={logo}
                                 alt={title}
                               />
-                              {/* {img.logo.extension === 'svg' ? (
-                                <img
-                                  className="h-full w-full"
-                                  src={img.logo.publicURL}
-                                  alt={title}
-                                />
-                              ) : (
-                                <GatsbyImage
-                                  // className="h-full"
-                                  placeholder="tracedSVG"
-                                  // className="w-full"
-                                  image={logo}
-                                  alt={title}
-                                />
-                              )} */}
                             </div>
                           </div>
                           <div className="flex mt-3 items-center">
@@ -166,6 +172,7 @@ export default function Projects({ data }) {
                           >
                             <a
                               className="btn-hide flex w-8 max-h-8"
+                              target="_blank"
                               {...(links[1] && {
                                 className: 'cursor-pointer flex w-8 max-h-8',
                                 href: links[1],
@@ -185,6 +192,7 @@ export default function Projects({ data }) {
                           >
                             <a
                               className="btn-hide flex w-8 max-h-8"
+                              target="_blank"
                               {...(links[2] && {
                                 className: 'cursor-pointer flex w-8 max-h-8',
                                 href: links[2],
@@ -204,11 +212,11 @@ export default function Projects({ data }) {
               )
             })}
           </Swiper>
-        </div>
-      </section>
+        </motion.div>
+      </MFullSection>
 
-      {modal && (
-        <Modal className="max-w-5xl" name="modal">
+      {Boolean(modal.length) && (
+        <Modal className="mod-test max-w-5xl" name="modal">
           <GatsbyImage
             className="object-cover object-top"
             image={modal[0]}
@@ -216,7 +224,7 @@ export default function Projects({ data }) {
           />
         </Modal>
       )}
-    </Layout>
+    </>
   )
 }
 
@@ -241,6 +249,7 @@ export const queryProjects = graphql`
               }
             }
             figma {
+              extension
               childImageSharp {
                 gatsbyImageData
               }

@@ -10,7 +10,7 @@ export default function StackSlider(props) {
       slidesPerView={'auto'}
       loop={true}
       freeMode={true}
-      speed={3000}
+      speed={4000}
       // centeredSlides={true}
       autoplay={{
         delay: 0,
@@ -18,7 +18,7 @@ export default function StackSlider(props) {
         waitForTransition: true,
         autoplayStopOnLast: true,
       }}
-      slidesPerView={5}
+      slidesPerView={7}
     >
       {props.stack.map((itm, idx) => (
         <SwiperSlide key={props.id + '_' + idx}>
