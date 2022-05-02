@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const PostStyled = styled.div`
+export const MPostStyled = styled(motion.div)`
   audio:not([controls]) {
     display: none;
     height: 0;

@@ -12,7 +12,8 @@ module.exports = {
   },
   plugins: [
     // `gatsby-plugin-transition-link`,
-    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-catch-links',
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',

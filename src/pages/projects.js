@@ -12,7 +12,7 @@ import 'swiper/css'
 import { MFullSection } from '../styles/styled'
 
 const m_top = {
-  hide: { opacity: 0, y: -100 },
+  hide: { opacity: 0, y: -200 },
   show: {
     opacity: 1,
     y: 0,
@@ -48,7 +48,7 @@ export default function Projects({ data }) {
         initial="hide"
         animate="show"
         exit="hide"
-        transition={{ staggerChildren: 0.5 }}
+        transition={{ staggerChildren: 0.2 }}
         items="initial"
         col="true"
         className="my-auto"

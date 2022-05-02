@@ -1,56 +1,61 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Layout, Post } from '../components'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion, LazyMotion, domAnimation, m } from 'framer-motion'
+import { MFullSection } from '../styles/styled'
+
+const m_txt = {
+  hide: { opacity: 0, y: -200 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+}
+const m_top = {
+  hide: { opacity: 0, y: 100 },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+}
 
 export default function blog({ data }) {
   const blog = data.allMarkdownRemark.nodes
 
   return (
-    <>
-      <section className="py-8">
-        <div className="container relative">
-          <div className="flex flex-wrap justify-center -mx-4">
-            <div
-              className="w-full px-4"
-              // data-sal="slide-down"
-              // data-sal-delay="100"
-              // data-sal-easing="ease-out-back"
-            >
-              <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
-                <span className="font-semibold text-lg text-primary mb-2 block">
-                  Our Blogs
-                </span>
-                <motion.h2
-                  layout
-                  layoutId="headline"
-                  style={{ maxWidth: `600px`, marginBottom: `1rem` }}
-                  className="
-                  font-bold
-                  text-3xl
-                  sm:text-4xl
-                  md:text-[40px]
-                  text-dark
-                  mb-4
-                  "
-                >
-                  Our Recent News
-                </motion.h2>
-                <p className="text-base text-body-color">
-                  There are many variations of passages of Lorem Ipsum available
-                  but the majority have suffered alteration in some form.
-                </p>
-              </div>
+    <MFullSection
+      initial="hide"
+      animate="show"
+      exit="hide"
+      transition={{ staggerChildren: 0.2 }}
+    >
+      <div className="container">
+        <motion.div
+          variants={m_txt}
+          className="flex flex-wrap justify-center -mx-4 mt-32"
+        >
+          <div className="w-full px-4">
+            <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
+              <span className="font-semibold text-lg text-primary mb-2 block">
+                My Blog
+              </span>
+              <h2 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
+                Our Recent News
+              </h2>
+              <p className="text-base text-body-color">
+                There are many variations of passages of Lorem Ipsum available
+                but the majority have suffered alteration in some form.
+              </p>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-4">
-            {blog.map((item, idx) => (
-              <Post key={item.id} data={item} dalay={`${(idx % 3) + 1}00`} />
-            ))}
-          </div>
-        </div>
-      </section>
-    </>
+        </motion.div>
+        <motion.div variants={m_top} className="flex flex-wrap -mx-4">
+          {blog.map((item, idx) => (
+            <Post key={item.id} data={item} custom={idx} />
+          ))}
+        </motion.div>
+      </div>
+    </MFullSection>
   )
 }
 

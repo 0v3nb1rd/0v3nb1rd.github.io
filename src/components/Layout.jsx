@@ -10,7 +10,11 @@ export default function Layout({ children, page, location }) {
       <AnimatePresence
         exitBeforeEnter
         // initial={false}
-        // onExitComplete={() => window.scrollTo(0, 0)}
+        // onExitComplete={() => {
+        //   if (typeof window !== 'undefined') {
+        //     window.scrollTo({ top: 0 })
+        //   }
+        // }}
       >
         <main key={location.pathname} className={cn('main', [page])}>
           {children}
