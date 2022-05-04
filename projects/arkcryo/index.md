@@ -1,9 +1,9 @@
 ---
-date: 2022-03-03
+date: 2022-03-15
 path: "/arkcryo"
 title: "Arkcryo"
 desc: "Corporative site for cryodelivery company"
-links: ["figma", "github", "http://test9.3d.lviv.ua/"]
+links: ["figma", "", "http://test9.3d.lviv.ua/"]
 img: {
 	logo: logo.svg,
 	thumbnail: thumbnail.png,

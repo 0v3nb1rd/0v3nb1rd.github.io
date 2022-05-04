@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
-import { Modal, StackSlider } from '../components'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { Modal } from '../components'
 import { motion } from 'framer-motion'
 import cn from 'classnames'
 import { FreeMode, Mousewheel } from 'swiper'
@@ -26,7 +26,7 @@ const m_projText = {
   },
 }
 
-export default function Projects({ data }) {
+export const Projects = ({ data }) => {
   const projects = data.allMarkdownRemark.nodes
 
   const refContainer = React.useRef(null)
@@ -62,7 +62,7 @@ export default function Projects({ data }) {
             <div className="w-full px-4">
               <div className="text-center mx-auto lg:mb-2 max-w-[510px]">
                 <span className="font-semibold text-lg text-primary mb-2 block">
-                  My Projects
+                  Projects
                 </span>
                 <h2
                   className="
@@ -267,3 +267,5 @@ export const queryProjects = graphql`
     }
   }
 `
+
+export default Projects

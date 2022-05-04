@@ -1,9 +1,9 @@
 ---
-date: 2021-12-25
+date: 2022-01-12
 path: "/appteka"
 title: "Appteka"
 desc: "Internet shop - Apple technics and accessories"
-links: ["figma", "#", "http://test7.3d.lviv.ua/"]
+links: ["figma", "", "http://test7.3d.lviv.ua/"]
 img: {
 	logo: logo.svg,
 	thumbnail: thumbnail.png,

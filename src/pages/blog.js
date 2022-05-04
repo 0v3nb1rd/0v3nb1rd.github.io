@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Layout, Post } from '../components'
-import { motion, LazyMotion, domAnimation, m } from 'framer-motion'
+import { Post } from '../components'
+import { motion } from 'framer-motion'
 import { MFullSection } from '../styles/styled'
 
 const m_txt = {
@@ -19,7 +19,7 @@ const m_top = {
   },
 }
 
-export default function blog({ data }) {
+export const blog = ({ data }) => {
   const blog = data.allMarkdownRemark.nodes
 
   return (
@@ -35,12 +35,12 @@ export default function blog({ data }) {
           className="flex flex-wrap justify-center -mx-4 mt-32"
         >
           <div className="w-full px-4">
-            <div className="text-center mx-auto mb-[60px] lg:mb-20 max-w-[510px]">
+            <div className="text-center mx-auto mb-[60px] lg:mb-12 max-w-[510px]">
               <span className="font-semibold text-lg text-primary mb-2 block">
-                My Blog
+                Blog
               </span>
               <h2 className="font-bold text-3xl sm:text-4xl md:text-[40px] text-dark mb-4">
-                Our Recent News
+                My Recent Blog News
               </h2>
               <p className="text-base text-body-color">
                 There are many variations of passages of Lorem Ipsum available
@@ -49,7 +49,10 @@ export default function blog({ data }) {
             </div>
           </div>
         </motion.div>
-        <motion.div variants={m_top} className="flex flex-wrap -mx-4">
+        <motion.div
+          variants={m_top}
+          className="flex items-center flex-wrap -mx-4"
+        >
           {blog.map((item, idx) => (
             <Post key={item.id} data={item} custom={idx} />
           ))}
@@ -84,3 +87,5 @@ export const query = graphql`
     }
   }
 `
+
+export default blog

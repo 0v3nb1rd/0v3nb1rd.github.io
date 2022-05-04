@@ -1,12 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { NavMenu } from './'
+import { NavMenu } from '..'
 import { motion } from 'framer-motion'
 import cn from 'classnames'
 
-// const transition = { duration: 4, ease: 'easeInOut' }
-
-export default function Header() {
+export const Header = () => {
   const [hideWave, setHideWave] = React.useState(false)
 
   React.useEffect(() => {

@@ -1,12 +1,6 @@
 import React from 'react'
 
-export default function ProjectLink({
-  iconSrc,
-  iconAlt,
-  link,
-  modal,
-  ...props
-}) {
+export const ProjectLink = ({ iconSrc, iconAlt, link, modal, ...props }) => {
   console.log(props)
   return (
     <li className="my-2 tooltip" {...props}>

@@ -20,8 +20,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
-  /* background-color: #F1F5F7; */
+  z-index: 20;
 }
 
 .layout {

@@ -1,13 +1,8 @@
 import React from 'react'
-import { Button } from './'
+import { Button } from '..'
 import cn from 'classnames'
 
-export default function ContactForm({
-  className,
-  children,
-  btnFull,
-  ...props
-}) {
+export const ContactForm = ({ className, children, btnFull, ...props }) => {
   return (
     <form
       {...props}

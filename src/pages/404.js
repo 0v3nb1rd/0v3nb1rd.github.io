@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Layout } from '../components'
 
-export default function notFound() {
+export const notFound = () => {
   return (
     <section>
       <div className="bg-gradient-to-r from-purple-300 to-blue-200">
@@ -36,3 +35,5 @@ export default function notFound() {
     </section>
   )
 }
+
+export default notFound

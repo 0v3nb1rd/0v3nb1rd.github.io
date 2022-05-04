@@ -9,7 +9,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 // import required modules
 import { Autoplay, EffectCards, FreeMode, Navigation } from 'swiper'
 
-export default function Slider(props) {
+export const Slider = (props) => {
   // console.log('first')
   const data = useStaticQuery(graphql`
     query queryScreenProjects {

@@ -1,7 +1,7 @@
 import React from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
-export default function AnimeSlider({ className, children, ...props }) {
+export const Slider = ({ className, children, ...props }) => {
   const faceCount = 4 // Counts of face images
   const [face, setFace] = React.useState(1)
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, FreeMode } from 'swiper'
 
-export default function StackSlider(props) {
+export const StackSlider = (props) => {
   return (
     <Swiper
       className="swipere__brands"

@@ -1,19 +1,7 @@
 import React from 'react'
-import { NavMenu, SocialList } from './'
-// import { useStaticQuery, graphql } from 'gatsby'
-// import { motion } from 'framer-motion'
-export default function Footer() {
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     site {
-  //       siteMetadata {
-  //         copiright
-  //       }
-  //     }
-  //   }
-  // `)
-  // const { copiright } = data.site.siteMetadata
+import { NavMenu, SocialList } from '..'
 
+export const Footer = () => {
   return (
     <footer className="items-center text-neutral-content relative z-10">
       <svg

@@ -20,7 +20,7 @@ const m_top = {
   },
 }
 
-export default function Contacts({ data }) {
+export const Contacts = ({ data }) => {
   const { contacts } = data.site.siteMetadata
   return (
     <MFullSection
@@ -151,3 +151,5 @@ export const queryContacts = graphql`
     }
   }
 `
+
+export default Contacts

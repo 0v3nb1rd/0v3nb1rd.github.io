@@ -268,6 +268,7 @@ export const MPostStyled = styled(motion.div)`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
+    list-style-type: auto;
     list-style-position: outside;
     list-style-image: none;
   }
@@ -357,11 +358,12 @@ export const MPostStyled = styled(motion.div)`
     margin-right: 1.45rem;
     margin-top: 0;
     padding-bottom: 0;
-    padding-left: 0;
     padding-right: 0;
     padding-top: 0;
+    padding-left: 1rem;
+    margin: 0 0 1.45rem;
     margin-bottom: 1.45rem;
-    margin: 0 1.45rem 1.45rem;
+    border-left: 4px solid rgb(214, 214, 215);
   }
   form {
     margin-left: 0;
@@ -563,7 +565,11 @@ export const MPostStyled = styled(motion.div)`
 
   a {
     text-decoration: none;
-    color: rgb(0, 119, 255);
+    color: #a3bf27;
+    transition: all 0.1s ease-in-out;
+    &:hover {
+      color: #738913;
+    }
   }
 
   button,
@@ -573,19 +579,15 @@ export const MPostStyled = styled(motion.div)`
     outline: none;
   }
 
-  // inner
-  color: #212121;
-  a {
-    text-decoration: none;
-    color: rgb(0, 119, 255);
-  }
   i {
     color: #a7a7a7;
   }
-  //
 
   ul {
     list-style-type: disc;
+    ul {
+      list-style-type: circle;
+    }
   }
 `
 
@@ -640,17 +642,16 @@ export const HighlightStyled = styled.article`
     border-radius: 0.3em;
   }
 
-  :not(pre) > code[class*='language-'],
+  & :not(pre) > code[class*='language-'],
   pre[class*='language-'] {
     background: #1d1f21;
   }
 
   /* Inline code */
-  :not(pre) > code[class*='language-'] {
+  & :not(pre) > code[class*='language-'] {
     padding: 0.1em;
     border-radius: 0.3em;
   }
-
   .token.comment,
   .token.prolog,
   .token.doctype,

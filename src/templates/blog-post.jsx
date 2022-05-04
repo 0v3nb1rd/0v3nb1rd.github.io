@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { motion } from 'framer-motion'
 
-import { MPostStyled, HighlightStyled } from './styled'
+import { MPostStyled, HighlightStyled, ArticleDate } from './styled'
 
 const m_txt = {
   hide: { opacity: 0, y: -200 },
@@ -21,15 +21,12 @@ const m_top = {
   },
 }
 
-export default function BlogPost({ data }) {
-  const { html } = data.markdownRemark
-  const { title, thumbnail } = data.markdownRemark.frontmatter
+export const BlogPost = ({ data }) => {
+  const { html, timeToRead } = data.markdownRemark
+  const { title, thumbnail, date } = data.markdownRemark.frontmatter
   const image = getImage(thumbnail)
 
-  const [anime, setAnime] = React.useState(false)
-  const clickTest = (e) => {
-    setAnime(!anime)
-  }
+  console.log(timeToRead)
   return (
     <MPostStyled
       initial="hide"
@@ -68,9 +65,10 @@ export default function BlogPost({ data }) {
         </motion.div>
         <motion.div variants={m_top}>
           <h1>{title}</h1>
-          <button className="btn btn-primary !mb-8 w-full" onClick={clickTest}>
-            click me
-          </button>
+          <ArticleDate>
+            <i>{date} -</i>
+            <i>{timeToRead} min read</i>
+          </ArticleDate>
           <HighlightStyled dangerouslySetInnerHTML={{ __html: html }} />
         </motion.div>
       </motion.div>
@@ -82,8 +80,10 @@ export const postQuery = graphql`
   query postQuery($slug: String) {
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       html
+      timeToRead
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
         thumbnail {
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
@@ -93,3 +93,5 @@ export const postQuery = graphql`
     }
   }
 `
+
+export default BlogPost

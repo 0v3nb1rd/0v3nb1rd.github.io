@@ -3,7 +3,7 @@ import { Header, Modal, ContactForm, Footer } from './'
 import cn from 'classnames'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export default function Layout({ children, page, location }) {
+export const Layout = ({ children, page, location }) => {
   return (
     <motion.div className="layout">
       <Header />

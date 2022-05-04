@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export default function NavMenu({ className, btnClasses }) {
+export const NavMenu = ({ className, btnClasses }) => {
   return (
     <nav className={className}>
       <ul className="flex">
