@@ -43,7 +43,8 @@ export const BlogPost = ({ data }) => {
       >
         <GatsbyImage
           image={image}
-          className="absolute inset-0 object-cover object-top w-full h-full filter blur"
+          layout="constrained"
+          className="!absolute inset-0 object-cover object-top w-full h-full filter blur"
           alt={title}
         />
       </motion.div>
@@ -58,7 +59,7 @@ export const BlogPost = ({ data }) => {
           <div className="relative pt-[56.25%] overflow-hidden rounded-2xl">
             <GatsbyImage
               image={image}
-              className="w-full h-full absolute inset-0 object-cover"
+              className="!absolute w-full h-full inset-0 object-cover"
               alt={title}
             />
           </div>
