@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export const NavMenu = ({ className, btnClasses }) => {
+export const NavMenu = ({ className, btnClasses, isFooter }) => {
   return (
     <nav className={className}>
       <ul className="flex">
         <li className="mx-2">
-          <Link to="/" className={btnClasses} activeClassName="bg-slate-100/25">
+          <Link
+            to="/"
+            className={btnClasses}
+            activeClassName={isFooter ? 'text-primary' : 'bg-slate-100/25'}
+          >
             Home
           </Link>
         </li>
@@ -14,7 +18,7 @@ export const NavMenu = ({ className, btnClasses }) => {
           <Link
             to="/projects"
             className={btnClasses}
-            activeClassName="bg-slate-100/25"
+            activeClassName={isFooter ? 'text-primary' : 'bg-slate-100/25'}
           >
             Projects
           </Link>
@@ -23,8 +27,7 @@ export const NavMenu = ({ className, btnClasses }) => {
           <Link
             to="/blog"
             className={btnClasses}
-            activeClassName="bg-slate-100/25"
-            partiallyActive={true}
+            activeClassName={isFooter ? 'text-primary' : 'bg-slate-100/25'}
           >
             Blog
           </Link>
@@ -33,7 +36,7 @@ export const NavMenu = ({ className, btnClasses }) => {
           <Link
             to="/contacts"
             className={btnClasses}
-            activeClassName="bg-slate-100/25"
+            activeClassName={isFooter ? 'text-primary' : 'bg-slate-100/25'}
           >
             Contacts
           </Link>

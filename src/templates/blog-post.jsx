@@ -25,8 +25,6 @@ export const BlogPost = ({ data }) => {
   const { html, timeToRead } = data.markdownRemark
   const { title, thumbnail, date } = data.markdownRemark.frontmatter
   const image = getImage(thumbnail)
-
-  console.log(timeToRead)
   return (
     <MPostStyled
       initial="hide"

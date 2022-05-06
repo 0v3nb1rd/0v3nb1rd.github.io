@@ -43,7 +43,8 @@ export const SectionSlider = () => {
               custom={0}
               className="text-6xl font-bold"
             >
-              Welcome To The<div className="text-red-600">Weirdos Club.</div>
+              Welcome To My
+              <div className="text-red-600">Site Portfolio...</div>
             </motion.h2>
             <motion.p
               variants={m_projText}

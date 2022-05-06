@@ -3,11 +3,17 @@ module.exports = {
   siteMetadata: {
     title: 'Ov3nb1rd - Front-end Stack Developer',
     description: 'web dev portfolio',
-    copiright: '© 2022',
     contacts: {
       adress: 'pr. Svobody, Lviv, Ukraine',
       phone: '+380639911222',
       email: '0v3nb1rd@gmail.com',
+    },
+    socials: {
+      facebook: 'https://facebook.com/0v3nb1rd',
+      instagram: 'https://instagram.com/0v3nb1rd',
+      telegram: 'https://t.me/ov3nb1rd',
+      github: 'https://github.com/0v3nb1rd',
+      linkedin: 'https://linkedin.com/in/0v3nb1rd',
     },
   },
   plugins: [

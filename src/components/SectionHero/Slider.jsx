@@ -21,29 +21,8 @@ export const Slider = ({ className, children, ...props }) => {
         key={face}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        // variants={variants}
-        // exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.4, delay: 0.2 }}
       />
     </div>
   )
 }
-
-// export const variants = {
-//   hide: {
-//     y: -20,
-//     opacity: 0,
-//     transition: {
-//       // ease: 'easeIn',
-//       duration: 0.3,
-//     },
-//   },
-//   show: {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       // ease: 'easeOut',
-//       duration: 0.15,
-//     },
-//   },
-// }
