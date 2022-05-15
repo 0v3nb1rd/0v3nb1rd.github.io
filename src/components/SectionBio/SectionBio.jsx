@@ -31,13 +31,13 @@ export const SectionBio = () => {
   return (
     <section>
       <div className="bg-neutral text-white py-8">
-        <div className="container mx-auto flex flex-col items-start md:flex-row my-12 md:my-24">
+        <div className="container mx-auto flex flex-col items-start md:flex-row mt-14 md:my-20 lg:my-12">
           <motion.div
             variants={m_projSlider}
             initial="hide"
             whileInView="show"
             viewport={{ once: false, amount: 0.3 }}
-            className="flex flex-col w-full sticky md:top-1/4 lg:w-1/3 mt-2 md:mt-12 px-8"
+            className="flex flex-col w-full sticky -mb-8 md:top-1/4 lg:w-1/3 mt-2 md:mt-12 px-8"
           >
             <p className="ml-2 text-yellow-300 uppercase tracking-loose">
               Working Experience
@@ -62,8 +62,8 @@ export const SectionBio = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="ml-0 md:ml-12 lg:w-2/3 sticky"
           >
-            <div className="container mx-auto w-full h-full">
-              <div className="relative wrap overflow-hidden p-10 h-full">
+            <div className=" mx-auto w-full h-full">
+              <div className="relative wrap overflow-hidden xl:p-10 h-full">
                 <div className="border-4 rounded-3xl	border-yellow-300 absolute h-full"></div>
                 <div className="border-4 rounded-3xl border-yellow-300 absolute h-full "></div>
 
@@ -71,14 +71,14 @@ export const SectionBio = () => {
                   <motion.div
                     variants={m_projText}
                     custom={0}
-                    className="mb-8 ml-10 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                    className="mb-4 lg:mb-8 lg:ml-10 flex justify-between flex-row-reverse items-center w-full left-timeline"
                   >
-                    <div className="order-1 w-5/12"></div>
-                    <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <div className="order-1 lg:w-5/12"></div>
+                    <div className="order-1 xl:w-5/12 p-4 lg:px-1 lg:py-4 text-right">
                       <p className="text-base text-yellow-300">October, 2020</p>
                       <a
                         href="#"
-                        className="flex mb-3 font-bold text-lg md:text-2xl"
+                        className="flex mb-1 lg:mb-3 font-bold text-lg md:text-2xl"
                       >
                         <img
                           className="w-40 ml-auto"
@@ -90,7 +90,7 @@ export const SectionBio = () => {
                         Asign - web studio that creates websites and modern
                         landings with smooth animation
                       </p>
-                      <p className="mt-2">
+                      <p className="mt-1 md:mt-2">
                         <span className="text-red-500">Stack:</span> HTML,
                         CSS/LESS, JQUERY, JS/ES6, NPM, PHP, LARAVEL, GIT
                       </p>
@@ -99,21 +99,21 @@ export const SectionBio = () => {
                   <motion.div
                     variants={m_projText}
                     custom={1}
-                    className="mb-8 flex justify-between items-center w-full right-timeline"
+                    className="mb-4 lg:mb-8 flex justify-between items-center w-full right-timeline"
                   >
-                    <div className="order-1 w-5/12"></div>
-                    <div className="order-1  w-5/12 px-1 py-4 text-left">
+                    <div className="order-1 lg:w-5/12"></div>
+                    <div className="order-1 xl:w-5/12 p-4 lg:px-1 lg:py-4 text-left">
                       <p className="mb-3 text-base text-yellow-300">
                         6-9 May, 2018
                       </p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                      <h4 className="mb-1 lg:mb-3 font-bold text-lg md:text-2xl">
                         Freelance
                       </h4>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                         Work as a web muster, full-stack developer
                         freelancehunt.com
                       </p>
-                      <p className="mt-2">
+                      <p className="mt-1 md:mt-2">
                         <span className="text-red-500">Stack:</span> HTML,
                         CSS/SCSS, JS/ES6, NODE, REACT/REDUX, EXPRESS, SEO
                       </p>
@@ -122,14 +122,14 @@ export const SectionBio = () => {
                   <motion.div
                     variants={m_projText}
                     custom={3}
-                    className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline"
+                    className="mb-4 lg:mb-8 lg:ml-10 flex justify-between flex-row-reverse items-center w-full left-timeline"
                   >
-                    <div className="order-1 w-5/12"></div>
-                    <div className="order-1 w-5/12 px-1 py-4 text-right">
+                    <div className="order-1 lg:w-5/12"></div>
+                    <div className="order-1 xl:w-5/12 p-4 lg:px-1 lg:py-4 text-right">
                       <p className="mb-3 text-base text-yellow-300">
                         10 May, 2017
                       </p>
-                      <h4 className="mb-3 font-bold text-lg md:text-2xl">
+                      <h4 className="mb-1 lg:mb-3 font-bold text-lg md:text-2xl">
                         SEO Link builder
                       </h4>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
@@ -137,7 +137,7 @@ export const SectionBio = () => {
                         the ranking of sites, work with rozetka.ua and
                         hotline.ua
                       </p>
-                      <p className="mt-2">
+                      <p className="mt-1 md:mt-2">
                         <span className="text-red-500">Stack:</span> HTML, SEO
                       </p>
                     </div>
@@ -145,21 +145,20 @@ export const SectionBio = () => {
                   <motion.div
                     variants={m_projText}
                     custom={4}
-                    className="mb-8 flex justify-between items-center w-full right-timeline"
+                    className="mb-4 lg:mb-8 flex justify-between items-center w-full right-timeline"
                   >
-                    <div className="order-1 w-5/12"></div>
-
-                    <div className="order-1  w-5/12 px-1 py-4">
+                    <div className="order-1 lg:w-5/12"></div>
+                    <div className="order-1 xl:w-5/12 p-4 lg:px-1 lg:py-4">
                       <p className="mb-3 text-base text-yellow-300">
                         12 May, 2016
                       </p>
-                      <h4 className="mb-3 font-bold  text-lg md:text-2xl text-left">
+                      <h4 className="mb-1 lg:mb-3 font-bold  text-lg md:text-2xl text-left">
                         Self projects
                       </h4>
                       <p className="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
                         Create landing-pages, support landing, sales{' '}
                       </p>
-                      <p className="mt-2">
+                      <p className="mt-1 md:mt-2">
                         <span className="text-red-500">Stack: </span>
                         WORDPRESS, OPENCART, HTML, CSS/SCSS, JS, NPM, GULP, SEO
                       </p>
@@ -172,7 +171,7 @@ export const SectionBio = () => {
                 initial="hide"
                 whileInView="show"
                 viewport={{ once: false, amount: 0.5 }}
-                className="mx-auto -mt-36 md:-mt-36"
+                className="md:-ml-[5.5rem] lg:mr-auto xl:mx-auto -mt-2 lg:-mt-12 xl:-mt-36"
                 src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
               />
             </div>
