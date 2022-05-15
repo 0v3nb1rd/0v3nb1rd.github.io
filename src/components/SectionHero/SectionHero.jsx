@@ -28,30 +28,47 @@ export const SectionHero = () => {
       transition={{ staggerChildren: 0.3 }}
       className="section--top h-screen	flex align-center justify-center items-center relative"
     >
-      <div className="hero-content m-auto flex-col lg:flex-row-reverse">
-        <motion.div variants={m_itm_right} className="w-2/4">
-          <Slider className="w-[600px] h-[600px] mx-auto" />
+      <div className="hero-content">
+        <motion.div
+          variants={m_itm_right}
+          className="h-[40vh] lg:h-auto w-full lg:w-2/4"
+        >
+          <Slider className="h-full lg:w-[440px] 2xl:w-[600px] mx-auto" />
         </motion.div>
 
-        <motion.div variants={m_itm_left} className="w-2/4">
-          <motion.h1 variants={m_itm_left} className="text-8xl font-bold">
-            Hello 👋<div className="text-red-600	">I’m Nazar.</div>
+        <motion.div
+          variants={m_itm_left}
+          className="text-center lg:text-left w-full lg:w-2/4"
+        >
+          <motion.h1
+            variants={m_itm_left}
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-bold"
+          >
+            Hello 👋
+            <div className="block md:inline-block pl-2 lg:pl-0 text-red-600">
+              I’m Nazar.
+            </div>
           </motion.h1>
-          <motion.div variants={m_itm_left} className="py-6 text-2xl type-txt">
+          <motion.div
+            variants={m_itm_left}
+            className="py-2 md:py-6 text-2xl xl:text-[2rem] xl:leading-[54px] tracking-[-0.3px]"
+          >
             A modern
-            <Typewriter
-              options={{
-                strings: [
-                  '<span class="text-red-600 text-5xl font-akaya">HTML-CSS</span> coder',
-                  '<span class="text-sky text-5xl font-akaya">React.js</span> dev.',
-                  '<span class="text-primary text-5xl font-akaya">Node.js</span> dev.',
-                  '<span class="text-warning text-5xl font-akaya">UI/UX</span> designer',
-                ],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-            <span className="block">
+            <div className="xl:pl-4 text-4xl md:text-5xl xl:inline-block h-[50px]">
+              <Typewriter
+                options={{
+                  strings: [
+                    '<span class="text-red-600 font-akaya">HTML-CSS</span> <span class="text-[2rem]">coder</span>',
+                    '<span class="text-sky font-akaya">React.js</span> <span class="text-[2rem]">dev.</span>',
+                    '<span class="text-primary font-akaya">Node.js</span> <span class="text-[2rem]">dev.</span>',
+                    '<span class="text-warning font-akaya">UI/UX</span> <span class="text-[2rem]">designer</span>',
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
+            <span className="hidden lg:block">
               with a strong appetite for creating memorable experiences.
             </span>
           </motion.div>
