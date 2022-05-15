@@ -44,9 +44,9 @@ export const Slider = (props) => {
         grabCursor={true}
         // modules={[EffectCards, Autoplay, FreeMode, Navigation]}
         modules={[FreeMode, Navigation, Autoplay]}
-        autoplay={{
-          delay: 1000,
-        }}
+        // autoplay={{
+        //   delay: 1000,
+        // }}
         speed={400}
         navigation
         className="swip swip--home"
@@ -58,7 +58,7 @@ export const Slider = (props) => {
 
           return (
             <SwiperSlide key={index + project.id}>
-              <div className="img-box">
+              <div className="img-box flex flex-col justify-center">
                 <GatsbyImage image={thumbnail} alt={title} />
               </div>
             </SwiperSlide>

@@ -10,6 +10,10 @@
   }
 }
 
+.gatsby-image-wrapper-constrained {
+  vertical-align: middle;
+}
+
 @layer components {
   .btn-hide {
     opacity: 0.3;
@@ -93,6 +97,7 @@ footer {
 .section__slider .wrap {
   height: 70vh;
   width: 25vw;
+  /* width: 100%; */
 }
 
 .swiper {
@@ -128,7 +133,8 @@ footer {
   top: 60%;
   height: 3rem;
   width: 4rem;
-  background: url('/img/icons/arrow_r.svg') center;
+  background: rgba(255, 255, 255, 0.5) url('/img/icons/arrow_r.svg') center;
+  backdrop-filter: saturate(180%) blur(20px);
   background-size: cover;
   cursor: pointer;
   z-index: 10;
@@ -136,9 +142,27 @@ footer {
 .swip--home .swiper-button-prev {
   left: 3%;
   transform: rotate(180deg);
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
 }
 .swip--home .swiper-button-next {
   right: 3%;
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {

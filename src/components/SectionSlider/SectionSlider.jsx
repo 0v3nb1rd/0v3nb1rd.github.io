@@ -36,12 +36,12 @@ export const SectionSlider = () => {
             <Slider />
           </div>
         </motion.div>
-        <div className="w-2/4">
-          <div className="w-4/5 mx-auto">
+        <div className="w-full lg:w-2/4 text-center lg:text-left">
+          <div className=" lg:w-4/5 mx-auto">
             <motion.h2
               variants={m_projText}
               custom={0}
-              className="text-6xl font-bold"
+              className="text-4xl lg:text-6xl font-bold"
             >
               Welcome To My
               <div className="text-red-600">Site Portfolio...</div>
@@ -49,7 +49,7 @@ export const SectionSlider = () => {
             <motion.p
               variants={m_projText}
               custom={1}
-              className="py-6 text-2xl"
+              className="py-2 lg:py-6 text-2xl"
             >
               The WEIRDOS CLUB is a private collection of NFTs—unique digital
               collectibles. The Weirdos are stored as ERC-721 tokens on the
@@ -58,7 +58,7 @@ export const SectionSlider = () => {
             <motion.p
               variants={m_projText}
               custom={2}
-              className="py-5 text-1xl"
+              className="py-2 lg:py-5 text-md text-justify lg:text-left"
             >
               With more than 200+ hand drawn traits, each NFT is unique and
               comes with a membership to an exclusive group of successful
