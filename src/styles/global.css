@@ -82,13 +82,6 @@ footer {
   right: 0;
 }
 
-.logo-box {
-  position: absolute;
-  left: 0;
-  top: 1rem;
-  z-index: 5;
-}
-
 .svg-blue {
   backdrop-filter: blur(20px);
   background-color: rgba(#30aade, 0.8);

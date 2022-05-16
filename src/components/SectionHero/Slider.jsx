@@ -5,13 +5,13 @@ export const Slider = ({ className, children, ...props }) => {
   const faceCount = 4 // Counts of face images
   const [face, setFace] = React.useState(1)
 
-  // React.useEffect(() => {
-  //   setInterval(() => {
-  //     setFace((face) => {
-  //       face === faceCount ? setFace(1) : setFace(face + 1)
-  //     })
-  //   }, 1000)
-  // }, [])
+  React.useEffect(() => {
+    setInterval(() => {
+      setFace((face) => {
+        face === faceCount ? setFace(1) : setFace(face + 1)
+      })
+    }, 1000)
+  }, [])
 
   return (
     <div className={className}>

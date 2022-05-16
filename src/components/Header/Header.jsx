@@ -3,9 +3,13 @@ import { Link } from 'gatsby'
 import { NavMenu } from '..'
 import { motion } from 'framer-motion'
 import cn from 'classnames'
+import { useIsMedium } from '../../hooks/utils'
 
 export const Header = () => {
   const [hideWave, setHideWave] = React.useState(false)
+
+  const isSmall = useIsMedium()
+  const IsMobileHeight = () => (isSmall ? 46 : 64)
 
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -19,47 +23,20 @@ export const Header = () => {
     <motion.header
       // initial={false}
       initial={{ opacity: 0, height: 0, y: -20 }}
-      animate={{ opacity: 1, height: 64, y: 0 }}
+      animate={{ opacity: 1, height: IsMobileHeight(), y: 0 }}
       transition={{ delay: 0.1, duration: 0.3 }}
       className={`header ${hideWave ? 'bg-sky100 backdrop-blur-lg' : 'bg-sky'}`}
     >
       <div className="container mx-auto">
         <div
-          className={cn('navbar transition-all relative', {
-            'translate-y-5': !hideWave,
-          })}
+          className={`navbar transition-all p-0 lg:p-2 relative 
+					${!hideWave ? 'translate-y-0 lg:translate-y-5' : 'min-h-0 lg:min-h-16'}`}
         >
           <div className="navbar-start">
-            <div className="dropdown">
-              <label tabIndex="0" className="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </label>
-              <ul className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                <li>
-                  <a>Projects</a>
-                </li>
-                <li>
-                  <a>Blog</a>
-                </li>
-                <li>
-                  <a>Contacts</a>
-                </li>
-              </ul>
-            </div>
-            <Link to="/" className="logo-box">
+            <Link
+              to="/"
+              className="logo-box absolute w-[48px] lg:w-auto left-0 top-0 lg:top-4 z-10"
+            >
               <motion.img
                 src="/logo.svg"
                 alt="logo icon"
@@ -68,18 +45,44 @@ export const Header = () => {
             </Link>
           </div>
 
-          <NavMenu
-            className="navbar-center hidden lg:flex"
-            btnClasses="btn glass"
-          />
+          <div className="navbar-center order-1 lg:order-none ">
+            <div className="dropdown lg:hidden">
+              <label
+                tabIndex="0"
+                className="btn btn-ghost btn-square text-neutral-content"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  className="inline-block w-5 h-5 stroke-current"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </label>
 
-          <div className="navbar-end">
+              <NavMenu
+                isCol
+                className="menu right-0 menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-36"
+              />
+            </div>
+            <NavMenu className="hidden lg:flex" btnClasses="btn glass" />
+          </div>
+
+          <div className="navbar-end justify-start lg:justify-end">
             <label
               htmlFor="modal-cv"
-              className="btn btn-accent text-white tracking-widest"
+              className="btn btn-sm lg:btn-md btn-accent text-white tracking-widest"
             >
               show
-              <span className="pl-1 text-red-500 text-3xl font-akaya">CV</span>
+              <span className="pl-1 text-red-500 text-xl lg:text-3xl font-akaya">
+                CV
+              </span>
             </label>
           </div>
         </div>
@@ -94,8 +97,8 @@ export const Header = () => {
         viewBox="0 0 1917 100"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        initial={{ height: 86 }}
-        animate={{ height: hideWave ? 0 : 86 }}
+        initial={{ height: IsMobileHeight() }}
+        animate={{ height: hideWave ? 0 : IsMobileHeight() }}
       >
         <motion.path
           d="M0 76.8259L53.25 63.0418C106.5 48.9311 213 21.7548 319.5 24.9558C426 28.1569 532.5 63.1725 639 73.3636C745.5 83.9466 852 69.7052 958.5 66.3735C1065 63.1725 1171.5 69.5746 1278 80.1576C1384.5 90.3487 1491 104.59 1597.5 97.4694C1704 90.3487 1810.5 63.1071 1863.75 49.0617L1917 35.2776V0.458008H0V76.8259Z"
