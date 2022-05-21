@@ -24,7 +24,7 @@ export const Layout = ({ children, page, location }) => {
 
       <Modal name="modal-cv" className="max-w-3xl">
         <a target="_blank" href="/FrontEndCV.pdf" className="cursor-zoom-in">
-          <img className="h-full" src="/CV.jpg" alt="" />
+          <img className="" src="/CV.jpg" alt="" />
         </a>
       </Modal>
 

@@ -65,7 +65,6 @@ export const Header = () => {
                   ></path>
                 </svg>
               </label>
-
               <NavMenu
                 isCol
                 className="menu right-0 menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-36"

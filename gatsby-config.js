@@ -25,12 +25,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp', // Needed for dynamic images
     {
-      resolve: `gatsby-plugin-scroll-reveal`,
-      options: {
-        once: true, // Defines if animation needs to be launched once
-      },
-    },
-    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: `blog`,

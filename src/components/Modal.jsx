@@ -6,7 +6,7 @@ export const Modal = ({ className, children, name }) => {
     <>
       <input type="checkbox" id={name} className="modal-toggle" />
       <label htmlFor={name} className="modal cursor-pointer">
-        <label className={cn('modal-box relative', [className])}>
+        <label className={cn('p-0 sm:p-6 modal-box relative', [className])}>
           {children}
         </label>
       </label>

@@ -25,7 +25,6 @@
     "gatsby-plugin-image": "^2.12.1",
     "gatsby-plugin-manifest": "^4.12.1",
     "gatsby-plugin-offline": "^5.12.1",
-    "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^4.12.1",
     "gatsby-plugin-styled-components": "^5.12.1",
     "gatsby-remark-autolink-headers": "^5.12.1",
@@ -59,10 +58,12 @@
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
-	"prettier": {
-		"singleQuote": true,
-		"semi": false,
-		"trailingComma": "es5",
-		"prettier.disableLanguages": ["markdown"]
-	}
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5",
+    "prettier.disableLanguages": [
+      "markdown"
+    ]
+  }
 }
