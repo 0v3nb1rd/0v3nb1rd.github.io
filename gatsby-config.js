@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '',
   siteMetadata: {
-    title: 'Ov3nb1rd - Front-end Stack Developer',
+    title: 'Ov3nb1rd - Front-end Developer',
     description: 'web dev portfolio',
     contacts: {
       adress: 'pr. Svobody, Lviv, Ukraine',
@@ -14,6 +14,7 @@ module.exports = {
       telegram: 'https://t.me/ov3nb1rd',
       github: 'https://github.com/0v3nb1rd',
       linkedin: 'https://linkedin.com/in/0v3nb1rd',
+      twitter: 'https://twitter.com/0v3nb1rd',
     },
   },
   plugins: [
@@ -74,6 +75,7 @@ module.exports = {
         icon: './static/logo.svg',
       },
     },
+    `gatsby-plugin-react-helmet`,
     'gatsby-plugin-offline',
   ],
 }

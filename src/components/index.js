@@ -1,3 +1,4 @@
+export { Seo } from './Seo'
 export { SectionHero } from './SectionHero'
 export { SectionSlider } from './SectionSlider'
 export { SectionBio } from './SectionBio'

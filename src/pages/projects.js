@@ -1,11 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { Modal } from '../components'
 import { motion } from 'framer-motion'
 import cn from 'classnames'
 import { FreeMode, Mousewheel } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+
+import { Seo, Modal } from '../components'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -44,6 +45,7 @@ export const Projects = ({ data }) => {
   }
   return (
     <>
+      <Seo title="Projects" />
       <MFullSection
         initial="hide"
         animate="show"

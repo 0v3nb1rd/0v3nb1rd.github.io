@@ -1,5 +1,6 @@
 import React from 'react'
 import {
+  Seo,
   SectionHero,
   SectionSlider,
   SectionBio,
@@ -9,6 +10,7 @@ import {
 export default function Home() {
   return (
     <>
+      <Seo title="Home" />
       <SectionHero />
       <SectionSlider />
       <SectionBio />
