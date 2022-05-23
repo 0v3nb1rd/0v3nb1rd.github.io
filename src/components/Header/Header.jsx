@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { NavMenu } from '..'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import cn from 'classnames'
 import { useIsMedium } from '../../hooks/utils'
 
 export const Header = () => {
   const [hideWave, setHideWave] = React.useState(false)
+  const [hideMenu, setHideMenu] = React.useState(false)
 
   const isSmall = useIsMedium()
   const IsMobileHeight = () => (isSmall ? 46 : 64)
@@ -46,9 +47,9 @@ export const Header = () => {
           </div>
 
           <div className="navbar-center order-1 lg:order-none ">
-            <div className="dropdown lg:hidden">
+            <div className="mobile-nav lg:hidden">
               <label
-                tabIndex="0"
+                onClick={() => setHideMenu(!hideMenu)}
                 className="btn btn-ghost btn-square text-neutral-content"
               >
                 <svg
@@ -65,11 +66,23 @@ export const Header = () => {
                   ></path>
                 </svg>
               </label>
-              <NavMenu
-                isCol
-                className="menu right-0 menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-36"
-              />
+              <AnimatePresence>
+                {hideMenu && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                  >
+                    <NavMenu
+                      isCol
+                      className=" menu menu-compact absolute right-0 mt-3 p-2 shadow bg-base-100 rounded-box w-36"
+                    />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
+
             <NavMenu className="hidden lg:flex" btnClasses="btn glass" />
           </div>
 
