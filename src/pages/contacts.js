@@ -31,15 +31,15 @@ export const Contacts = ({ data }) => {
         exit="hide"
         transition={{ staggerChildren: 0.1 }}
       >
-        <div className="hero hero-section--full mb-20">
+        <div className="hero hero-section--full mt-16 md:mt-0 mb-10 md:mb-20">
           <div className="container">
             <div className=" sm:items-center sm:pt-0">
-              <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
+              <div className="max-w-6xl mx-auto lg:px-8">
                 <div className="mt-8 overflow-hidden">
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     <motion.div
                       variants={m_varik}
-                      className="p-6 mr-2 bg-ylw  sm:rounded-lg relative z-10"
+                      className="p-6 mr-2 bg-ylw sm:rounded-lg relative z-10 order-1 md:order-none text-center md:text-left"
                     >
                       <h1 className="text-4xl sm:text-5xl text-white font-akaya dark:text-white font-extrabold tracking-widest	">
                         My contacts is:
@@ -132,7 +132,7 @@ export const Contacts = ({ data }) => {
 
         <motion.div
           variants={m_top}
-          className="absolute bottom-40 right-20 -z-10 "
+          className="absolute bottom-40 md:right-10 xl:right-20 -z-10 md:w-[10rem] xl:w-[14rem] h-auto"
         >
           <Dino />
         </motion.div>

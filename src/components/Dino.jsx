@@ -6,7 +6,7 @@ export const Dino = ({ className }) => {
     <StaticImage
       className={className}
       placeholder="blurred"
-      layout="fixed"
+      layout="fullWidth"
       src="../images/deno.png"
       alt="A kitten"
     />

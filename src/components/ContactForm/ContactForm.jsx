@@ -8,7 +8,7 @@ export const ContactForm = ({ className, children, btnFull, ...props }) => {
       {...props}
       method="post"
       action="https://getform.io/f/c3ab79b8-6485-4f71-be1d-7e3cb28dcfb1"
-      className={cn('p-6 flex flex-col justify-center', [className])}
+      className={cn('py-6 md:p-6 flex flex-col justify-center', [className])}
     >
       <div className="flex flex-col">
         <label htmlFor="name" className="hidden">
@@ -43,7 +43,7 @@ export const ContactForm = ({ className, children, btnFull, ...props }) => {
         ></textarea>
       </div>
 
-      <div className="flex flex-col mt-2">
+      <div className="flex flex-col items-center md:items-start mt-2">
         <Button
           type="submit"
           className={cn('btn text-white btn-info mt-2 btn-wide', {

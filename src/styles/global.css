@@ -49,15 +49,16 @@ body {
   left: 0;
   right: 0;
   height: 100%;
+	min-height: 40rem;
 }
-.main--contacts {
-  min-height: 40rem;
+@media(max-width: 767px) {
+	.main--contacts {
+		position: static;
+	}
 }
+
 .main--projects {
   flex: 1 1 auto;
-  /* display: flex; */
-  /* position: relative; */
-  /* min-height: 70rem; */
 }
 
 footer {
