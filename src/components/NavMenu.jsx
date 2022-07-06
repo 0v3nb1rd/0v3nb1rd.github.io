@@ -2,17 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import cn from 'classnames'
 
-export const NavMenu = ({
-  className,
-  btnClasses,
-  isFooter,
-  isCol,
-  isClicked,
-}) => {
-  console.log(isClicked)
+export const NavMenu = ({ className, btnClasses, isFooter, isCol }) => {
   return (
     <nav className={className}>
-      <ul className={cn('flex', { ['flex-col']: isCol })}>
+      <ul className={cn('flex', { 'flex-col': isCol })}>
         <li className="mx-2">
           <Link
             to="/"
