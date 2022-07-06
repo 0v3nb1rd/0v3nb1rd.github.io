@@ -41,31 +41,59 @@ export const SectionSlider = () => {
             <motion.h2
               variants={m_projText}
               custom={0}
-              className="text-4xl lg:text-6xl font-bold"
+              className="mb-6 text-4xl lg:text-6xl font-bold"
             >
-              Welcome To My
-              <div className="text-red-600">Site Portfolio...</div>
+              What
+              <span className="text-red-600"> I Do?</span>
             </motion.h2>
             <motion.p
               variants={m_projText}
               custom={1}
-              className="py-2 lg:py-6 text-2xl"
+              className="my-2 lg:my-3 text-3xl"
             >
-              The WEIRDOS CLUB is a private collection of NFTs—unique digital
-              collectibles. The Weirdos are stored as ERC-721 tokens on the
-              Ethereum blockchain and hosted on IPFS.
+              Web Development
             </motion.p>
             <motion.p
               variants={m_projText}
               custom={2}
-              className="py-2 lg:py-5 text-md text-justify lg:text-left"
+              className=" text-lg text-left lg:text-left"
             >
-              With more than 200+ hand drawn traits, each NFT is unique and
-              comes with a membership to an exclusive group of successful
-              investors. Join an ambitious ever-growing community with multiple
-              benefits and utilities.
+              <ul>
+                <li className="relative">
+                  <span className="absolute">❄︎</span>
+                  <div className="pl-8 ">
+                    Building responsive websites using HTML/SCSS, Bootstrap,
+                    ReactJS & NextJS
+                  </div>
+                </li>
+                <li className="relative mt-2">
+                  <span className="absolute ">❄︎</span>
+                  <div className="pl-8 ">
+                    Making animations using Framer Motion, GSAP & CSS
+                  </div>
+                </li>
+                <li className="relative mt-2">
+                  <span className="absolute ">❄︎</span>
+                  <div className="pl-8 ">
+                    Creating application backend in Node & Next
+                  </div>
+                </li>
+                <li className="relative mt-2">
+                  <span className="absolute ">❄︎</span>
+                  <div className="pl-8 ">
+                    SEO Optimization & audit of websites
+                  </div>
+                </li>
+                <li className="relative mt-2">
+                  <span className="absolute">❄︎</span>
+                  <div className="pl-8">
+                    Having experience in Domain & Hosting using Netlify, Vercel,
+                    Heroku & Hostinger
+                  </div>
+                </li>
+              </ul>
             </motion.p>
-            <motion.div variants={m_projText} custom={2}>
+            <motion.div className="mt-10" variants={m_projText} custom={2}>
               <Link
                 to="/projects"
                 className="btn btn-wide btn-accent text-white"
