@@ -27,7 +27,7 @@ const m_projText = {
   },
 }
 
-export const Projects = ({ data }) => {
+const Projects = ({ data }) => {
   const projects = data.allMarkdownRemark.nodes
 
   const refContainer = React.useRef(null)
@@ -38,11 +38,13 @@ export const Projects = ({ data }) => {
   React.useEffect(() => {
     const margin = refContainer.current.getClientRects()[0].x
     refContainerLeft.current.style.marginLeft = Math.floor(margin) + 'px'
-  })
+  }, [])
 
   const showFigma = (figma, title) => {
+    // console.log([figma, title])
     setModal([figma, title])
   }
+
   return (
     <>
       <Seo title="Projects" />
@@ -104,7 +106,7 @@ export const Projects = ({ data }) => {
             className="swiper--proj"
           >
             {projects.map((project) => {
-              const { title, stack, img, desc, links } = project.frontmatter
+              const { title, img, desc, links } = project.frontmatter
               const logo = img.logo.publicURL
               const thumbnail = getImage(img.thumbnail)
               const figma = getImage(img.figma)
@@ -131,9 +133,6 @@ export const Projects = ({ data }) => {
                               <img
                                 className={cn(
                                   'h-full object-contain object-left'
-                                  // {
-                                  //   'bg-black': is_white,
-                                  // }
                                 )}
                                 src={logo}
                                 alt={title}
@@ -148,14 +147,15 @@ export const Projects = ({ data }) => {
                           <li
                             className="my-2 tooltip"
                             data-tip={
-                              figma ? 'show screanshot' : 'contact me to show'
+                              figma ? 'show screenshot' : 'contact me to show'
                             }
                           >
                             <label
-                              className="btn-hide flex w-8 max-h-8"
+                              className={`flex w-8 max-h-8 ${
+                                figma ? 'cursor-pointer' : 'btn-hide'
+                              }`}
+                              htmlFor="modal"
                               {...(figma && {
-                                className: 'cursor-pointer flex w-8 max-h-8',
-                                htmlFor: 'modal',
                                 onClick: () => showFigma(figma, title),
                               })}
                             >
@@ -173,10 +173,11 @@ export const Projects = ({ data }) => {
                             }
                           >
                             <a
-                              className="btn-hide flex w-8 max-h-8"
+                              className={`flex w-8 max-h-8 ${
+                                links[1] ? 'cursor-pointer' : 'btn-hide'
+                              }`}
                               target="_blank"
                               {...(links[1] && {
-                                className: 'cursor-pointer flex w-8 max-h-8',
                                 href: links[1],
                               })}
                             >
@@ -193,10 +194,11 @@ export const Projects = ({ data }) => {
                             }
                           >
                             <a
-                              className="btn-hide flex w-8 max-h-8"
+                              className={`flex w-8 max-h-8 ${
+                                links[2] ? 'cursor-pointer' : 'btn-hide'
+                              }`}
                               target="_blank"
                               {...(links[2] && {
-                                className: 'cursor-pointer flex w-8 max-h-8',
                                 href: links[2],
                               })}
                             >

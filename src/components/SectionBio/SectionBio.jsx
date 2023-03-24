@@ -50,7 +50,7 @@ export const SectionBio = () => {
               work with life.
             </p>
             <a
-              href="#"
+              href="#/"
               className="bg-transparent mr-auto hover:bg-yellow-300 text-yellow-300 hover:text-white rounded shadow hover:shadow-lg py-2 px-4 border border-yellow-300 hover:border-transparent"
             >
               Explore Now
@@ -77,7 +77,7 @@ export const SectionBio = () => {
                     <div className="order-1 xl:w-5/12 p-4 lg:px-1 lg:py-4 text-right">
                       <p className="text-base text-yellow-300">October, 2020</p>
                       <a
-                        href="#"
+                        href="#/"
                         className="flex mb-1 lg:mb-3 font-bold text-lg md:text-2xl"
                       >
                         <img

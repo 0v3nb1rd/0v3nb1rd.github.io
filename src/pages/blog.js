@@ -19,7 +19,7 @@ const m_top = {
   },
 }
 
-export const blog = ({ data }) => {
+const Blog = ({ data }) => {
   const blog = data.allMarkdownRemark.nodes
 
   return (
@@ -91,4 +91,4 @@ export const query = graphql`
   }
 `
 
-export default blog
+export default Blog

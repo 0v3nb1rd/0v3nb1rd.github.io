@@ -6,6 +6,7 @@ export const SocialList = ({ className, socials }) => {
       <a
         className="ml-4 hover:text-primary transition-colors duration-100"
         target="_blank"
+        rel="noreferrer"
         href={socials.facebook}
       >
         <span className="sr-only">facebook</span>
@@ -25,6 +26,7 @@ export const SocialList = ({ className, socials }) => {
       <a
         className="ml-4 hover:text-primary transition-colors duration-100"
         target="_blank"
+        rel="noreferrer"
         href={socials.instagram}
       >
         <span className="sr-only">instagram</span>
@@ -41,6 +43,7 @@ export const SocialList = ({ className, socials }) => {
       <a
         className="ml-4 hover:text-primary transition-colors duration-100"
         target="_blank"
+        rel="noreferrer"
         href={socials.telegram}
       >
         <span className="sr-only">telegram</span>
@@ -59,6 +62,7 @@ export const SocialList = ({ className, socials }) => {
       <a
         className="ml-4 hover:text-primary transition-colors duration-100"
         target="_blank"
+        rel="noreferrer"
         href={socials.github}
       >
         <span className="sr-only">GitHub</span>
@@ -76,6 +80,7 @@ export const SocialList = ({ className, socials }) => {
       <a
         className="ml-4 hover:text-primary transition-colors duration-100"
         target="_blank"
+        rel="noreferrer"
         href={socials.linkedin}
       >
         <span className="sr-only">linkedin</span>

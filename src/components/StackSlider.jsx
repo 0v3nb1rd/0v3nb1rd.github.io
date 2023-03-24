@@ -18,7 +18,7 @@ export const StackSlider = (props) => {
         waitForTransition: true,
         autoplayStopOnLast: true,
       }}
-      slidesPerView={7}
+      // slidesPerView={7}
     >
       {props.stack.map((itm, idx) => (
         <SwiperSlide key={props.id + '_' + idx}>

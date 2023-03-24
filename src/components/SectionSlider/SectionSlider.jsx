@@ -36,6 +36,7 @@ export const SectionSlider = () => {
             <Slider />
           </div>
         </motion.div>
+
         <div className="w-full lg:w-2/4 text-center lg:text-left">
           <div className=" lg:w-4/5 mx-auto">
             <motion.h2
@@ -53,10 +54,11 @@ export const SectionSlider = () => {
             >
               Web Development
             </motion.p>
-            <motion.p
+
+            <motion.div
               variants={m_projText}
               custom={2}
-              className=" text-lg text-left lg:text-left"
+              className="text-lg text-left lg:text-left"
             >
               <ul>
                 <li className="relative">
@@ -92,7 +94,8 @@ export const SectionSlider = () => {
                   </div>
                 </li>
               </ul>
-            </motion.p>
+            </motion.div>
+
             <motion.div className="mt-10" variants={m_projText} custom={2}>
               <Link
                 to="/projects"
@@ -104,6 +107,7 @@ export const SectionSlider = () => {
           </div>
         </div>
       </motion.div>
+
       <svg
         className="bottom-svg  -bottom-20"
         preserveAspectRatio="none"

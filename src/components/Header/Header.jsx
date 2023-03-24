@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { NavMenu } from '..'
 import { AnimatePresence, motion } from 'framer-motion'
-import cn from 'classnames'
+// import cn from 'classnames'
 import { useIsMedium } from '../../hooks/utils'
 
 export const Header = () => {
@@ -49,7 +49,9 @@ export const Header = () => {
           <div className="navbar-center order-1 lg:order-none ">
             <div className="mobile-nav lg:hidden">
               <label
-                onClick={() => setHideMenu(!hideMenu)}
+                htmlFor="mobile-menu"
+                onClick={() => setHideMenu((prev) => !prev)}
+                aria-hidden="true"
                 className="btn btn-ghost btn-square text-neutral-content"
               >
                 <svg
@@ -69,6 +71,7 @@ export const Header = () => {
               <AnimatePresence>
                 {hideMenu && (
                   <motion.div
+                    id="mobile-menu"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}

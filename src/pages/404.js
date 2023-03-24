@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { Seo } from '../components'
-export const notFound = () => {
+
+const notFound = () => {
   return (
     <>
       <Seo title="404" />

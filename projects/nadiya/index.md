@@ -1,9 +1,9 @@
 ---
-date: 2021-12-07
+date: 2022-05-07
 path: "/nadiya"
 title: "Nadiya"
 desc: "Corporative site Nadiya - clinic of reproduction medicine"
-links: ["figma", "", "http://test3.3d.lviv.ua/"]
+links: ["figma", "", "https://nadiya-fertility.com"]
 img: {
 	logo: logo.svg,
 	thumbnail: thumbnail.png,

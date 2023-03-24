@@ -53,112 +53,88 @@ export const SectionStack = () => {
           >
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:pb-10 p-4 items-center">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_js.svg"
                 alt="Adidas"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:pb-10 p-4 items-center">
               <img
-                tabIndex="1"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_node.svg"
                 alt="Chanel"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:pb-10 p-4 items-center">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_scss.svg"
                 alt="Nike"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:pb-10 p-4 items-center">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_figma.svg"
                 alt="Toyota"
-                role="img"
               />
             </div>
 
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r :border-r border-gray-200 xl:py-10 p-4 items-center">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_react.svg"
                 alt="Adidas"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b xl:border-r lg:border-r border-gray-200 xl:py-10 p-4 items-center">
               <img
-                tabIndex="1"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_redux.svg"
                 alt="Chanel"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-b lg:border-b border-gray-200 xl:py-10 p-4 items-center">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_next.svg"
                 alt="Nike"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center lg:border-b xl:border-b lg:border-l xl:border-l border-gray-200 xl:py-10 p-4 items-center">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_gatsby.svg"
                 alt="Toyota"
-                role="img"
               />
             </div>
 
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 p-4 items-center">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_tailwind.svg"
                 alt="GS1"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-r lg:border-r border-gray-200 xl:pt-10 p-4 items-center">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_bootstrap.svg"
                 alt="BlackBerry"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:pt-10 lg:pt-10 md:pt-2 p-4">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_styled-components.svg"
                 alt="Mini"
-                role="img"
               />
             </div>
             <div className="group w-4/12 xl:w-1/4 lg:w-1/4 md:w-1/4 flex justify-center xl:border-l lg:border-l border-gray-200 xl:pt-10 lg:pt-10 md:pt-2 p-4">
               <img
-                tabIndex="0"
                 className="max-h-16 w-16 group-hover:drop-shadow-2xl group-hover:scale-105 transform transition-all duration-500"
                 src="/img/skills/icon_laravel.svg"
                 alt="Honda"
-                role="img"
               />
             </div>
           </motion.div>

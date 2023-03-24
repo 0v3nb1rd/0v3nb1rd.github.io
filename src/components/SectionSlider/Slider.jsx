@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 // import 'swiper/css'
 // import 'swiper/css/effect-cards'
 // import required modules
-import { Autoplay, EffectCards, FreeMode, Navigation } from 'swiper'
+import { Autoplay, FreeMode, Navigation } from 'swiper'
 
 export const Slider = (props) => {
   // console.log('first')

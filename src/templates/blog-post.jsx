@@ -22,7 +22,7 @@ const m_top = {
   },
 }
 
-export const BlogPost = ({ data }) => {
+const BlogPost = ({ data }) => {
   const { html, timeToRead } = data.markdownRemark
   const { title, thumbnail, date } = data.markdownRemark.frontmatter
   const image = getImage(thumbnail)

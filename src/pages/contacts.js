@@ -20,7 +20,7 @@ const m_top = {
   },
 }
 
-export const Contacts = ({ data }) => {
+const Contacts = ({ data }) => {
   const { contacts } = data.site.siteMetadata
   return (
     <>
