@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { Seo, Modal } from '../components'
 
-// Import Swiper styles
 import 'swiper/css'
 import { MFullSection } from '../styles/styled'
 
@@ -40,9 +39,8 @@ const Projects = ({ data }) => {
     refContainerLeft.current.style.marginLeft = Math.floor(margin) + 'px'
   }, [])
 
-  const showFigma = (figma, title) => {
-    // console.log([figma, title])
-    setModal([figma, title])
+  const handleModal = (img, title) => {
+    setModal([img, title])
   }
 
   return (
@@ -60,26 +58,26 @@ const Projects = ({ data }) => {
         <motion.div
           variants={m_top}
           ref={refContainer}
-          className="container absolute left-0 right-0 top-32"
+          className="container absolute left-0 right-0 top-28 xl:top-32"
         >
-          <div className="flex flex-wrap justify-center -mx-4">
+          <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4">
-              <div className="text-center mx-auto lg:mb-2 max-w-[510px]">
-                <span className="font-semibold text-lg text-primary mb-2 block">
+              <div className="mx-auto max-w-[510px] text-center lg:mb-2">
+                <span className="block text-lg font-semibold text-primary xl:mb-2">
                   Projects
                 </span>
                 <h2
                   className="
-                  font-bold
-                  text-3xl
-                  sm:text-4xl
-                  md:text-[40px]
                   text-dark
-                  mb-4"
+                  mb-4
+                  text-3xl
+                  font-bold
+                  sm:text-4xl
+                  md:text-[40px]"
                 >
                   My Recent Projects
                 </h2>
-                <p className="text-base text-body-color">
+                <p className="text-body-color text-base">
                   There are many variations of passages of Lorem Ipsum available
                   but the majority have suffered alteration in some form.
                 </p>
@@ -113,22 +111,28 @@ const Projects = ({ data }) => {
 
               return (
                 <SwiperSlide key={project.id}>
-                  <div className=" max-w-md bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transform transition-all duration-500">
-                    <div className="-m-4 -mb-8 portfolio__slide relative rounded-xl rounded-tr-none rounded-tl-none overflow-hidden h-80">
-                      <GatsbyImage
-                        className="object-cover object-top"
-                        image={thumbnail}
-                        alt={title}
-                      />
+                  <div className="max-w-sm transform rounded-xl bg-white shadow-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl 2xl:max-w-md">
+                    <div className="portfolio__slide relative -m-4 -mb-8 h-72 overflow-hidden rounded-xl rounded-tr-none rounded-tl-none 2xl:h-80">
+                      <label
+                        htmlFor="modal"
+                        className="relative z-10 cursor-pointer"
+                        onClick={() => handleModal(thumbnail, title)}
+                      >
+                        <GatsbyImage
+                          className="object-cover object-top"
+                          image={thumbnail}
+                          alt={title}
+                        />
+                      </label>
                     </div>
-                    <div className="flex flex-col p-4 pt-10 relative">
-                      <div className="py-2">
-                        {/* <StackSlider stack={stack} id={project.id} /> */}
-                      </div>
+                    <div className="relative flex flex-col p-4 pt-10">
+                      {/* <div className="py-2">
+                        <StackSlider stack={stack} id={project.id} />
+                      </div> */}
 
                       <div className=" flex items-center justify-between">
                         <div className="flex flex-col">
-                          <div className="flex space-x-3 h-12">
+                          <div className="flex h-12 space-x-3">
                             <div className="h-auto w-full max-w-[200px]">
                               <img
                                 className={cn(
@@ -139,24 +143,26 @@ const Projects = ({ data }) => {
                               />
                             </div>
                           </div>
-                          <div className="flex mt-3 items-center">
-                            <p className="text-xl font-normal ">{desc}</p>
+                          <div className="mt-3 flex items-center">
+                            <p className="text-lg font-normal leading-tight 2xl:text-xl">
+                              {desc}
+                            </p>
                           </div>
                         </div>
-                        <ul className="flex flex-col mx-2">
+                        <ul className="mx-2 flex flex-col">
                           <li
-                            className="my-2 tooltip"
+                            className="tooltip z-10 my-2"
                             data-tip={
                               figma ? 'show screenshot' : 'contact me to show'
                             }
                           >
                             <label
-                              className={`flex w-8 max-h-8 ${
+                              className={`flex max-h-8 w-8 ${
                                 figma ? 'cursor-pointer' : 'btn-hide'
                               }`}
                               htmlFor="modal"
                               {...(figma && {
-                                onClick: () => showFigma(figma, title),
+                                onClick: () => handleModal(figma, title),
                               })}
                             >
                               <img
@@ -167,13 +173,13 @@ const Projects = ({ data }) => {
                           </li>
 
                           <li
-                            className="my-2 tooltip"
+                            className="tooltip z-10 my-2"
                             data-tip={
                               links[1] ? 'show code' : 'contact me to show'
                             }
                           >
                             <a
-                              className={`flex w-8 max-h-8 ${
+                              className={`flex max-h-8 w-8 ${
                                 links[1] ? 'cursor-pointer' : 'btn-hide'
                               }`}
                               target="_blank"
@@ -188,13 +194,13 @@ const Projects = ({ data }) => {
                             </a>
                           </li>
                           <li
-                            className="my-2 tooltip"
+                            className="tooltip z-10 my-2"
                             data-tip={
                               links[2] ? 'show site' : 'contact me to show'
                             }
                           >
                             <a
-                              className={`flex w-8 max-h-8 ${
+                              className={`flex max-h-8 w-8 ${
                                 links[2] ? 'cursor-pointer' : 'btn-hide'
                               }`}
                               target="_blank"
@@ -219,7 +225,7 @@ const Projects = ({ data }) => {
         </motion.div>
       </MFullSection>
 
-      {Boolean(modal.length) && (
+      {modal?.length && (
         <Modal className="mod-test max-w-5xl" name="modal">
           <GatsbyImage
             className="object-cover object-top"

@@ -3,7 +3,15 @@ import { Header, Modal, ContactForm, Footer } from './'
 import cn from 'classnames'
 import { motion, AnimatePresence } from 'framer-motion'
 
-export const Layout = ({ children, page, location }) => {
+export const Layout = ({ children, page, location: { pathname } }) => {
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }, [pathname])
+
   return (
     <motion.div className="layout">
       <Header />
@@ -16,7 +24,7 @@ export const Layout = ({ children, page, location }) => {
         //   }
         // }}
       >
-        <main key={location.pathname} className={cn('main', [page])}>
+        <main key={pathname} className={cn('main', [page])}>
           {children}
         </main>
       </AnimatePresence>
@@ -29,9 +37,9 @@ export const Layout = ({ children, page, location }) => {
       </Modal>
 
       <Modal name="modal-contact">
-        <h2 className="text-4xl text-gray-600 text-center font-akaya font-extrabold tracking-wider">
+        <h2 className="text-center font-akaya text-4xl font-extrabold tracking-wider text-gray-600">
           Write me something
-          <span className="text-3xl block w-full"> coool 😜</span>
+          <span className="block w-full text-3xl"> coool 😜</span>
         </h2>
         <ContactForm className="pt-2" btnFull />
       </Modal>

@@ -6,7 +6,7 @@
 
 @layer base {
   .hero-content {
-    @apply m-auto flex-col lg:flex-row-reverse w-full lg:w-9/12;
+    @apply m-auto w-full flex-col lg:w-9/12 lg:flex-row-reverse;
   }
 }
 
@@ -40,7 +40,7 @@ body {
 
 .main {
   min-height: 100%;
-	overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 /* .main--projects, */
@@ -49,12 +49,12 @@ body {
   left: 0;
   right: 0;
   height: 100%;
-	min-height: 40rem;
+  min-height: 40rem;
 }
-@media(max-width: 767px) {
-	.main--contacts {
-		position: static;
-	}
+@media (max-width: 767px) {
+  .main--contacts {
+    position: static;
+  }
 }
 
 .main--projects {
@@ -173,13 +173,10 @@ footer {
   transition-timing-function: linear;
 }
 .swiper--proj > .swiper-wrapper {
-  padding: 20rem 0 5rem;
-  /* padding: 5rem 0; */
+  @apply pb-[5rem] pt-[18rem] xl:pt-[20rem];
 }
 .swiper--proj > .swiper-wrapper > .swiper-slide {
-  max-width: 480px;
-  /* padding: 0 2rem; */
-  margin: 0 2rem;
+  @apply mx-[2rem] max-w-[420px] 2xl:max-w-[480px];
 }
 
 .portfolio__slide::before {
