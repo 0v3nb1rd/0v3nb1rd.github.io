@@ -43,10 +43,10 @@ export const SectionBio = () => {
               Working Experience
             </p>
             <p className="text-3xl md:text-4xl leading-normal md:leading-relaxed mb-2">
-              My own experiance
+              My own experience
             </p>
             <p className="text-sm md:text-base text-gray-50 mb-4">
-              Here’s my experiance timeline. By the way, I know how to combine
+              Here’s my experience timeline. By the way, I know how to combine
               work with life.
             </p>
             <a
