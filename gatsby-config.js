@@ -15,6 +15,7 @@ module.exports = {
       github: 'https://github.com/0v3nb1rd',
       linkedin: 'https://linkedin.com/in/0v3nb1rd',
       twitter: 'https://twitter.com/0v3nb1rd',
+      koFi: 'https://ko-fi.com/0v3nb1rd',
     },
   },
   plugins: [

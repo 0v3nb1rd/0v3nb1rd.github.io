@@ -1,10 +1,11 @@
 import React from 'react'
 
 export const SocialList = ({ className, socials }) => {
+  console.log(socials)
   return (
     <div className={className}>
       <a
-        className="ml-4 hover:text-primary transition-colors duration-100"
+        className="ml-4 transition-colors duration-100 hover:text-primary"
         target="_blank"
         rel="noreferrer"
         href={socials.facebook}
@@ -24,7 +25,7 @@ export const SocialList = ({ className, socials }) => {
       </a>
 
       <a
-        className="ml-4 hover:text-primary transition-colors duration-100"
+        className="ml-4 transition-colors duration-100 hover:text-primary"
         target="_blank"
         rel="noreferrer"
         href={socials.instagram}
@@ -41,7 +42,7 @@ export const SocialList = ({ className, socials }) => {
       </a>
 
       <a
-        className="ml-4 hover:text-primary transition-colors duration-100"
+        className="ml-4 transition-colors duration-100 hover:text-primary"
         target="_blank"
         rel="noreferrer"
         href={socials.telegram}
@@ -60,7 +61,7 @@ export const SocialList = ({ className, socials }) => {
       </a>
 
       <a
-        className="ml-4 hover:text-primary transition-colors duration-100"
+        className="ml-4 transition-colors duration-100 hover:text-primary"
         target="_blank"
         rel="noreferrer"
         href={socials.github}
@@ -78,7 +79,7 @@ export const SocialList = ({ className, socials }) => {
       </a>
 
       <a
-        className="ml-4 hover:text-primary transition-colors duration-100"
+        className="ml-4 transition-colors duration-100 hover:text-primary"
         target="_blank"
         rel="noreferrer"
         href={socials.linkedin}
